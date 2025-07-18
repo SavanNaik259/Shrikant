@@ -441,6 +441,12 @@ body {
         border: none;
         cursor: pointer;
         z-index: 999;
+        border-radius: 50%;
+        transition: var(--transition-smooth);
+    }
+    
+    .mobile-close:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
     
     .mobile-close::before,
@@ -453,6 +459,7 @@ body {
         height: 2px;
         background: var(--text-white);
         transition: var(--transition-smooth);
+        border-radius: 1px;
     }
     
     .mobile-close::before {

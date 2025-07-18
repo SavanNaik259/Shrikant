@@ -27,17 +27,23 @@ class WeddingPhotographyWebsite {
         // Mobile menu toggle
         this.hamburger?.addEventListener('click', () => this.toggleMobileMenu());
         
-        // Mobile menu close button
-        this.mobileClose?.addEventListener('click', () => this.closeMobileMenu());
+        // Mobile menu close button - use event delegation
+        document.addEventListener('click', (e) => {
+            if (e.target && e.target.id === 'mobile-close') {
+                this.closeMobileMenu();
+            }
+        });
         
         // Close mobile menu when clicking on nav links
         this.navLinks.forEach(link => {
             link.addEventListener('click', () => this.closeMobileMenu());
         });
         
-        // Close mobile menu when clicking outside
+        // Close mobile menu when clicking outside menu area
         document.addEventListener('click', (e) => {
-            if (!this.navbar?.contains(e.target) && !this.navMenu?.contains(e.target)) {
+            if (this.navMenu?.classList.contains('active') && 
+                !this.navMenu.contains(e.target) && 
+                !this.hamburger?.contains(e.target)) {
                 this.closeMobileMenu();
             }
         });
@@ -279,6 +285,11 @@ class WeddingPhotographyWebsite {
             this.hamburger.setAttribute('aria-label', 'Toggle navigation menu');
             this.hamburger.setAttribute('aria-expanded', 'false');
             this.hamburger.setAttribute('role', 'button');
+        }
+        
+        if (this.mobileClose) {
+            this.mobileClose.setAttribute('aria-label', 'Close navigation menu');
+            this.mobileClose.setAttribute('role', 'button');
         }
         
         if (this.navMenu) {
