@@ -153,29 +153,48 @@ body {
 /* Mobile Menu Toggle */
 .hamburger {
     display: none;
-    flex-direction: column;
     cursor: pointer;
-    padding: 0.5rem;
     background: none;
     border: none;
     position: relative;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: var(--transition-smooth);
+}
+
+.hamburger:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .hamburger .bar {
-    width: 28px;
+    position: absolute;
+    width: 24px;
     height: 2px;
     background-color: var(--text-white);
-    margin: 4px 0;
+    left: 50%;
+    transform: translateX(-50%);
     transition: var(--transition-smooth);
-    border-radius: 2px;
+    border-radius: 1px;
+}
+
+.hamburger .bar:nth-child(1) {
+    top: 14px;
+}
+
+.hamburger .bar:nth-child(2) {
+    top: 21px;
+}
+
+.hamburger .bar:nth-child(3) {
+    top: 28px;
 }
 
 .hamburger.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    top: 21px;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -183,7 +202,8 @@ body {
 }
 
 .hamburger.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    top: 21px;
+    transform: translateX(-50%) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -396,40 +416,42 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: block;
     }
     
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        left: 0;
+        width: 100vw;
         height: 100vh;
-        width: 280px;
-        flex-direction: column;
-        background: linear-gradient(135deg, rgba(248, 246, 244, 0.98), rgba(232, 226, 213, 0.98));
+        background: rgba(0, 0, 0, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        opacity: 0;
+        visibility: hidden;
         transition: var(--transition-slow);
-        padding: 6rem 2rem 2rem;
-        gap: 2rem;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
-        z-index: 999;
+        z-index: 998;
     }
     
     .nav-menu.active {
-        right: 0;
+        opacity: 1;
+        visibility: visible;
     }
     
     .nav-item {
+        transform: translateY(30px);
         opacity: 0;
-        transform: translateX(30px);
         transition: var(--transition-smooth);
     }
     
     .nav-menu.active .nav-item {
+        transform: translateY(0);
         opacity: 1;
-        transform: translateX(0);
     }
     
     .nav-menu.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
@@ -438,42 +460,38 @@ body {
     .nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
     
     .nav-link {
-        font-size: 1.1rem;
-        color: var(--text-dark);
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        display: block;
-        text-transform: none;
-        letter-spacing: 0;
-        font-weight: 400;
-    }
-    
-    .nav-link:last-child {
-        border-bottom: none;
+        font-size: 2rem;
+        font-weight: 300;
+        color: var(--text-white);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1rem 2rem;
+        border-radius: 0;
+        position: relative;
+        transition: var(--transition-smooth);
     }
     
     .nav-link::before {
-        display: none;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background: var(--accent-color);
+        transition: var(--transition-smooth);
+        transform: translateX(-50%);
+    }
+    
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 80%;
     }
     
     .nav-link:hover,
     .nav-link.active {
         color: var(--accent-color);
-        background: rgba(212, 175, 55, 0.1);
-        padding-left: 1rem;
-        border-radius: 4px;
-    }
-    
-    /* Mobile overlay to prevent body scroll when menu open */
-    .nav-menu.active::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: -1;
     }
 }
 
