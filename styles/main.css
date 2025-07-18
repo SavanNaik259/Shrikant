@@ -641,16 +641,66 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     text-align: center;
     color: var(--text-dark);
     margin-bottom: 4rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.portfolio-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+    border-radius: 2px;
+}
+
+.portfolio-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background: var(--accent-color);
+    opacity: 0.5;
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
     gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 2rem 2rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) transparent;
+}
+
+.portfolio-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.portfolio-grid::-webkit-scrollbar-track {
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 4px;
+}
+
+.portfolio-grid::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+.portfolio-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
 }
 
 .portfolio-item {
@@ -661,6 +711,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     aspect-ratio: 16/10;
+    flex: 0 0 400px;
+    min-height: 250px;
 }
 
 .portfolio-item:hover {
@@ -772,16 +824,27 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .portfolio-title {
         font-size: 2.5rem;
         margin-bottom: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .portfolio-title::before {
+        width: 60px;
+        height: 2px;
+    }
+    
+    .portfolio-title::after {
+        width: 30px;
     }
     
     .portfolio-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
-        padding: 0 1rem;
+        padding: 1rem;
     }
     
     .portfolio-item {
+        flex: 0 0 300px;
         aspect-ratio: 16/12;
+        min-height: 225px;
     }
     
     .portfolio-overlay {
@@ -813,10 +876,26 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .portfolio-title {
         font-size: 2rem;
         margin-bottom: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .portfolio-title::before {
+        width: 50px;
+        height: 2px;
+    }
+    
+    .portfolio-title::after {
+        width: 25px;
     }
     
     .portfolio-grid {
         gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .portfolio-item {
+        flex: 0 0 280px;
+        min-height: 200px;
     }
     
     .portfolio-overlay {
