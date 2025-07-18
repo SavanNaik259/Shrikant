@@ -720,7 +720,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     flex: 0 0 580px;
-    height: 450px;
+    height: 480px;
 }
 
 .portfolio-item:hover {
@@ -851,7 +851,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .portfolio-item {
         flex: 0 0 480px;
-        height: 380px;
+        height: 410px;
     }
     
     .portfolio-overlay {
@@ -902,7 +902,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .portfolio-item {
         flex: 0 0 400px;
-        height: 320px;
+        height: 350px;
     }
     
     .portfolio-overlay {
