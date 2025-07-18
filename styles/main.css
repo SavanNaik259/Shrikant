@@ -686,7 +686,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     gap: 2.5rem;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 1rem 0 2rem;
+    padding: 1rem 2rem 2rem;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -719,8 +719,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
-    flex: 0 0 500px;
-    height: 350px;
+    flex: 0 0 550px;
+    height: 400px;
 }
 
 .portfolio-item:hover {
@@ -846,12 +846,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .portfolio-grid {
         gap: 1.5rem;
-        padding: 1rem 0;
+        padding: 1rem 1.5rem 2rem;
     }
     
     .portfolio-item {
-        flex: 0 0 420px;
-        height: 300px;
+        flex: 0 0 460px;
+        height: 340px;
     }
     
     .portfolio-overlay {
@@ -897,12 +897,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .portfolio-grid {
         gap: 1rem;
-        padding: 1rem 0;
+        padding: 1rem 1rem 2rem;
     }
     
     .portfolio-item {
-        flex: 0 0 350px;
-        height: 250px;
+        flex: 0 0 380px;
+        height: 280px;
     }
     
     .portfolio-overlay {
