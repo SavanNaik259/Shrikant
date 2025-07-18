@@ -677,7 +677,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     gap: 2.5rem;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 1rem 3rem 2rem;
+    padding: 1rem 0 2rem;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -837,7 +837,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .portfolio-grid {
         gap: 1.5rem;
-        padding: 1rem;
+        padding: 1rem 0;
     }
     
     .portfolio-item {
@@ -888,7 +888,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .portfolio-grid {
         gap: 1rem;
-        padding: 1rem 0.5rem;
+        padding: 1rem 0;
     }
     
     .portfolio-item {
