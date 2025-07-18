@@ -629,9 +629,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Portfolio Section */
 .portfolio {
-    padding: var(--section-padding);
+    padding: 4rem 0;
     background: var(--primary-color);
     min-height: 100vh;
+}
+
+.portfolio .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .portfolio-title {
@@ -646,7 +652,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     position: relative;
     display: inline-block;
     width: 100%;
+    padding: 0 2rem;
 }
+
+
 
 .portfolio-title::before {
     content: '';
