@@ -11,6 +11,7 @@ class WeddingPhotographyWebsite {
         this.mobileClose = document.getElementById('mobile-close');
         this.navLinks = document.querySelectorAll('.nav-link');
         this.heroVideo = document.querySelector('.hero-video');
+        this.portfolioItems = document.querySelectorAll('.portfolio-item');
         
         this.init();
     }
@@ -21,6 +22,7 @@ class WeddingPhotographyWebsite {
         this.setupSmoothScrolling();
         this.setupNavbarScrollEffect();
         this.setupAccessibility();
+        this.setupPortfolio();
     }
 
     setupEventListeners() {
@@ -381,6 +383,96 @@ class WeddingPhotographyWebsite {
             }
         });
     }
+
+    setupPortfolio() {
+        // Handle portfolio item clicks
+        this.portfolioItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const videoId = item.dataset.video;
+                const slug = item.dataset.slug;
+                
+                if (videoId && slug) {
+                    this.navigateToPortfolioVideo(videoId, slug);
+                }
+            });
+        });
+    }
+
+    navigateToPortfolioVideo(videoId, slug) {
+        // Create video page URL
+        const videoPageUrl = `/portfolio/${slug}`;
+        
+        // Store video data in sessionStorage for the video page
+        sessionStorage.setItem('portfolioVideo', JSON.stringify({
+            videoId: videoId,
+            slug: slug
+        }));
+        
+        // Navigate to video page (will be handled by creating a new page)
+        this.createVideoPage(videoId, slug);
+    }
+
+    createVideoPage(videoId, slug) {
+        // Hide main content
+        const main = document.querySelector('main');
+        if (main) {
+            main.style.display = 'none';
+        }
+        
+        // Create video page container
+        const videoPageContainer = document.createElement('div');
+        videoPageContainer.className = 'video-page-container';
+        videoPageContainer.innerHTML = `
+            <div class="video-page">
+                <div class="video-header">
+                    <button class="back-button" onclick="window.weddingWebsite.goBackToPortfolio()">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </button>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/${videoId}?rel=0&showinfo=0&modestbranding=1&controls=1"
+                        frameborder="0"
+                        allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                </div>
+            </div>
+        `;
+        
+        // Add to body
+        document.body.appendChild(videoPageContainer);
+        
+        // Update URL without page reload
+        history.pushState({ page: 'video', slug: slug }, '', `/portfolio/${slug}`);
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
+    goBackToPortfolio() {
+        // Remove video page
+        const videoPageContainer = document.querySelector('.video-page-container');
+        if (videoPageContainer) {
+            videoPageContainer.remove();
+        }
+        
+        // Show main content
+        const main = document.querySelector('main');
+        if (main) {
+            main.style.display = 'block';
+        }
+        
+        // Update URL
+        history.pushState({ page: 'home' }, '', '/');
+        
+        // Scroll to portfolio section
+        const portfolioSection = document.getElementById('portfolio');
+        if (portfolioSection) {
+            portfolioSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 }
 
 // Performance optimization: Use requestAnimationFrame for scroll events
@@ -404,6 +496,9 @@ class ScrollHandler {
 // Initialize the website when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const website = new WeddingPhotographyWebsite();
+    
+    // Expose website instance globally for video page navigation
+    window.weddingWebsite = website;
     
     // Performance monitoring
     if ('performance' in window) {
