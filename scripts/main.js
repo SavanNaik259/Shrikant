@@ -8,6 +8,7 @@ class WeddingPhotographyWebsite {
         this.navbar = document.getElementById('navbar');
         this.hamburger = document.getElementById('hamburger');
         this.navMenu = document.getElementById('nav-menu');
+        this.mobileClose = document.getElementById('mobile-close');
         this.navLinks = document.querySelectorAll('.nav-link');
         this.heroVideo = document.querySelector('.hero-video');
         
@@ -26,6 +27,9 @@ class WeddingPhotographyWebsite {
         // Mobile menu toggle
         this.hamburger?.addEventListener('click', () => this.toggleMobileMenu());
         
+        // Mobile menu close button
+        this.mobileClose?.addEventListener('click', () => this.closeMobileMenu());
+        
         // Close mobile menu when clicking on nav links
         this.navLinks.forEach(link => {
             link.addEventListener('click', () => this.closeMobileMenu());
@@ -33,7 +37,7 @@ class WeddingPhotographyWebsite {
         
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!this.navbar?.contains(e.target)) {
+            if (!this.navbar?.contains(e.target) && !this.navMenu?.contains(e.target)) {
                 this.closeMobileMenu();
             }
         });
