@@ -765,7 +765,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .about-content-text {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -1498,7 +1504,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .about-content-text {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -1571,7 +1583,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 
 .about-content-text {
-    padding-left: 0;
+    padding: 0;
 }
 
 .about-title {
