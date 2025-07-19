@@ -304,6 +304,21 @@ class WeddingPhotographyWebsite {
         
         // Handle keyboard navigation
         this.setupKeyboardNavigation();
+        
+        // Style ampersands in portfolio names
+        this.styleAmpersands();
+    }
+
+    styleAmpersands() {
+        const portfolioNames = document.querySelectorAll('.portfolio-names');
+        portfolioNames.forEach(nameElement => {
+            const originalText = nameElement.textContent;
+            if (originalText.includes(' & ')) {
+                // Replace & with a styled span
+                const styledText = originalText.replace(' & ', ' <span class="elegant-ampersand">&</span> ');
+                nameElement.innerHTML = styledText;
+            }
+        });
     }
 
     addSkipLink() {

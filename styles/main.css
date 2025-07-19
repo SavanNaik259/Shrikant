@@ -807,21 +807,27 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-style: italic;
 }
 
-/* Elegant ampersand styling - makes & more decorative */
+/* Custom styling for ampersand character */
 .portfolio-names {
-    font-feature-settings: "liga" 1, "dlig" 1;
-    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" off;
 }
 
-/* Enhanced styling for a more elegant ampersand appearance */
-.portfolio-names::first-line {
-    font-variant-ligatures: discretionary-ligatures;
+/* Target the ampersand specifically with a different font and styling */
+.portfolio-names::before {
+    content: '';
 }
 
-/* Additional refinement for the ampersand character */
-.portfolio-names {
-    font-kerning: auto;
-    font-variant-numeric: oldstyle-nums;
+/* Elegant ampersand styling */
+.elegant-ampersand {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--accent-light);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 0.2em;
+    display: inline-block;
+    transform: translateY(-0.05em);
 }
 
 .play-button {
