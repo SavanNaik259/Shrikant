@@ -981,7 +981,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .portfolio-grid {
         gap: 1.5rem;
-        padding: 1rem 1.5rem 2rem;
+        padding: 1rem 1.5rem 0rem;
     }
 
     .portfolio-item {
@@ -1047,7 +1047,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .portfolio-grid {
         gap: 1rem;
-        padding: 1rem 1rem 2rem;
+        padding: 1rem 1rem 0rem;
     }
 
     .portfolio-item {
@@ -1450,7 +1450,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 
     .about-content {
-        padding: 4rem 0;
+        padding: 1rem 0 4rem 0;
     }
 
     .about-section-title {
