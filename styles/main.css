@@ -1713,14 +1713,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .about-content-text {
         padding-left: 0;
+        display: flex;
+        flex-direction: column;
     }
     
     .about-visual {
-        order: -1;
+        order: 1;
+        margin: 2rem 0;
     }
     
     .about-title {
         text-align: center;
+        order: 0;
     }
     
     .about-title::after {
@@ -1728,11 +1732,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         transform: translateX(-50%);
     }
     
+    .about-text-wrapper {
+        order: 2;
+    }
+    
     .about-image {
         height: 400px;
     }
-    
-
 }
 
 @media screen and (max-width: 768px) {
