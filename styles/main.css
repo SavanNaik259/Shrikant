@@ -7,7 +7,7 @@
 
 :root {
     /* Color Palette - Wedding Elegant Theme */
-    --primary-color: #f8f6f4;
+    --primary-color: #F0E9E0;
     --secondary-color: #e8e2d5;
     --accent-color: #d4af37;
     --accent-light: #f4e4a6;
@@ -40,6 +40,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    background-color: var(--primary-color);
 }
 
 /* Remove default focus outlines for touch devices */
