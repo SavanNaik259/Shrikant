@@ -803,28 +803,30 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
+    background: #ff0000;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition-smooth);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
 }
 
 .play-button i {
     font-size: 1.2rem;
-    color: var(--text-dark);
+    color: white;
     margin-left: 2px;
 }
 
 .portfolio-item:hover .play-button {
-    background: var(--accent-color);
+    background: #cc0000;
     transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
 }
 
 .portfolio-item:hover .play-button i {
-    color: var(--text-white);
+    color: white;
 }
 
 /* Portfolio Responsive Design */
@@ -872,10 +874,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .play-button {
         width: 50px;
         height: 50px;
+        background: #ff0000;
+        box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3);
     }
     
     .play-button i {
         font-size: 1rem;
+        color: white;
     }
 }
 
