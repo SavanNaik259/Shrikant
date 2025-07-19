@@ -1434,8 +1434,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         font-size: 2.2rem;
     }
     
-    .about-text-wrapper {
-        padding: 0 1.5rem;
+    .about-content-text {
+        padding: 0 0.5rem;
     }
 }
 
@@ -1473,8 +1473,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         font-size: 1.8rem;
     }
     
-    .about-text-wrapper {
-        padding: 0 1rem;
+    .about-content-text {
+        padding: 0;
     }
 }
 
@@ -1523,6 +1523,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     gap: 4rem;
     align-items: center;
     padding: 0 2rem;
+}
+
+.about-content-text {
+    padding: 0 1rem;
 }
 
 .about-visual {
@@ -1575,7 +1579,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .about-text-wrapper {
     text-align: justify;
-    padding: 0 3rem;
 }
 
 .about-description {
