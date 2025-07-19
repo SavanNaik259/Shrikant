@@ -739,6 +739,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         line-height: 1.5;
         text-align: left;
     }
+    
+    .about-image-container {
+        padding: 0 1.5rem;
+    }
+    
+    .about-text-wrapper {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -750,6 +758,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .modern-trends-text {
         font-size: 0.75rem;
+    }
+    
+    .about-image-container {
+        padding: 0 1rem;
+    }
+    
+    .about-text-wrapper {
+        padding: 0;
     }
 }
 
@@ -2078,6 +2094,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .contact-form-section {
         padding: 2.5rem;
+    }
+    
+    .about-image-container {
+        padding: 0 1.5rem;
+    }
+    
+    .about-text-wrapper {
+        padding: 0;
     }
     
     .form-row {
