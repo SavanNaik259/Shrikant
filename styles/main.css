@@ -1235,7 +1235,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* About Content Section */
 .about-content {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background: var(--primary-color);
 }
 
