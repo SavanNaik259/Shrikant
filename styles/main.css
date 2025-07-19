@@ -739,24 +739,24 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         line-height: 1.5;
         text-align: left;
     }
-    
+
     .about-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
         padding: 0 1rem;
     }
-    
+
     .about-image-container {
         padding: 0 1rem;
         order: 1;
     }
-    
+
     .about-text-wrapper {
-        padding: 0;
+        padding: 0 2rem;
         order: 2;
     }
-    
+
     .about-content-text {
         order: 2;
     }
@@ -772,31 +772,31 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .modern-trends-text {
         font-size: 0.75rem;
     }
-    
+
     .about-wrapper {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
         padding: 0 0.5rem;
     }
-    
+
     .about-image-container {
         padding: 0 0.5rem;
         order: 1;
     }
-    
+
     .about-text-wrapper {
         padding: 0 !important;
         margin: 0 !important;
         order: 2;
     }
-    
+
     .about-content-text {
         padding: 0 !important;
         margin: 0 !important;
         order: 2;
     }
-    
+
     .about-image {
         height: 300px;
     }
@@ -1096,7 +1096,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .portfolio-grid {
         gap: 1rem;
-        padding: 1rem 1rem 0rem;
+        padding: 1rem 1rem 1rem;
     }
 
     .portfolio-item {
@@ -1482,13 +1482,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .cta-title {
         font-size: 2.2rem;
     }
-    
+
     .about-image-container {
         padding: 0 1.5rem;
     }
-    
+
     .about-text-wrapper {
-        padding: 0;
+        padding: 0 2rem;
     }
 }
 
@@ -1525,16 +1525,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .cta-title {
         font-size: 1.8rem;
     }
-    
+
     .about-image-container {
         padding: 0 1rem;
     }
-    
+
     .about-text-wrapper {
         padding: 0 !important;
         margin: 0 !important;
     }
-    
+
     .about-content-text {
         padding: 0 !important;
         margin: 0 !important;
@@ -2080,30 +2080,30 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         gap: 3rem;
         text-align: center;
     }
-    
+
     .about-image-container {
         padding: 0 1.8rem;
     }
-    
+
     .about-text-wrapper {
         padding: 0;
     }
-    
+
     .contact-form-container {
         padding: 0 2rem;
     }
-    
+
     .contact-form-section {
         padding: 3rem;
         max-width: 700px;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2114,58 +2114,58 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .contact-section {
         padding: 5rem 0;
     }
-    
+
     .contact-container {
         padding: 0 1rem;
     }
-    
+
     .contact-title {
         font-size: 2.5rem;
         letter-spacing: 2px;
     }
-    
+
     .contact-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .contact-form-container {
         padding: 0 1rem;
     }
-    
+
     .contact-form-section {
         padding: 2.5rem;
     }
-    
+
     .about-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
         padding: 0 1rem;
     }
-    
+
     .about-image-container {
         padding: 0 1rem;
         order: 1;
     }
-    
+
     .about-text-wrapper {
-        padding: 0;
+        padding: 0 2rem;
         order: 2;
     }
-    
+
     .about-content-text {
         order: 2;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .footer {
         padding: 3rem 0 2rem;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
@@ -2177,38 +2177,38 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .contact-section {
         padding: 4rem 0;
     }
-    
+
     .contact-title {
         font-size: 2rem;
         letter-spacing: 1px;
     }
-    
+
     .contact-subtitle {
         font-size: 1rem;
     }
-    
+
     .contact-form-section {
         padding: 2rem;
         border-radius: 20px;
     }
-    
+
     .form-input,
     .form-textarea {
         padding: 1.2rem;
         border-radius: 12px;
         font-size: 0.9rem;
     }
-    
+
     .form-label {
         font-size: 0.8rem;
         margin-bottom: 0.6rem;
     }
-    
+
     .submit-btn {
         padding: 1.2rem 2rem;
         font-size: 1rem;
     }
-    
+
     .footer-brand h3 {
         font-size: 1.5rem;
     }
