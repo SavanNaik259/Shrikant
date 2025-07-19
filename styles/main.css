@@ -740,12 +740,25 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         text-align: left;
     }
     
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
     .about-image-container {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+        order: 1;
     }
     
     .about-text-wrapper {
         padding: 0;
+        order: 2;
+    }
+    
+    .about-content-text {
+        order: 2;
     }
 }
 
@@ -760,18 +773,32 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         font-size: 0.75rem;
     }
     
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+    
     .about-image-container {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
+        order: 1;
     }
     
     .about-text-wrapper {
         padding: 0 !important;
         margin: 0 !important;
+        order: 2;
     }
     
     .about-content-text {
         padding: 0 !important;
         margin: 0 !important;
+        order: 2;
+    }
+    
+    .about-image {
+        height: 300px;
     }
 }
 
@@ -2108,12 +2135,25 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         padding: 2.5rem;
     }
     
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
     .about-image-container {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+        order: 1;
     }
     
     .about-text-wrapper {
         padding: 0;
+        order: 2;
+    }
+    
+    .about-content-text {
+        order: 2;
     }
     
     .form-row {
