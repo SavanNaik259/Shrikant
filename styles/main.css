@@ -804,6 +804,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     letter-spacing: 0.5px;
     line-height: 1.1;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-style: normal;
 }
 
 .play-button {
@@ -877,6 +878,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .portfolio-names {
         font-size: 1.4rem;
         font-weight: 300;
+        font-style: normal;
     }
     
     .portfolio-date {
@@ -935,6 +937,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .portfolio-names {
         font-size: 1.2rem;
         font-weight: 300;
+        font-style: normal;
     }
     
     .portfolio-date {
