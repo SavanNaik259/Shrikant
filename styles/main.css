@@ -43,6 +43,32 @@ body {
     background-color: var(--primary-color);
 }
 
+/* Global Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--primary-color);
+}
+
 /* Remove default focus outlines for touch devices */
 button, a, input, textarea, select {
     outline: none;
@@ -699,7 +725,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .portfolio-grid::-webkit-scrollbar-track {
-    background: rgba(212, 175, 55, 0.1);
+    background: var(--primary-color);
     border-radius: 4px;
 }
 
