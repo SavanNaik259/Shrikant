@@ -1746,30 +1746,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .floating-label {
     position: absolute;
-    left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 0.9rem;
+    left: 1rem;
+    top: -0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--accent-color);
+    font-size: 0.75rem;
     font-weight: 500;
     pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-}
-
-.floating-input:focus + .floating-label,
-.floating-input:not(:placeholder-shown) + .floating-label {
-    top: -0.5rem;
-    left: 1rem;
-    font-size: 0.75rem;
-    opacity: 1;
-    background: rgba(255, 255, 255, 0.9);
-    -webkit-text-fill-color: var(--accent-color);
     padding: 0 0.5rem;
     border-radius: 4px;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+}
+
+.textarea-label {
+    top: -0.5rem;
+    left: 1rem;
 }
 
 .floating-textarea {
