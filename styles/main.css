@@ -675,18 +675,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .modern-trends-content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: left;
+    padding: 0 1rem;
 }
 
 .modern-trends-text {
     font-family: var(--font-secondary);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--text-light);
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
     text-align: justify;
 }
 
@@ -708,12 +709,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .modern-trends-content {
         max-width: 100%;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
     
     .modern-trends-text {
-        font-size: 0.9rem;
-        line-height: 1.6;
+        font-size: 0.8rem;
+        line-height: 1.5;
         text-align: left;
     }
 }
@@ -726,7 +727,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .modern-trends-text {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 }
 
