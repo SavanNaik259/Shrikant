@@ -807,6 +807,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-style: italic;
 }
 
+/* Special styling for the ampersand (&) symbol in portfolio names */
+.portfolio-names .ampersand {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--accent-light);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 0.3rem;
+    display: inline-block;
+    transform: scale(1.2);
+}
+
 .play-button {
     width: 60px;
     height: 60px;
