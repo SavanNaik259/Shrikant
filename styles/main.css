@@ -664,12 +664,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .modern-trends-title {
-    font-family: var(--font-soligant);
-    font-size: 2.8rem;
-    font-weight: 400;
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 300;
     color: var(--text-dark);
-    letter-spacing: 2px;
-    line-height: 1.2;
+    letter-spacing: 3px;
+    line-height: 1.3;
     margin-bottom: 4rem;
     text-transform: uppercase;
 }
@@ -681,13 +681,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .modern-trends-text {
-    font-family: var(--font-intervogue);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 1.8rem;
     text-align: justify;
-    opacity: 0.9;
 }
 
 .modern-trends-text:last-child {
@@ -701,9 +701,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .modern-trends-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: 3rem;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
     
     .modern-trends-content {
@@ -712,20 +712,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .modern-trends-text {
-        font-size: 1rem;
-        line-height: 1.7;
+        font-size: 0.9rem;
+        line-height: 1.6;
         text-align: left;
     }
 }
 
 @media screen and (max-width: 480px) {
     .modern-trends-title {
-        font-size: 1.8rem;
-        line-height: 1.3;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: 1px;
     }
     
     .modern-trends-text {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 }
 
