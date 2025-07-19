@@ -755,7 +755,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Portfolio Section */
 .portfolio {
-    padding: 2rem 0 0.25rem 0;
+    padding: 2rem 0 0 0;
     background: var(--primary-color);
 }
 
