@@ -269,23 +269,31 @@
                 </div>
                 
                 <div class="contact-content-grid">
-                    <!-- Contact Form -->
+                    <!-- Glassmorphic Contact Form -->
                     <div class="contact-form-section">
                         <form class="contact-form" id="contact-form">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" class="floating-input" placeholder="Your Name" required>
+                                    <label for="name" class="floating-label">Your Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="floating-input" placeholder="Email Address" required>
+                                    <label for="email" class="floating-label">Email Address</label>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Email Address" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="date" id="wedding-date" name="wedding-date" placeholder="Wedding Date" required>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="tel" id="phone" name="phone" class="floating-input" placeholder="Phone Number" required>
+                                    <label for="phone" class="floating-label">Phone Number</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" id="wedding-date" name="wedding-date" class="floating-input" required>
+                                    <label for="wedding-date" class="floating-label">Wedding Date</label>
+                                </div>
                             </div>
                             <div class="form-group full-width">
-                                <textarea id="message" name="message" placeholder="Tell us about your special day..." rows="5" required></textarea>
+                                <textarea id="message" name="message" class="floating-textarea" placeholder="Tell us about your special day, your vision, and what makes your love story unique..." rows="5" required></textarea>
                             </div>
                             <button type="submit" class="submit-btn">
                                 <span>Send Message</span>
@@ -294,48 +302,58 @@
                         </form>
                     </div>
                     
-                    <!-- Contact Info -->
+                    <!-- Floating Contact Info Cards -->
                     <div class="contact-info-section">
-                        <div class="contact-info-card">
-                            <h3>Contact Information</h3>
+                        <div class="floating-card">
+                            <h3 class="card-title">Contact Information</h3>
                             <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <span class="label">Email</span>
-                                    <span class="value">hello@vedicvows.com</span>
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">hello@vedicvows.com</span>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <span class="label">Phone</span>
-                                    <span class="value">+91 98765 43210</span>
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+91 98765 43210</span>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span class="label">Location</span>
-                                    <span class="value">Mumbai, Maharashtra</span>
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Mumbai, Maharashtra</span>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Social Media -->
-                        <div class="social-media-card">
-                            <h3>Follow Us</h3>
-                            <div class="social-links">
-                                <a href="#" class="social-link instagram" aria-label="Instagram">
+                        <!-- Enhanced Social Media -->
+                        <div class="floating-card social-section">
+                            <h3 class="card-title">Follow Our Journey</h3>
+                            <div class="social-grid">
+                                <a href="#" class="social-item instagram" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
                                 </a>
-                                <a href="#" class="social-link facebook" aria-label="Facebook">
+                                <a href="#" class="social-item facebook" aria-label="Facebook">
                                     <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
                                 </a>
-                                <a href="#" class="social-link youtube" aria-label="YouTube">
+                                <a href="#" class="social-item youtube" aria-label="YouTube">
                                     <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
                                 </a>
-                                <a href="#" class="social-link whatsapp" aria-label="WhatsApp">
+                                <a href="#" class="social-item whatsapp" aria-label="WhatsApp">
                                     <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
                                 </a>
                             </div>
                         </div>
