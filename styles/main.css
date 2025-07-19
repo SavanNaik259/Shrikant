@@ -1439,7 +1439,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0 0.05rem;
+        padding: 0 0.01rem;
     }
 }
 
@@ -1482,7 +1482,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0;
+        padding: 0 0.01rem;
     }
 }
 
@@ -1538,7 +1538,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .about-text-wrapper {
-    padding: 0 0.1rem;
+    padding: 0 0.01rem;
 }
 
 .about-visual {
@@ -2030,7 +2030,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0 0.08rem;
+        padding: 0 0.01rem;
     }
     
     .contact-form-container {
