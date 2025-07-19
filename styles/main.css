@@ -807,6 +807,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-style: italic;
 }
 
+/* Elegant ampersand styling - makes & more decorative */
+.portfolio-names {
+    font-feature-settings: "liga" 1, "dlig" 1;
+    text-rendering: optimizeLegibility;
+}
+
+/* Enhanced styling for a more elegant ampersand appearance */
+.portfolio-names::first-line {
+    font-variant-ligatures: discretionary-ligatures;
+}
+
+/* Additional refinement for the ampersand character */
+.portfolio-names {
+    font-kerning: auto;
+    font-variant-numeric: oldstyle-nums;
+}
+
 .play-button {
     width: 60px;
     height: 60px;
