@@ -1646,6 +1646,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .about-text-wrapper {
     text-align: justify;
+    padding: 0 2rem;
 }
 
 .about-description {
