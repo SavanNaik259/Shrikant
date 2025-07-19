@@ -1558,13 +1558,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     margin-bottom: 3rem;
     text-transform: uppercase;
     position: relative;
+    text-align: center;
 }
 
 .about-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80px;
     height: 3px;
     background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
