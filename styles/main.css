@@ -1433,6 +1433,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .cta-title {
         font-size: 2.2rem;
     }
+    
+    .about-text-wrapper {
+        padding: 0 1.5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1467,6 +1471,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .cta-title {
         font-size: 1.8rem;
+    }
+    
+    .about-text-wrapper {
+        padding: 0 1rem;
     }
 }
 
@@ -1567,6 +1575,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .about-text-wrapper {
     text-align: justify;
+    padding: 0 3rem;
 }
 
 .about-description {
