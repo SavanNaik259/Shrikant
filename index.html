@@ -261,35 +261,142 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-content" id="contact">
+        <section class="contact-section" id="contact">
             <div class="contact-container">
-                <h2 class="contact-title">GET IN TOUCH</h2>
-                <div class="contact-form-wrapper">
-                    <form class="modern-contact-form" id="contact-form">
-                        <div class="form-row">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            <input type="email" id="email" name="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-row">
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                            <input type="date" id="wedding-date" name="wedding-date" required>
-                        </div>
-                        <textarea id="message" name="message" placeholder="Tell us about your special day" rows="5" required></textarea>
-                        <button type="submit" class="modern-submit-button">SEND MESSAGE</button>
-                    </form>
+                <div class="contact-header">
+                    <h2 class="contact-title">GET IN TOUCH</h2>
+                    <p class="contact-subtitle">Let's capture your love story together</p>
                 </div>
                 
-                <div class="contact-info-simple">
-                    <div class="contact-detail">
-                        <span>Email:</span> hello@weddingphotography.com
+                <div class="contact-content-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" id="wedding-date" name="wedding-date" placeholder="Wedding Date" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <textarea id="message" name="message" placeholder="Tell us about your special day..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
-                    <div class="contact-detail">
-                        <span>Phone:</span> +1 (555) 123-4567
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info-section">
+                        <div class="contact-info-card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="label">Email</span>
+                                    <span class="value">hello@vedicvows.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="label">Phone</span>
+                                    <span class="value">+91 98765 43210</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="label">Location</span>
+                                    <span class="value">Mumbai, Maharashtra</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="social-media-card">
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link instagram" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link facebook" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link youtube" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link whatsapp" aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Vedic Vows</h3>
+                    <p>Capturing timeless moments with artistic excellence</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#portfolio">Wedding Photography</a></li>
+                            <li><a href="#portfolio">Pre-Wedding Shoots</a></li>
+                            <li><a href="#portfolio">Engagement Photos</a></li>
+                            <li><a href="#portfolio">Traditional Ceremonies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Vedic Vows. All rights reserved.</p>
+                </div>
+                <div class="footer-developer">
+                    <p>Developed by <a href="https://savannaik.netlify.app" target="_blank" rel="noopener noreferrer">Savan Naik</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="scripts/main.js"></script>
