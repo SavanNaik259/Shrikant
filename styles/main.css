@@ -1439,7 +1439,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0 0.25rem;
+        padding: 0 0.1rem;
     }
 }
 
@@ -1538,7 +1538,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .about-text-wrapper {
-    padding: 0 0.5rem;
+    padding: 0 0.25rem;
 }
 
 .about-visual {
