@@ -1555,37 +1555,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     display: block;
 }
 
-.about-image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    padding: 2rem;
-    color: white;
-}
 
-.overlay-text {
-    text-align: center;
-}
-
-.experience-years {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: var(--accent-color);
-    line-height: 1;
-}
-
-.experience-label {
-    display: block;
-    font-family: var(--font-intervogue);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 0.5rem;
-}
 
 .about-content-text {
     padding-left: 2rem;
@@ -1630,46 +1600,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .about-description:last-of-type {
-    margin-bottom: 3rem;
-}
-
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-}
-
-.stat-number {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    display: block;
-    font-family: var(--font-intervogue);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-light);
+    margin-bottom: 0;
 }
 
 /* Modern Contact Section */
@@ -1798,9 +1729,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         height: 400px;
     }
     
-    .about-stats {
-        gap: 1.5rem;
-    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1826,23 +1755,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         height: 350px;
     }
     
-    .about-stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-    
-    .stat-item {
-        padding: 1rem;
-    }
-    
-    .stat-number {
-        font-size: 1.5rem;
-    }
-    
-    .experience-years {
-        font-size: 2.5rem;
-    }
+
     
     .form-row {
         grid-template-columns: 1fr;
@@ -1889,25 +1802,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         transform: rotate(0deg);
     }
     
-    .experience-years {
-        font-size: 2rem;
-    }
-    
-    .experience-label {
-        font-size: 0.7rem;
-    }
-    
-    .about-stats {
-        margin-top: 1.5rem;
-    }
-    
-    .stat-number {
-        font-size: 1.3rem;
-    }
-    
-    .stat-label {
-        font-size: 0.75rem;
-    }
+
     
     .modern-contact-form input,
     .modern-contact-form textarea {
