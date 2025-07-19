@@ -807,29 +807,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-style: italic;
 }
 
-/* Custom styling for ampersand character */
-.portfolio-names {
-    font-feature-settings: "liga" off;
-}
-
-/* Target the ampersand specifically with a different font and styling */
-.portfolio-names::before {
-    content: '';
-}
-
-/* Elegant ampersand styling */
-.elegant-ampersand {
-    font-family: 'Baskerville', 'Times New Roman', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: var(--accent-light);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    margin: 0 0.2em;
-    display: inline-block;
-    transform: translateY(-0.05em);
-}
-
 .play-button {
     width: 60px;
     height: 60px;
