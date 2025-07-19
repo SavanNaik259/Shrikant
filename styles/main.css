@@ -767,23 +767,22 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .portfolio-title {
-    font-family: var(--font-primary);
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    color: var(--text-dark);
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    letter-spacing: 4px;
+    line-height: 1.4;
     margin-bottom: 4rem;
-    letter-spacing: 3px;
     text-transform: uppercase;
     position: relative;
+    text-align: center;
     display: inline-block;
     width: 100%;
     padding: 0 2rem;
 }
 
-
-
-.portfolio-title::before {
+.portfolio-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -793,18 +792,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     height: 3px;
     background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
     border-radius: 2px;
-}
-
-.portfolio-title::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 1px;
-    background: var(--accent-color);
-    opacity: 0.5;
 }
 
 .portfolio-grid {
@@ -1619,6 +1606,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     line-height: 1.4;
     margin-bottom: 4rem;
     text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+
+.contact-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+    border-radius: 2px;
 }
 
 .contact-form-wrapper {
