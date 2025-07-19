@@ -1838,26 +1838,30 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-contact-items {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-contact-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
-    color: var(--text-light);
+    color: #ffffff;
     font-family: var(--font-secondary);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .footer-contact-item i {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--accent-color);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .footer-contact-item span {
@@ -1938,6 +1942,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-social {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .footer-social a {
