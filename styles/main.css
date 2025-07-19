@@ -1,3 +1,22 @@
+/* Font Imports */
+@font-face {
+    font-family: 'Soligant';
+    src: url('../fonts/Soligant.woff2') format('woff2'),
+         url('../fonts/Soligant.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IntervogueSoft';
+    src: url('../fonts/IntervogueSoft.woff2') format('woff2'),
+         url('../fonts/IntervogueSoft.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -20,8 +39,8 @@
     /* Typography */
     --font-primary: 'Playfair Display', serif;
     --font-secondary: 'Inter', sans-serif;
-    --font-soligant: "Soligant", serif;
-    --font-intervogue: "IntervogueSoft", sans-serif;
+    --font-soligant: "Soligant", 'Playfair Display', serif;
+    --font-intervogue: "IntervogueSoft", 'Inter', sans-serif;
     
     /* Spacing */
     --section-padding: 4rem 0;

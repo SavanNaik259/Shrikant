@@ -23,6 +23,9 @@ A modern, responsive wedding photographer website featuring an elegant, mobile-f
   - Applied consistent #F0E9E0 background color across all sections
   - Styled "&" symbols in portfolio couples' names with golden accent
   - Updated scrollbar styling to match site background
+  - Added Modern Trends section with custom typography
+  - Implemented custom fonts: Soligant for headings, IntervogueSoft for body text
+  - Added font-face declarations with fallbacks to existing fonts
 
 ## User Preferences
 - Prefers single-page application structure
