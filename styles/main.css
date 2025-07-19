@@ -1713,6 +1713,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .about-content-text {
         padding-left: 0;
+    }
+    
+    .about-visual {
         order: -1;
     }
     
