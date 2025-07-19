@@ -776,27 +776,35 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .portfolio-date {
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-    opacity: 0.9;
+    font-family: var(--font-secondary);
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    opacity: 0.8;
+    color: var(--accent-light);
 }
 
 .portfolio-location {
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 0.8rem;
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
     opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .portfolio-names {
     font-family: var(--font-primary);
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 1.2;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-style: italic;
 }
 
 .play-button {
@@ -868,7 +876,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .portfolio-names {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+    
+    .portfolio-date {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .portfolio-location {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
     }
     
     .play-button {
@@ -915,12 +935,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .portfolio-names {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-style: italic;
     }
     
-    .portfolio-date,
+    .portfolio-date {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+    
     .portfolio-location {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
     }
 }
 
