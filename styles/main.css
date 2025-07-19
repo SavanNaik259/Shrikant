@@ -1439,7 +1439,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
     
     .about-text-wrapper {
-        padding: 0 0.1rem;
+        padding: 0 0.05rem;
     }
 }
 
@@ -1538,7 +1538,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .about-text-wrapper {
-    padding: 0 0.25rem;
+    padding: 0 0.1rem;
 }
 
 .about-visual {
@@ -2023,6 +2023,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+    }
+    
+    .about-image-container {
+        padding: 0 1.8rem;
+    }
+    
+    .about-text-wrapper {
+        padding: 0 0.08rem;
     }
     
     .contact-form-container {
