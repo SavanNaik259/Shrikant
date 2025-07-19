@@ -1660,14 +1660,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-style: italic;
 }
 
-.contact-content-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 6rem;
-    align-items: start;
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Glassmorphic Contact Form */
+/* Centered Contact Form */
 .contact-form-section {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(15px);
@@ -1679,6 +1678,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         inset 0 1px 0 rgba(255, 255, 255, 0.6);
     position: relative;
     overflow: hidden;
+    max-width: 800px;
+    width: 100%;
 }
 
 .contact-form-section::before {
@@ -1711,9 +1712,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     grid-column: 1 / -1;
 }
 
-.floating-input {
+.form-label {
+    display: block;
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-input {
     width: 100%;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -1726,7 +1738,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     outline: none;
 }
 
-.floating-input:focus {
+.form-input:focus {
     border-color: var(--accent-color);
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 
@@ -1735,37 +1747,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateY(-2px);
 }
 
-.floating-input::placeholder {
+.form-input::placeholder {
     color: #888;
     transition: all 0.3s ease;
 }
 
-.floating-input:focus::placeholder {
-    color: transparent;
+.form-input:focus::placeholder {
+    color: #aaa;
 }
 
-.floating-label {
-    position: absolute;
-    left: 1rem;
-    top: -0.5rem;
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--accent-color);
-    font-size: 0.75rem;
-    font-weight: 500;
-    pointer-events: none;
-    padding: 0 0.5rem;
-    border-radius: 4px;
-    opacity: 1;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 10;
-}
-
-.textarea-label {
-    top: -0.5rem;
-    left: 1rem;
-}
-
-.floating-textarea {
+.form-textarea {
     width: 100%;
     min-height: 140px;
     padding: 1.5rem;
@@ -1782,12 +1773,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     outline: none;
 }
 
-.floating-textarea:focus {
+.form-textarea:focus {
     border-color: var(--accent-color);
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 
         0 0 0 4px rgba(211, 172, 126, 0.1),
         0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-textarea::placeholder {
+    color: #888;
 }
 
 .submit-btn {
@@ -1838,174 +1834,34 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateY(-1px);
 }
 
-/* Floating Contact Info Cards */
-.contact-info-section {
+/* Footer Contact Information */
+.footer-contact-items {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
-.floating-card {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.floating-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-    border-radius: 20px 20px 0 0;
-}
-
-.floating-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 
-        0 30px 60px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.card-title {
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-.contact-item {
+.footer-contact-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: translateX(5px);
-}
-
-.contact-item:last-child {
-    margin-bottom: 0;
-}
-
-.contact-icon {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 8px 20px rgba(211, 172, 126, 0.3);
-    transition: all 0.3s ease;
-}
-
-.contact-item:hover .contact-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 12px 25px rgba(211, 172, 126, 0.4);
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-label {
-    font-family: var(--font-secondary);
-    font-size: 0.85rem;
-    color: #666;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.3rem;
-}
-
-.contact-value {
-    font-family: var(--font-secondary);
-    font-size: 1.1rem;
-    color: #333;
-    font-weight: 600;
-}
-
-/* Enhanced Social Media */
-.social-section {
-    text-align: center;
-}
-
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.social-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.social-item.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-item.facebook {
-    background: linear-gradient(45deg, #1877f2, #3b82f6);
-}
-
-.social-item.youtube {
-    background: linear-gradient(45deg, #ff0000, #ff4444);
-}
-
-.social-item.whatsapp {
-    background: linear-gradient(45deg, #25d366, #128c7e);
-}
-
-.social-item:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.social-item i {
-    font-size: 1.5rem;
-    color: white;
-    margin-right: 0.8rem;
-}
-
-.social-item span {
-    color: white;
+    gap: 1rem;
+    color: var(--text-light);
     font-family: var(--font-secondary);
     font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+.footer-contact-item i {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.footer-contact-item span {
+    color: inherit;
 }
 
 /* Footer Styles */
@@ -2140,17 +1996,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         text-align: center;
     }
     
-    .contact-content-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
+    .contact-form-container {
+        padding: 0 2rem;
     }
     
     .contact-form-section {
         padding: 3rem;
-    }
-    
-    .floating-card {
-        padding: 2rem;
+        max-width: 700px;
     }
     
     .footer-content {
@@ -2183,8 +2035,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         font-size: 1.1rem;
     }
     
-    .contact-content-grid {
-        gap: 3rem;
+    .contact-form-container {
+        padding: 0 1rem;
     }
     
     .contact-form-section {
@@ -2194,15 +2046,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .form-row {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-    }
-    
-    .floating-card {
-        padding: 2rem;
-    }
-    
-    .social-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
     }
     
     .footer {
@@ -2235,49 +2078,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         border-radius: 20px;
     }
     
-    .floating-input,
-    .floating-textarea {
+    .form-input,
+    .form-textarea {
         padding: 1.2rem;
         border-radius: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .form-label {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
     }
     
     .submit-btn {
         padding: 1.2rem 2rem;
         font-size: 1rem;
-    }
-    
-    .floating-card {
-        padding: 1.5rem;
-        border-radius: 15px;
-    }
-    
-    .card-title {
-        font-size: 1.3rem;
-    }
-    
-    .contact-item {
-        padding: 0.8rem;
-        gap: 1rem;
-    }
-    
-    .contact-icon {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .social-item {
-        padding: 1.2rem;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .social-item i {
-        margin-right: 0;
-        margin-bottom: 0.3rem;
-    }
-    
-    .social-item span {
-        font-size: 0.8rem;
     }
     
     .footer-brand h3 {
