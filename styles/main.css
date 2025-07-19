@@ -678,7 +678,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
-    padding: 0;
+    padding: 0 2rem;
 }
 
 .modern-trends-text {
@@ -709,7 +709,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     
     .modern-trends-content {
         max-width: 100%;
-        padding: 0;
+        padding: 0 1rem;
     }
     
     .modern-trends-text {
