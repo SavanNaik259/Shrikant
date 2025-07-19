@@ -1559,30 +1559,46 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .about-content-text {
     padding-left: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.about-visual {
-    order: 1;
-    margin: 2rem 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-title {
-    order: 0;
+    text-align: center;
 }
 
 .about-title::after {
-transform: translateX(-50%);
-    }
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .about-text-wrapper {
-        order: 2;
-    }
+.about-image-container {
+    margin: 3rem 0;
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 3rem auto;
+}
 
-    .about-image {
-        height: 400px;
-    }
+.about-text-wrapper {
+    text-align: justify;
+}
+
+.about-description {
+    font-family: var(--font-intervogue);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.about-description:last-of-type {
+    margin-bottom: 0;
 }
 
 /* Modern Contact Section */
@@ -1692,4 +1708,3 @@ transform: translateX(-50%);
         gap: 3rem;
         text-align: center;
     }
-</style>
