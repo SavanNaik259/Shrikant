@@ -1486,7 +1486,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* Contact Hero Section */
 .contact-hero {
     padding: 8rem 0 4rem;
-    background: var(--primary-color);
+ /*   background: var(--primary-color);*/
     text-align: center;
 }
 
@@ -1719,11 +1719,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     left: -50%;
     width: 200%;
     height: 200%;
-    background: 
+    background:#F0E9E0;
+  /*  background: 
         radial-gradient(circle at 20% 80%, rgba(211, 172, 126, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(193, 154, 108, 0.12) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(211, 172, 126, 0.08) 0%, transparent 50%);
-    animation: gentleFloat 25s ease-in-out infinite;
+    animation: gentleFloat 25s ease-in-out infinite;*/
 }
 
 @keyframes gentleFloat {
@@ -1748,20 +1749,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .contact-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-size: 1.8rem;
     font-weight: 300;
-    background: linear-gradient(135deg, #2c2c2c 0%, #6b6b6b 50%, var(--accent-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #6b6b6b;
     letter-spacing: 4px;
-    line-height: 1.2;
-    margin-bottom: 2rem;
+    line-height: 1.4;
+    margin-bottom: 4rem;
     text-transform: uppercase;
     position: relative;
-    opacity: 0;
-    animation: titleReveal 1.2s ease-out 0.3s forwards;
+    text-align: center;
+    width: 100%;
 }
 
 @keyframes titleReveal {
@@ -1778,14 +1776,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .contact-title::after {
     content: '';
     position: absolute;
-    bottom: -25px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 0;
-    height: 4px;
+    width: 80px;
+    height: 3px;
     background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
     border-radius: 2px;
-    animation: lineExpand 1s ease-out 1.5s forwards;
 }
 
 @keyframes lineExpand {
