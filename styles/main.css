@@ -1821,7 +1821,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .form-input::placeholder, .form-textarea::placeholder {
-    color: #999;
+    color: #666;
     font-size: 1rem;
 }
 
@@ -1847,12 +1847,33 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     border-bottom: 2px solid #d0d0d0;
     min-width: 100px;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.phone-prefix:hover {
+    border-bottom-color: #B49E64;
 }
 
 .flag-icon {
-    width: 20px;
-    height: 14px;
-    border-radius: 2px;
+    width: 24px;
+    height: 16px;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #FF9933 33%, white 33%, white 66%, #138A42 66%);
+    position: relative;
+    display: inline-block;
+}
+
+.flag-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border: 1px solid #052966;
+    border-radius: 50%;
 }
 
 .country-code {
@@ -1861,7 +1882,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .phone-prefix i {
-    color: #999;
+    color: #666;
     font-size: 0.8rem;
 }
 
@@ -1872,19 +1893,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Date Input Styling */
 .date-input {
-    color: transparent;
+    color: #666;
 }
 
-.date-input:focus,
-.date-input:valid {
-    color: #666;
+.date-input::-webkit-calendar-picker-indicator {
+    color: #B49E64;
+    cursor: pointer;
 }
 
 .date-label {
     position: absolute;
     left: 0;
     top: 1rem;
-    color: #999;
+    color: #666;
     font-size: 1rem;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -1899,7 +1920,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     position: absolute;
     right: 0;
     top: 1rem;
-    color: #999;
+    color: #B49E64;
     font-size: 1rem;
     pointer-events: none;
 }

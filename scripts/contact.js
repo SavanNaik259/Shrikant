@@ -2,75 +2,26 @@
 class ContactForm {
     constructor() {
         this.form = document.getElementById('contact-form');
-        this.submitButton = this.form.querySelector('.submit-button');
+        this.submitButton = this.form.querySelector('.submit-btn');
         this.init();
     }
 
     init() {
         this.form.addEventListener('submit', this.handleSubmit.bind(this));
-        this.setupInputAnimations();
+        this.setupPhonePrefix();
     }
 
-    setupInputAnimations() {
-        const inputs = this.form.querySelectorAll('input, textarea');
-        
-        inputs.forEach(input => {
-            // Handle date input labels differently
-            if (input.type === 'date') {
-                const label = input.nextElementSibling;
-                if (label && label.tagName === 'LABEL') {
-                    // Always keep date labels in active position
-                    label.style.transform = 'translateY(-1.5rem)';
-                    label.style.fontSize = '0.85rem';
-                    label.style.color = 'var(--accent-color)';
-                }
-            }
-
-            // Handle initial state for inputs with values
-            if (input.value.trim() !== '') {
-                this.activateLabel(input);
-            }
-
-            // Handle input events
-            input.addEventListener('input', (e) => {
-                if (e.target.value.trim() !== '') {
-                    this.activateLabel(e.target);
-                } else if (e.target.type !== 'date') {
-                    this.deactivateLabel(e.target);
-                }
+    setupPhonePrefix() {
+        const phonePrefix = document.querySelector('.phone-prefix');
+        if (phonePrefix) {
+            phonePrefix.addEventListener('click', () => {
+                // Simple click feedback - could be expanded for dropdown functionality
+                console.log('Country code selector clicked');
             });
-
-            // Handle focus events
-            input.addEventListener('focus', (e) => {
-                this.activateLabel(e.target);
-            });
-
-            // Handle blur events
-            input.addEventListener('blur', (e) => {
-                if (e.target.value.trim() === '' && e.target.type !== 'date') {
-                    this.deactivateLabel(e.target);
-                }
-            });
-        });
-    }
-
-    activateLabel(input) {
-        const label = input.nextElementSibling;
-        if (label && label.tagName === 'LABEL') {
-            label.style.transform = 'translateY(-1.5rem)';
-            label.style.fontSize = '0.85rem';
-            label.style.color = 'var(--accent-color)';
         }
     }
 
-    deactivateLabel(input) {
-        const label = input.nextElementSibling;
-        if (label && label.tagName === 'LABEL') {
-            label.style.transform = 'translateY(0)';
-            label.style.fontSize = '1rem';
-            label.style.color = '#999';
-        }
-    }
+
 
     async handleSubmit(e) {
         e.preventDefault();
