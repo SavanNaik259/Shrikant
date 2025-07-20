@@ -1,23 +1,7 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
-@font-face {
-    font-family: 'Soligant';
-    src: url('../fonts/Soligant.woff2') format('woff2'),
-         url('../fonts/Soligant.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'IntervogueSoft';
-    src: url('../fonts/IntervogueSoft.woff2') format('woff2'),
-         url('../fonts/IntervogueSoft.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+/* Custom fonts removed - using Google Fonts fallbacks */
 
 /* Reset and Base Styles */
 * {
@@ -41,8 +25,8 @@
     /* Typography */
     --font-primary: 'Playfair Display', serif;
     --font-secondary: 'Inter', sans-serif;
-    --font-soligant: "Soligant", 'Playfair Display', serif;
-    --font-intervogue: "IntervogueSoft", 'Inter', sans-serif;
+    --font-soligant: 'Playfair Display', serif;
+    --font-intervogue: 'Inter', sans-serif;
 
     /* Spacing */
     --section-padding: 4rem 0;
@@ -2087,6 +2071,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .phone-input {
         flex: 1;
         width: auto;
+    }
+
+    /* Specific spacing for Event Date field (6th form group - left-aligned) */
+    .form-group:nth-child(6) {
+        margin-left: 8% !important;
+    }
+
+    /* Specific spacing for No. of Days field (7th form group - right-aligned) */
+    .form-group:nth-child(7) {
+        margin-right: 8% !important;
     }
 
     .submit-btn {
