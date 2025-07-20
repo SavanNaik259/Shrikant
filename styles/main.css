@@ -1928,10 +1928,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    color: #ffffff;
+    color: #cccccc;
     font-family: var(--font-secondary);
     font-size: 1rem;
     font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-contact-item:hover {
+    color: var(--accent-color);
 }
 
 .footer-contact-item i {
