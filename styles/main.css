@@ -2053,23 +2053,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
-    /* Override for Event Date field to provide more left spacing */
-    .contact-form .date-field-group {
-        align-self: flex-start !important;
-        margin-left: 5% !important;
-        margin-right: 0 !important;
-        width: 75vw !important;
-        max-width: 350px !important;
-    }
 
-    /* Override for No. of Days field to provide more right spacing */
-    .contact-form .days-field-group {
-        align-self: flex-end !important;
-        margin-right: 5% !important;
-        margin-left: 0 !important;
-        width: 75vw !important;
-        max-width: 350px !important;
-    }
 
     .form-input, .form-textarea, .form-select {
         font-size: 0.95rem;
