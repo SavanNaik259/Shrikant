@@ -1705,7 +1705,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .contact-header {
     text-align: center;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -1716,7 +1716,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     color: #6b6b6b;
     letter-spacing: 4px;
     line-height: 1.4;
-    margin-bottom: 4rem;
+    margin-bottom: 0.1rem!important;
     text-transform: uppercase;
     position: relative;
     text-align: center;
@@ -1745,7 +1745,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-family: var(--font-secondary);
     font-size: 1.4rem;
     color: #666;
-    margin-top: 3rem;
+    margin-top: 1rem;
     opacity: 0;
     font-style: italic;
     animation: subtitleFade 1s ease-out 2s forwards;
@@ -2227,16 +2227,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    color: #cccccc;
-    font-family: var(--font-secondary);
+    color: #b8b8b8;
+    font-family: 'Inter', 'Poppins', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
 
 .footer-contact-item:hover {
     color: var(--accent-color);
+    background: rgba(184, 134, 11, 0.1);
+    transform: translateY(-1px);
 }
 
 .footer-contact-item i {
@@ -2247,6 +2252,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     justify-content: center;
     color: var(--accent-color);
     font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-contact-item:hover i {
+    transform: scale(1.1);
 }
 
 .footer-contact-item span {
@@ -2274,18 +2284,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .footer-brand h3 {
-    font-family: var(--font-primary);
-    font-size: 2rem;
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-size: 2.2rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.3;
 }
 
 .footer-brand p {
-    font-family: var(--font-secondary);
+    font-family: 'Inter', 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #cccccc;
-    line-height: 1.6;
+    color: #b8b8b8;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    max-width: 300px;
 }
 
 .footer-links {
@@ -2295,11 +2310,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .footer-section h4 {
-    font-family: var(--font-primary);
-    font-size: 1.2rem;
-    color: white;
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #f5f5f5;
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
 }
 
 .footer-section ul {
@@ -2313,15 +2330,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .footer-section ul li a {
-    font-family: var(--font-secondary);
-    color: #cccccc;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    color: #b0b0b0;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .footer-section ul li a:hover {
     color: var(--accent-color);
+    transform: translateX(3px);
 }
 
 .footer-social {
@@ -2361,17 +2382,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .footer-copyright p,
 .footer-developer p {
-    font-family: var(--font-secondary);
+    font-family: 'Inter', 'Poppins', sans-serif;
     font-size: 0.9rem;
-    color: #999;
+    color: #888;
     margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.3px;
 }
 
 .footer-developer a {
     color: var(--accent-color);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .footer-developer a:hover {
