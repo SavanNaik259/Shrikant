@@ -2086,18 +2086,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Additional mobile spacing fixes for specific fields */
 @media screen and (max-width: 768px) {
-    /* Event Date field - should be on LEFT with extra spacing */
+    /* Event Date field - should be on LEFT with just enough spacing to show label */
     .form-group.date-field-group {
         align-self: flex-start !important;
-        margin-left: 18% !important;
+        margin-left: 17% !important;
         margin-right: 0 !important;
     }
     
-    /* Days field - should be on RIGHT with extra spacing */  
+    /* Days field - should be on RIGHT with just enough spacing to show label */  
     .form-group.days-field-group {
         align-self: flex-end !important;
         margin-left: 0 !important;
-        margin-right: 18% !important;
+        margin-right: 17% !important;
     }
 }
 
