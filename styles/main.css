@@ -949,10 +949,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         letter-spacing: 2px;
     }
 
-    .portfolio-title::before {
-        width: 60px;
-        height: 2px;
-    }
+
 
 
 
@@ -1013,10 +1010,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         letter-spacing: 1px;
     }
 
-    .portfolio-title::before {
-        width: 50px;
-        height: 2px;
-    }
+
 
 
 
