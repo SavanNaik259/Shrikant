@@ -12,30 +12,19 @@ class ContactForm {
         this.setupDateInput();
     }
 
-    setupPhonePrefix() {
+    async setupPhonePrefix() {
         const phonePrefix = document.querySelector('.phone-prefix');
         const countryCodeSpan = document.querySelector('.country-code');
         const flagIcon = document.querySelector('.flag-icon');
         
         if (phonePrefix && countryCodeSpan && flagIcon) {
-            // Country data with proper flag codes
-            const countries = [
-                { code: '+91', name: 'India', flag: 'in' },
-                { code: '+1', name: 'United States', flag: 'us' },
-                { code: '+44', name: 'United Kingdom', flag: 'gb' },
-                { code: '+49', name: 'Germany', flag: 'de' },
-                { code: '+33', name: 'France', flag: 'fr' },
-                { code: '+86', name: 'China', flag: 'cn' },
-                { code: '+81', name: 'Japan', flag: 'jp' },
-                { code: '+39', name: 'Italy', flag: 'it' },
-                { code: '+7', name: 'Russia', flag: 'ru' },
-                { code: '+55', name: 'Brazil', flag: 'br' }
-            ];
+            // Load countries data from REST Countries API
+            const countries = await this.loadCountriesData();
             
             let currentCountryIndex = 0;
             
             // Set initial flag
-            this.updateFlag(flagIcon, countries[currentCountryIndex].flag);
+            this.updateFlag(flagIcon, countries[currentCountryIndex]);
             
             phonePrefix.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -45,26 +34,102 @@ class ContactForm {
                 const selectedCountry = countries[currentCountryIndex];
                 
                 // Update country code
-                countryCodeSpan.textContent = selectedCountry.code;
+                countryCodeSpan.textContent = selectedCountry.dialCode;
                 
                 // Update flag
-                this.updateFlag(flagIcon, selectedCountry.flag);
+                this.updateFlag(flagIcon, selectedCountry);
                 
-                console.log(`Selected country: ${selectedCountry.name} (${selectedCountry.code})`);
+                console.log(`Selected country: ${selectedCountry.name} (${selectedCountry.dialCode})`);
             });
         }
     }
 
-    updateFlag(flagElement, countryCode) {
-        // Remove all existing flag classes
+    async loadCountriesData() {
+        // Pre-defined country data with popular countries
+        const popularCountries = [
+            { name: 'India', dialCode: '+91', code: 'IN', flag: null },
+            { name: 'United States', dialCode: '+1', code: 'US', flag: null },
+            { name: 'United Kingdom', dialCode: '+44', code: 'GB', flag: null },
+            { name: 'Germany', dialCode: '+49', code: 'DE', flag: null },
+            { name: 'France', dialCode: '+33', code: 'FR', flag: null },
+            { name: 'China', dialCode: '+86', code: 'CN', flag: null },
+            { name: 'Japan', dialCode: '+81', code: 'JP', flag: null },
+            { name: 'Italy', dialCode: '+39', code: 'IT', flag: null },
+            { name: 'Russia', dialCode: '+7', code: 'RU', flag: null },
+            { name: 'Brazil', dialCode: '+55', code: 'BR', flag: null },
+            { name: 'Canada', dialCode: '+1', code: 'CA', flag: null },
+            { name: 'Australia', dialCode: '+61', code: 'AU', flag: null },
+            { name: 'South Korea', dialCode: '+82', code: 'KR', flag: null },
+            { name: 'Spain', dialCode: '+34', code: 'ES', flag: null },
+            { name: 'Netherlands', dialCode: '+31', code: 'NL', flag: null }
+        ];
+
+        try {
+            // Try to fetch flag data from REST Countries API
+            const response = await fetch('https://restcountries.com/v3.1/alpha?codes=' + 
+                popularCountries.map(c => c.code.toLowerCase()).join(',') + '&fields=cca2,flag,flags');
+            
+            if (response.ok) {
+                const apiData = await response.json();
+                
+                // Map API data to our countries
+                popularCountries.forEach(country => {
+                    const apiCountry = apiData.find(c => c.cca2 === country.code);
+                    if (apiCountry) {
+                        country.flag = apiCountry.flags?.svg || apiCountry.flags?.png;
+                        country.emoji = apiCountry.flag;
+                    }
+                });
+            }
+        } catch (error) {
+            console.log('Could not fetch flag data from API, using fallback flags');
+        }
+
+        // Set fallback flag URLs for countries without API data
+        popularCountries.forEach(country => {
+            if (!country.flag) {
+                country.flag = `https://flagcdn.com/w40/${country.code.toLowerCase()}.png`;
+            }
+        });
+
+        return popularCountries;
+    }
+
+    updateFlag(flagElement, country) {
+        // Clear existing styles and classes
         flagElement.className = 'flag-icon';
-        
-        // Add the specific flag class
-        flagElement.classList.add(`flag-${countryCode}`);
-        
-        // Clear any inline styles and content
         flagElement.style.cssText = '';
         flagElement.innerHTML = '';
+        
+        if (country.flag) {
+            // Create an image element for the flag
+            const flagImg = document.createElement('img');
+            flagImg.src = country.flag;
+            flagImg.alt = `${country.name} flag`;
+            flagImg.style.width = '100%';
+            flagImg.style.height = '100%';
+            flagImg.style.objectFit = 'cover';
+            flagImg.style.borderRadius = '3px';
+            
+            // Handle image loading errors
+            flagImg.onerror = () => {
+                // Fallback to emoji flag or colored rectangle
+                flagElement.innerHTML = country.emoji || '🏳️';
+                flagElement.style.display = 'flex';
+                flagElement.style.alignItems = 'center';
+                flagElement.style.justifyContent = 'center';
+                flagElement.style.fontSize = '12px';
+            };
+            
+            flagElement.appendChild(flagImg);
+        } else {
+            // Fallback display
+            flagElement.innerHTML = country.emoji || '🏳️';
+            flagElement.style.display = 'flex';
+            flagElement.style.alignItems = 'center';
+            flagElement.style.justifyContent = 'center';
+            flagElement.style.fontSize = '12px';
+        }
     }
 
     setupDateInput() {
