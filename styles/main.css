@@ -1557,12 +1557,29 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Mobile first approach - single column for small screens */
 @media screen and (max-width: 768px) {
+    .about-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .about-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    
     .about-content-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem;
         text-align: center;
         justify-items: center !important;
         align-items: center !important;
+        width: 100% !important;
     }
     
     .about-description {
@@ -1599,8 +1616,28 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media screen and (max-width: 480px) {
+    .about-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .about-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    
     .about-content-grid {
         gap: 1.5rem;
+        width: 100% !important;
+        text-align: center !important;
+        justify-items: center !important;
+        align-items: center !important;
     }
 
     .about-image {
