@@ -37,6 +37,15 @@ class ContactForm {
                 }
             });
             
+            // Handle input events (for when field is cleared)
+            dateInput.addEventListener('input', () => {
+                if (dateInput.value) {
+                    dateLabel.style.opacity = '0';
+                } else {
+                    dateLabel.style.opacity = '1';
+                }
+            });
+            
             // Handle focus events
             dateInput.addEventListener('focus', () => {
                 dateLabel.style.opacity = '0';
@@ -52,7 +61,9 @@ class ContactForm {
             if (dateIcon) {
                 dateIcon.addEventListener('click', () => {
                     dateInput.focus();
-                    dateInput.showPicker();
+                    if (dateInput.showPicker) {
+                        dateInput.showPicker();
+                    }
                 });
             }
         }
