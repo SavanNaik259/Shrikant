@@ -2053,6 +2053,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
+    /* OVERRIDE: Event Date field - FORCE to LEFT side (even child should go right, but user wants left) */
+    .contact-form .form-group.date-field-group {
+        align-self: flex-start !important;
+        margin-left: 17% !important;
+        margin-right: 0 !important;
+    }
+    
+    /* OVERRIDE: Days field - FORCE to RIGHT side (odd child should go left, but user wants right) */  
+    .contact-form .form-group.days-field-group {
+        align-self: flex-end !important;
+        margin-left: 0 !important;
+        margin-right: 17% !important;
+    }
+
 
 
     .form-input, .form-textarea, .form-select {
@@ -2084,37 +2098,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-/* Mobile spacing fixes for Event Date and Days fields */
-@media screen and (max-width: 768px) {
-    /* Event Date field - FORCE to LEFT side (override even child default) */
-    .form-group.date-field-group {
-        align-self: flex-start !important;
-        margin-left: 17% !important;
-        margin-right: 0 !important;
-    }
-    
-    /* Days field - FORCE to RIGHT side (override odd child default) */  
-    .form-group.days-field-group {
-        align-self: flex-end !important;
-        margin-left: 0 !important;
-        margin-right: 17% !important;
-    }
-}
 
-/* Also apply to larger mobile screens */
-@media screen and (max-width: 768px) and (min-width: 481px) {
-    .form-group.date-field-group {
-        align-self: flex-start !important;
-        margin-left: 12% !important;
-        margin-right: 0 !important;
-    }
-    
-    .form-group.days-field-group {
-        align-self: flex-end !important;
-        margin-left: 0 !important;
-        margin-right: 12% !important;
-    }
-}
 
 /* Footer Contact Information */
 .footer-contact-items {
