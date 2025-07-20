@@ -1265,9 +1265,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     opacity: 0.9;
 }
 
-.about-image {
-    position: relative;
-}
+
 
 .about-image-placeholder {
     background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
@@ -1605,6 +1603,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .about-image {
+    position: relative;
     width: 100%;
     max-width: 600px;
     height: 480px;
