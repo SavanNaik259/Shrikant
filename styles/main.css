@@ -2053,6 +2053,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
+    /* Override for Event Date field to provide more left spacing */
+    .date-field-group {
+        align-self: flex-start !important;
+        margin-left: 8% !important;
+        margin-right: 0 !important;
+    }
+
+    /* Override for No. of Days field to provide more right spacing */
+    .days-field-group {
+        align-self: flex-end !important;
+        margin-right: 8% !important;
+        margin-left: 0 !important;
+    }
+
     .form-input, .form-textarea, .form-select {
         font-size: 0.95rem;
     }
@@ -2073,15 +2087,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         width: auto;
     }
 
-    /* Specific spacing for Event Date field (6th form group - left-aligned) */
-    .form-group:nth-child(6) {
-        margin-left: 8% !important;
-    }
 
-    /* Specific spacing for No. of Days field (7th form group - right-aligned) */
-    .form-group:nth-child(7) {
-        margin-right: 8% !important;
-    }
 
     .submit-btn {
         padding: 0.8rem 1.8rem;
