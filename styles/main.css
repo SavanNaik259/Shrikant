@@ -1561,6 +1561,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         grid-template-columns: 1fr !important;
         gap: 2rem;
         text-align: center;
+        justify-items: center !important;
+        align-items: center !important;
     }
 
     .about-image-container {
@@ -1574,6 +1576,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .about-text-wrapper {
         order: 2;
         padding: 0 1rem !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .about-image {
