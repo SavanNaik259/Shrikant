@@ -2015,18 +2015,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
-    /* Special overrides for Event Date (6th = even, but want LEFT) */
+    /* Add slight extra spacing for Event Date and Days fields to prevent label hiding */
     .form-group.date-field-group {
-        align-self: flex-start !important;
-        margin-left: 12% !important;
-        margin-right: 0 !important;
+        margin-left: 13% !important;
     }
 
-    /* Special overrides for Days (7th = odd, but want RIGHT) */
     .form-group.days-field-group {
-        align-self: flex-end !important;
-        margin-left: 0 !important;
-        margin-right: 12% !important;
+        margin-right: 13% !important;
     }
 
     .form-input, .form-textarea, .form-select {
