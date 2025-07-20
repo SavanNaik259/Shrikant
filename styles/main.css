@@ -2053,25 +2053,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
-    /* CRITICAL OVERRIDE: Event Date field must be on LEFT side */
-    .contact-form-wrapper .contact-form .form-group.date-field-group,
-    .form-group.date-field-group {
+    /* Override for Event Date field to provide more left spacing */
+    .contact-form .date-field-group {
         align-self: flex-start !important;
-        margin-left: 17% !important;
+        margin-left: 5% !important;
         margin-right: 0 !important;
-        order: -1; /* Force earlier order if needed */
+        width: 75vw !important;
+        max-width: 350px !important;
     }
-    
-    /* CRITICAL OVERRIDE: Days field must be on RIGHT side */  
-    .contact-form-wrapper .contact-form .form-group.days-field-group,
-    .form-group.days-field-group {
+
+    /* Override for No. of Days field to provide more right spacing */
+    .contact-form .days-field-group {
         align-self: flex-end !important;
+        margin-right: 5% !important;
         margin-left: 0 !important;
-        margin-right: 17% !important;
-        order: 1; /* Force later order if needed */
+        width: 75vw !important;
+        max-width: 350px !important;
     }
-
-
 
     .form-input, .form-textarea, .form-select {
         font-size: 0.95rem;
@@ -2102,7 +2100,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-
+/* Additional mobile spacing fixes for specific fields */
+@media screen and (max-width: 768px) {
+    /* Event Date field - add more left spacing */
+    .form-group.date-field-group {
+        margin-left: 6% !important;
+        margin-right: 2% !important;
+    }
+    
+    /* Days field - add more right spacing */  
+    .form-group.days-field-group {
+        margin-left: 2% !important;
+        margin-right: 6% !important;
+    }
+}
 
 /* Footer Contact Information */
 .footer-contact-items {
@@ -2435,26 +2446,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .footer-brand h3 {
         font-size: 1.5rem;
-    }
-}
-
-/* FINAL OVERRIDE - CRITICAL POSITIONING FOR MOBILE */
-@media screen and (max-width: 768px) {
-    /* Event Date MUST be on LEFT side - override all other rules */
-    .contact-form .date-field-group,
-    .form-group.date-field-group {
-        align-self: flex-start !important;
-        margin-left: 17% !important;
-        margin-right: 0 !important;
-        text-align: left !important;
-    }
-    
-    /* Days field MUST be on RIGHT side - override all other rules */  
-    .contact-form .days-field-group,
-    .form-group.days-field-group {
-        align-self: flex-end !important;
-        margin-left: 0 !important;
-        margin-right: 17% !important;
-        text-align: right !important;
     }
 }
