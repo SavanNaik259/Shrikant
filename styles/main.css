@@ -1936,13 +1936,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     pointer-events: none;
     transition: all 0.3s ease;
     font-family: var(--font-primary);
+    opacity: 1;
 }
 
 .date-input:focus + .date-label,
-.date-input:not([value=""]) + .date-label,
+.date-input:not(:placeholder-shown) + .date-label,
 .date-input:valid + .date-label {
     opacity: 0;
     transform: translateY(-10px);
+}
+
+.date-input:not(:focus):not(:valid) + .date-label {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .date-icon {
