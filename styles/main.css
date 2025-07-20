@@ -2029,7 +2029,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .contact-form-wrapper {
         padding: 1.5rem 0.5rem;
     }
@@ -2054,17 +2054,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 
     /* Override for Event Date field to provide more left spacing */
-    .date-field-group {
+    .contact-form .date-field-group {
         align-self: flex-start !important;
-        margin-left: 8% !important;
+        margin-left: 5% !important;
         margin-right: 0 !important;
+        width: 75vw !important;
+        max-width: 350px !important;
     }
 
     /* Override for No. of Days field to provide more right spacing */
-    .days-field-group {
+    .contact-form .days-field-group {
         align-self: flex-end !important;
-        margin-right: 8% !important;
+        margin-right: 5% !important;
         margin-left: 0 !important;
+        width: 75vw !important;
+        max-width: 350px !important;
     }
 
     .form-input, .form-textarea, .form-select {
@@ -2093,6 +2097,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         padding: 0.8rem 1.8rem;
         font-size: 0.9rem;
         min-width: 130px;
+    }
+}
+
+/* Additional mobile spacing fixes for specific fields */
+@media screen and (max-width: 768px) {
+    /* Event Date field - add more left spacing */
+    .form-group.date-field-group {
+        margin-left: 10% !important;
+        margin-right: 5% !important;
+    }
+    
+    /* Days field - add more right spacing */  
+    .form-group.days-field-group {
+        margin-left: 5% !important;
+        margin-right: 10% !important;
     }
 }
 
