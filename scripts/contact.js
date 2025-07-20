@@ -9,6 +9,7 @@ class ContactForm {
     init() {
         this.form.addEventListener('submit', this.handleSubmit.bind(this));
         this.setupPhonePrefix();
+        this.setupDateInput();
     }
 
     setupPhonePrefix() {
@@ -18,6 +19,42 @@ class ContactForm {
                 // Simple click feedback - could be expanded for dropdown functionality
                 console.log('Country code selector clicked');
             });
+        }
+    }
+
+    setupDateInput() {
+        const dateInput = document.getElementById('wedding-date');
+        const dateLabel = document.querySelector('.date-label');
+        const dateIcon = document.querySelector('.date-icon');
+        
+        if (dateInput && dateLabel) {
+            // Handle date input changes
+            dateInput.addEventListener('change', () => {
+                if (dateInput.value) {
+                    dateLabel.style.opacity = '0';
+                } else {
+                    dateLabel.style.opacity = '1';
+                }
+            });
+            
+            // Handle focus events
+            dateInput.addEventListener('focus', () => {
+                dateLabel.style.opacity = '0';
+            });
+            
+            dateInput.addEventListener('blur', () => {
+                if (!dateInput.value) {
+                    dateLabel.style.opacity = '1';
+                }
+            });
+            
+            // Make calendar icon clickable
+            if (dateIcon) {
+                dateIcon.addEventListener('click', () => {
+                    dateInput.focus();
+                    dateInput.showPicker();
+                });
+            }
         }
     }
 

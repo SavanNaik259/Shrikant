@@ -1924,6 +1924,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .date-input::-webkit-calendar-picker-indicator {
     color: #B49E64;
     cursor: pointer;
+    opacity: 0;
 }
 
 .date-label {
@@ -1934,11 +1935,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-size: 1rem;
     pointer-events: none;
     transition: all 0.3s ease;
+    font-family: var(--font-primary);
 }
 
 .date-input:focus + .date-label,
+.date-input:not([value=""]) + .date-label,
 .date-input:valid + .date-label {
     opacity: 0;
+    transform: translateY(-10px);
 }
 
 .date-icon {
@@ -1948,6 +1952,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     color: #B49E64;
     font-size: 1rem;
     pointer-events: none;
+    cursor: pointer;
 }
 
 /* Select Styling */
