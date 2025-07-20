@@ -2104,14 +2104,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 @media screen and (max-width: 768px) {
     /* Event Date field - add more left spacing */
     .form-group.date-field-group {
-        margin-left: 10% !important;
-        margin-right: 5% !important;
+        margin-left: 6% !important;
+        margin-right: 2% !important;
     }
     
     /* Days field - add more right spacing */  
     .form-group.days-field-group {
-        margin-left: 5% !important;
-        margin-right: 10% !important;
+        margin-left: 2% !important;
+        margin-right: 6% !important;
     }
 }
 
