@@ -1575,9 +1575,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .about-image {
         height: 400px;
-        width: 100vw !important;
-        max-width: 100vw !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
         margin: 0 auto;
+        margin-left: 50% !important;
+        transform: translateX(-50%) !important;
     }
 }
 
@@ -1588,8 +1590,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .about-image {
         height: 350px;
-        width: 100vw !important;
-        max-width: 100vw !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
+        margin-left: 50% !important;
+        transform: translateX(-50%) !important;
     }
 
     .about-text-wrapper {
