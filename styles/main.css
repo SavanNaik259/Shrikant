@@ -1575,8 +1575,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .about-image {
         height: 400px;
-        width: 100% !important;
-        max-width: 650px !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
         margin: 0 auto;
     }
 }
@@ -1588,7 +1588,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .about-image {
         height: 350px;
-        max-width: 550px !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
     }
 
     .about-text-wrapper {
