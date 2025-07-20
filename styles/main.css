@@ -1565,7 +1565,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .about-image-container {
         order: 1;
-        padding: 0 1rem;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .about-text-wrapper {
@@ -1577,8 +1580,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         height: 400px;
         width: 90vw !important;
         max-width: 90vw !important;
-        margin: 0 auto;
-        margin-left: 50% !important;
+        margin: 0 auto !important;
+        position: relative !important;
+        left: 50% !important;
         transform: translateX(-50%) !important;
     }
 }
@@ -1592,7 +1596,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         height: 350px;
         width: 90vw !important;
         max-width: 90vw !important;
-        margin-left: 50% !important;
+        margin: 0 auto !important;
+        position: relative !important;
+        left: 50% !important;
         transform: translateX(-50%) !important;
     }
 
