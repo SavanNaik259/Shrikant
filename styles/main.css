@@ -717,7 +717,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     margin-bottom: 0;
 }
 
-/* Responsive Design for Modern Trends */
+/* Responsive Design for Modern Trends and About */
 @media screen and (max-width: 768px) {
     .modern-trends {
         padding: 4rem 0;
@@ -740,53 +740,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         text-align: left;
     }
 
-    .about-wrapper {
+    .about-content-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
         text-align: center;
-        padding: 0 1rem;
     }
 
     .about-image-container {
-        padding: 0 1rem;
         order: 1;
     }
 
     .about-text-wrapper {
-        padding: 0 2rem !important;
         order: 2;
+        padding: 0 1rem;
     }
 
-    .about-content-text {
-        order: 2;
-    }
-}
-
-/* Ensure proper grid layout for larger screens */
-@media screen and (min-width: 769px) {
-    .about-wrapper {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        text-align: left;
-        padding: 0 2rem;
-    }
-
-    .about-image-container {
-        padding: 0 2rem;
-        order: 0;
-    }
-
-    .about-text-wrapper {
-        padding: 0 2.5rem;
-        order: 0;
-    }
-
-    .about-content-text {
-        order: 0;
-    }
-
-    .about-title {
-        text-align: center;
+    .about-image {
+        height: 350px;
     }
 }
 
@@ -801,28 +771,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         font-size: 0.75rem;
     }
 
-    .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
-        padding: 0 0.5rem;
+    .about-content-grid {
+        gap: 2rem;
     }
 
-    .about-image-container {
-        padding: 0 0.5rem;
-        order: 1;
+    .about-wrapper {
+        padding: 0 1rem;
     }
 
     .about-text-wrapper {
-        padding: 0 2rem !important;
-        margin: 0 !important;
-        order: 2;
-    }
-
-    .about-content-text {
-        padding: 0 !important;
-        margin: 0 !important;
-        order: 2;
+        padding: 0;
     }
 
     .about-image {
@@ -1609,36 +1567,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .about-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
     padding: 0 2rem;
-}
-
-.about-image-container {
-    padding: 0 2rem;
-}
-
-.about-text-wrapper {
-    padding: 0;
-}
-
-.about-visual {
-    position: relative;
-}
-
-.about-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-
-
-.about-content-text {
-    padding: 0;
 }
 
 .about-title {
@@ -1648,10 +1577,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     color: #6b6b6b;
     letter-spacing: 4px;
     line-height: 1.4;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     text-transform: uppercase;
     position: relative;
     text-align: center;
+    width: 100%;
 }
 
 .about-title::after {
@@ -1666,15 +1596,30 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     border-radius: 2px;
 }
 
-.about-image-container {
-    margin: 3rem 0;
-    display: block;
-    max-width: 500px;
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
-.about-content .about-text-wrapper {
-    text-align: justify;
-    padding: 0 3rem !important;
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.about-text-wrapper {
+    padding: 0 2rem;
 }
 
 .about-description {
@@ -2107,9 +2052,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     color: var(--accent-light);
 }
 
-/* Responsive Design for About, Contact, and Footer */
+/* Responsive Design for Contact and Footer */
 @media screen and (max-width: 992px) {
-
     .contact-form-container {
         padding: 0 2rem;
     }
@@ -2155,27 +2099,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .contact-form-section {
         padding: 2.5rem;
-    }
-
-    .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .about-image-container {
-        padding: 0 1rem;
-        order: 1;
-    }
-
-    .about-text-wrapper {
-        padding: 0 2rem !important;
-        order: 2;
-    }
-
-    .about-content-text {
-        order: 2;
     }
 
     .form-row {
