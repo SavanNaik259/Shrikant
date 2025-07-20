@@ -2000,17 +2000,22 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         padding: 2rem 1rem;
     }
 
-    /* Reduce zigzag effect on smaller screens */
+    /* Maintain zigzag effect on medium screens with smaller offset */
     .form-group {
-        width: 95vw;
+        width: 85vw;
+        max-width: 500px;
     }
 
     .form-group:nth-child(odd) {
-        margin-left: 5%;
+        align-self: flex-start;
+        margin-left: 10%;
+        margin-right: 0;
     }
 
     .form-group:nth-child(even) {
-        margin-right: 5%;
+        align-self: flex-end;
+        margin-right: 10%;
+        margin-left: 0;
     }
 
     .phone-group {
@@ -2034,13 +2039,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         padding: 1.5rem 0.5rem;
     }
 
-    /* Center align all fields on very small screens */
+    /* Maintain zigzag pattern on small screens with reduced offset */
     .form-group {
         margin-bottom: 2rem;
-        width: 96vw;
-        align-self: center !important;
-        margin-left: 0 !important;
+        width: 80vw;
+        max-width: 400px;
+    }
+
+    .form-group:nth-child(odd) {
+        align-self: flex-start !important;
+        margin-left: 15% !important;
         margin-right: 0 !important;
+    }
+
+    .form-group:nth-child(even) {
+        align-self: flex-end !important;
+        margin-right: 15% !important;
+        margin-left: 0 !important;
     }
 
     .form-input, .form-textarea, .form-select {
