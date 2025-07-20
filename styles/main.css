@@ -770,17 +770,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     padding: 0 2rem;
 }
 
-.portfolio-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-    border-radius: 2px;
-}
+
 
 .portfolio-grid {
     display: flex;
@@ -964,9 +954,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         height: 2px;
     }
 
-    .portfolio-title::after {
-        width: 30px;
-    }
+
 
     .portfolio-grid {
         gap: 1.5rem;
@@ -1030,9 +1018,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         height: 2px;
     }
 
-    .portfolio-title::after {
-        width: 25px;
-    }
+
 
     .portfolio-grid {
         gap: 1rem;
@@ -1245,16 +1231,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     position: relative;
 }
 
-.about-section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-    border-radius: 2px;
-}
+
 
 .about-paragraph {
     font-family: var(--font-secondary);
@@ -1536,17 +1513,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     width: 100%;
 }
 
-.about-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-    border-radius: 2px;
-}
+
 
 .about-content-grid {
     display: grid;
@@ -1773,17 +1740,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-.contact-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-    border-radius: 2px;
-}
+
 
 @keyframes lineExpand {
     0% { width: 0; }
