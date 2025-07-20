@@ -2063,17 +2063,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 
     .phone-group {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 0.5rem;
     }
 
     .phone-prefix {
-        min-width: 100%;
-        justify-content: flex-start;
+        min-width: 80px;
+        flex-shrink: 0;
+        justify-content: center;
     }
 
     .phone-input {
-        width: 100%;
+        flex: 1;
+        width: auto;
     }
 
     .submit-btn {
