@@ -1568,7 +1568,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .about-content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 1rem;
     align-items: start;
 }
 
