@@ -762,6 +762,34 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
+/* Ensure proper grid layout for larger screens */
+@media screen and (min-width: 769px) {
+    .about-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        text-align: left;
+        padding: 0 2rem;
+    }
+
+    .about-image-container {
+        padding: 0 2rem;
+        order: 0;
+    }
+
+    .about-text-wrapper {
+        padding: 0 2.5rem;
+        order: 0;
+    }
+
+    .about-content-text {
+        order: 0;
+    }
+
+    .about-title {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .modern-trends-title {
         font-size: 1.5rem;
@@ -2081,19 +2109,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Responsive Design for About, Contact, and Footer */
 @media screen and (max-width: 992px) {
-    .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-
-    .about-image-container {
-        padding: 0 1.8rem;
-    }
-
-    .about-text-wrapper {
-        padding: 0;
-    }
 
     .contact-form-container {
         padding: 0 2rem;
