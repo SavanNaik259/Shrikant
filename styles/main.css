@@ -1889,10 +1889,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Removed old CSS flag implementations - now using real flag images from API */
 
-/* Default flag styling */
-.flag-icon:not([class*="flag-"]) {
-    background: linear-gradient(to bottom, #FF9933 33.33%, white 33.33%, white 66.66%, #138808 66.66%);
-}
+/* Default flag styling - removed CSS flag, now using real images */
 
 .country-code {
     color: #666;

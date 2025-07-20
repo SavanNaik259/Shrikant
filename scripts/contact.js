@@ -24,8 +24,10 @@ class ContactForm {
             let currentCountryIndex = 0;
             let dropdown = null;
             
-            // Set initial flag
-            this.updateFlag(flagIcon, countries[currentCountryIndex]);
+            // Set initial flag (India)
+            const indiaCountry = countries.find(country => country.code === 'IN') || countries[0];
+            currentCountryIndex = countries.findIndex(country => country.code === 'IN');
+            this.updateFlag(flagIcon, indiaCountry);
             
             phonePrefix.addEventListener('click', (e) => {
                 e.preventDefault();
