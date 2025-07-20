@@ -2102,16 +2102,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Additional mobile spacing fixes for specific fields */
 @media screen and (max-width: 768px) {
-    /* Event Date field - add more left spacing */
+    /* Event Date field - maintain left alignment but add slight spacing */
     .form-group.date-field-group {
-        margin-left: 6% !important;
-        margin-right: 2% !important;
+        align-self: flex-start !important;
+        margin-left: 18% !important;
+        margin-right: 0 !important;
     }
     
-    /* Days field - add more right spacing */  
+    /* Days field - maintain right alignment but add slight spacing */  
     .form-group.days-field-group {
-        margin-left: 2% !important;
-        margin-right: 6% !important;
+        align-self: flex-end !important;
+        margin-left: 0 !important;
+        margin-right: 18% !important;
     }
 }
 
