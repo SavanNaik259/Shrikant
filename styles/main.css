@@ -1992,45 +1992,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* Responsive Design for Minimalist Form */
 @media screen and (max-width: 768px) {
     .contact-form-wrapper {
-        padding: 2rem 1rem;
-    }
-
-    /* Maintain zigzag effect on medium screens with smaller offset */
-    .form-group {
-        width: 85vw;
-        max-width: 500px;
-    }
-
-    .form-group:nth-child(odd) {
-        align-self: flex-start;
-        margin-left: 10%;
-        margin-right: 0;
-    }
-
-    .form-group:nth-child(even) {
-        align-self: flex-end;
-        margin-right: 10%;
-        margin-left: 0;
-    }
-
-    .phone-group {
-        gap: 0.5rem;
-    }
-
-    .phone-prefix {
-        min-width: 90px;
-        font-size: 0.9rem;
-    }
-
-    .submit-btn {
-        padding: 0.9rem 2rem;
-        font-size: 0.95rem;
-        min-width: 140px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .contact-form-wrapper {
         padding: 1.5rem 0.5rem;
     }
 
@@ -2041,6 +2002,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         max-width: 400px;
     }
 
+    /* Default zigzag: odd = left, even = right */
     .form-group:nth-child(odd) {
         align-self: flex-start !important;
         margin-left: 15% !important;
@@ -2053,7 +2015,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
+    /* Special overrides for Event Date (6th = even, but want LEFT) */
+    .form-group.date-field-group {
+        align-self: flex-start !important;
+        margin-left: 12% !important;
+        margin-right: 0 !important;
+    }
 
+    /* Special overrides for Days (7th = odd, but want RIGHT) */
+    .form-group.days-field-group {
+        align-self: flex-end !important;
+        margin-left: 0 !important;
+        margin-right: 12% !important;
+    }
 
     .form-input, .form-textarea, .form-select {
         font-size: 0.95rem;
@@ -2075,7 +2049,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         width: auto;
     }
 
+    .phone-group {
+        gap: 0.5rem;
+    }
 
+    .phone-prefix {
+        min-width: 90px;
+        font-size: 0.9rem;
+    }
 
     .submit-btn {
         padding: 0.8rem 1.8rem;
@@ -2084,39 +2065,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-/* Additional mobile spacing fixes for specific fields */
-@media screen and (max-width: 768px) {
-    /* Event Date field - force LEFT alignment (override natural even position) */
-    .form-group.date-field-group {
-        align-self: flex-start !important;
-        margin-left: 12% !important;
-        margin-right: 0 !important;
-    }
-    
-    /* Days field - force RIGHT alignment (override natural odd position) */  
-    .form-group.days-field-group {
-        align-self: flex-end !important;
-        margin-left: 0 !important;
-        margin-right: 12% !important;
-    }
-}
 
-/* Also apply these rules for tablet sizes */
-@media screen and (max-width: 768px) and (min-width: 481px) {
-    /* Event Date field - force LEFT alignment */
-    .form-group.date-field-group {
-        align-self: flex-start !important;
-        margin-left: 10% !important;
-        margin-right: 0 !important;
-    }
-    
-    /* Days field - force RIGHT alignment */  
-    .form-group.days-field-group {
-        align-self: flex-end !important;
-        margin-left: 0 !important;
-        margin-right: 10% !important;
-    }
-}
 
 /* Footer Contact Information */
 .footer-contact-items {
