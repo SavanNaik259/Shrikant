@@ -1806,6 +1806,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     padding: 1rem 0;
     border: none;
     border-bottom: 2px solid #B49E64;
+    border-radius: 0;
     background: transparent;
     color: #666;
     font-size: 1rem;
@@ -1845,6 +1846,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     gap: 0.5rem;
     padding: 1rem 0;
     border-bottom: 2px solid #B49E64;
+    border-radius: 0;
     min-width: 100px;
     flex-shrink: 0;
     cursor: pointer;
