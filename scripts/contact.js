@@ -14,11 +14,64 @@ class ContactForm {
 
     setupPhonePrefix() {
         const phonePrefix = document.querySelector('.phone-prefix');
-        if (phonePrefix) {
+        const countryCodeSpan = document.querySelector('.country-code');
+        const flagIcon = document.querySelector('.flag-icon');
+        
+        if (phonePrefix && countryCodeSpan && flagIcon) {
+            // Country data
+            const countries = [
+                { code: '+91', name: 'India', flag: 'in' },
+                { code: '+1', name: 'United States', flag: 'us' },
+                { code: '+44', name: 'United Kingdom', flag: 'gb' },
+                { code: '+86', name: 'China', flag: 'cn' },
+                { code: '+81', name: 'Japan', flag: 'jp' },
+                { code: '+49', name: 'Germany', flag: 'de' },
+                { code: '+33', name: 'France', flag: 'fr' },
+                { code: '+39', name: 'Italy', flag: 'it' },
+                { code: '+7', name: 'Russia', flag: 'ru' },
+                { code: '+55', name: 'Brazil', flag: 'br' }
+            ];
+            
+            let currentCountryIndex = 0;
+            
             phonePrefix.addEventListener('click', () => {
-                // Simple click feedback - could be expanded for dropdown functionality
-                console.log('Country code selector clicked');
+                // Cycle through countries
+                currentCountryIndex = (currentCountryIndex + 1) % countries.length;
+                const selectedCountry = countries[currentCountryIndex];
+                
+                // Update country code
+                countryCodeSpan.textContent = selectedCountry.code;
+                
+                // Update flag based on country
+                this.updateFlag(flagIcon, selectedCountry.flag);
+                
+                console.log(`Selected country: ${selectedCountry.name} (${selectedCountry.code})`);
             });
+        }
+    }
+
+    updateFlag(flagElement, countryCode) {
+        // Remove existing flag classes
+        flagElement.className = 'flag-icon';
+        
+        // Apply specific flag styling based on country
+        switch(countryCode) {
+            case 'in': // India
+                flagElement.style.background = 'linear-gradient(to bottom, #FF9933 33.33%, white 33.33%, white 66.66%, #138808 66.66%)';
+                flagElement.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 12px; height: 12px; background-image: url(\'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\'%3E%3Cpath d=\'M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z\' fill=\'%23000080\'/%3E%3C/svg%3E\'); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>';
+                break;
+            case 'us': // United States
+                flagElement.style.background = 'linear-gradient(to bottom, #B22234 0%, #B22234 7.69%, white 7.69%, white 15.38%, #B22234 15.38%, #B22234 23.07%, white 23.07%, white 30.76%, #B22234 30.76%, #B22234 38.45%, white 38.45%, white 46.14%, #B22234 46.14%, #B22234 53.83%, white 53.83%, white 61.52%, #B22234 61.52%, #B22234 69.21%, white 69.21%, white 76.9%, #B22234 76.9%, #B22234 84.59%, white 84.59%, white 92.28%, #B22234 92.28%, #B22234 100%)';
+                flagElement.innerHTML = '<div style="position: absolute; top: 0; left: 0; width: 40%; height: 46.15%; background: #3C3B6E;"></div>';
+                break;
+            case 'gb': // United Kingdom
+                flagElement.style.background = '#012169';
+                flagElement.innerHTML = '<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(-45deg, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(90deg, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(0deg, transparent 40%, white 40%, white 60%, transparent 60%); background-size: 100% 100%;"></div><div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, transparent 45%, #C8102E 45%, #C8102E 55%, transparent 55%), linear-gradient(-45deg, transparent 45%, #C8102E 45%, #C8102E 55%, transparent 55%);"></div>';
+                break;
+            default:
+                // Default to India flag
+                flagElement.style.background = 'linear-gradient(to bottom, #FF9933 33.33%, white 33.33%, white 66.66%, #138808 66.66%)';
+                flagElement.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 12px; height: 12px; background-image: url(\'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\'%3E%3Cpath d=\'M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z\' fill=\'%23000080\'/%3E%3C/svg%3E\'); background-size: contain; background-repeat: no-repeat; background-position: center;"></div>';
         }
     }
 

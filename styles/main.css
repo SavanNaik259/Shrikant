@@ -1868,9 +1868,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     width: 24px;
     height: 16px;
     border-radius: 3px;
-    background: linear-gradient(to bottom, #FF9933 33%, white 33%, white 66%, #138A42 66%);
+    background: linear-gradient(to bottom, #FF9933 33.33%, white 33.33%, white 66.66%, #138808 66.66%);
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .flag-icon::after {
@@ -1879,10 +1880,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    border: 1px solid #052966;
-    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z' fill='%23000080'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .country-code {
