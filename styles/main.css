@@ -2053,18 +2053,22 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         margin-left: 0 !important;
     }
 
-    /* OVERRIDE: Event Date field - FORCE to LEFT side (even child should go right, but user wants left) */
-    .contact-form .form-group.date-field-group {
+    /* CRITICAL OVERRIDE: Event Date field must be on LEFT side */
+    .contact-form-wrapper .contact-form .form-group.date-field-group,
+    .form-group.date-field-group {
         align-self: flex-start !important;
         margin-left: 17% !important;
         margin-right: 0 !important;
+        order: -1; /* Force earlier order if needed */
     }
     
-    /* OVERRIDE: Days field - FORCE to RIGHT side (odd child should go left, but user wants right) */  
-    .contact-form .form-group.days-field-group {
+    /* CRITICAL OVERRIDE: Days field must be on RIGHT side */  
+    .contact-form-wrapper .contact-form .form-group.days-field-group,
+    .form-group.days-field-group {
         align-self: flex-end !important;
         margin-left: 0 !important;
         margin-right: 17% !important;
+        order: 1; /* Force later order if needed */
     }
 
 
@@ -2431,5 +2435,26 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .footer-brand h3 {
         font-size: 1.5rem;
+    }
+}
+
+/* FINAL OVERRIDE - CRITICAL POSITIONING FOR MOBILE */
+@media screen and (max-width: 768px) {
+    /* Event Date MUST be on LEFT side - override all other rules */
+    .contact-form .date-field-group,
+    .form-group.date-field-group {
+        align-self: flex-start !important;
+        margin-left: 17% !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+    
+    /* Days field MUST be on RIGHT side - override all other rules */  
+    .contact-form .days-field-group,
+    .form-group.days-field-group {
+        align-self: flex-end !important;
+        margin-left: 0 !important;
+        margin-right: 17% !important;
+        text-align: right !important;
     }
 }
