@@ -717,7 +717,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     margin-bottom: 0;
 }
 
-/* Responsive Design for Modern Trends and About */
+/* Responsive Design for Modern Trends */
 @media screen and (max-width: 768px) {
     .modern-trends {
         padding: 4rem 0;
@@ -739,25 +739,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         line-height: 1.5;
         text-align: left;
     }
-
-    .about-content-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-
-    .about-image-container {
-        order: 1;
-    }
-
-    .about-text-wrapper {
-        order: 2;
-        padding: 0 1rem;
-    }
-
-    .about-image {
-        height: 350px;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -771,20 +752,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         font-size: 0.75rem;
     }
 
-    .about-content-grid {
-        gap: 2rem;
-    }
-
     .about-wrapper {
         padding: 0 1rem;
-    }
-
-    .about-text-wrapper {
-        padding: 0;
-    }
-
-    .about-image {
-        height: 300px;
     }
 }
 
@@ -1601,6 +1570,47 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+}
+
+/* Mobile first approach - single column for small screens */
+@media screen and (max-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-image-container {
+        order: 1;
+        padding: 0 1rem;
+    }
+
+    .about-text-wrapper {
+        order: 2;
+        padding: 0 1rem !important;
+    }
+
+    .about-image {
+        height: 350px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-content-grid {
+        gap: 1.5rem;
+    }
+
+    .about-image {
+        height: 300px;
+        max-width: 350px;
+    }
+
+    .about-text-wrapper {
+        padding: 0 0.5rem !important;
+    }
 }
 
 .about-image-container {
