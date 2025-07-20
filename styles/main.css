@@ -2002,26 +2002,28 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         max-width: 400px;
     }
 
-    /* Default zigzag: odd = left, even = right */
+    /* Default zigzag: odd = left, even = right with consistent spacing */
     .form-group:nth-child(odd) {
         align-self: flex-start !important;
-        margin-left: 15% !important;
-        margin-right: 0 !important;
+        margin-left: 10% !important;
+        margin-right: 5% !important;
     }
 
     .form-group:nth-child(even) {
         align-self: flex-end !important;
-        margin-right: 15% !important;
-        margin-left: 0 !important;
+        margin-right: 10% !important;
+        margin-left: 5% !important;
     }
 
     /* Add slight extra spacing for Event Date and Days fields to prevent label hiding */
     .form-group.date-field-group {
-        margin-left: 13% !important;
+        margin-left: 8% !important;
+        margin-right: 5% !important;
     }
 
     .form-group.days-field-group {
-        margin-right: 13% !important;
+        margin-left: 5% !important;
+        margin-right: 8% !important;
     }
 
     .form-input, .form-textarea, .form-select {
