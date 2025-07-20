@@ -1564,6 +1564,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         justify-items: center !important;
         align-items: center !important;
     }
+    
+    .about-description {
+        text-align: center !important;
+    }
 
     .about-image-container {
         order: 1;
@@ -1611,6 +1615,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     .about-text-wrapper {
         padding: 0 0.5rem !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .about-description {
+        text-align: center !important;
     }
 }
 
