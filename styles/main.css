@@ -96,7 +96,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Navigation Styles */
 .navbar {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     background: transparent;
     z-index: 1000;
@@ -105,7 +107,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .navbar.scrolled {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -182,10 +186,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     max-width: 320px;
     object-fit: contain;
     transition: var(--transition-smooth);
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 15px;
-    border-radius: 8px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     display: block;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
 }
 
 .nav-logo .logo-link:hover .logo-image {
@@ -204,13 +209,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-family: var(--font-secondary);
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     text-decoration: none;
     padding: 0.5rem 0;
     position: relative;
     transition: var(--transition-smooth);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .nav-link::before {
@@ -250,11 +256,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     position: absolute;
     width: 24px;
     height: 2px;
-    background-color: var(--text-dark);
+    background-color: var(--text-white);
     left: 50%;
     transform: translateX(-50%);
     transition: var(--transition-smooth);
     border-radius: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hamburger .bar:nth-child(1) {
