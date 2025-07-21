@@ -2340,6 +2340,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     text-align: center;
 }
 
+.footer-logo {
+    height: 60px;
+    width: auto;
+    max-width: 250px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: brightness(1.1);
+    transition: var(--transition-smooth);
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
 .footer-brand h3 {
     font-family: 'Cormorant Garamond', 'Playfair Display', serif;
     font-size: 2.2rem;
@@ -2623,6 +2638,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .contact-form-section::after {
         animation-duration: 30s;
         opacity: 0.4;
+    }
+
+    .footer-logo {
+        height: 50px;
+        max-width: 200px;
     }
 
     .footer-brand h3 {
