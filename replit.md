@@ -1,7 +1,7 @@
-# Wedding Photography Website
+# Vedic Vows - South Indian Wedding Photography Website
 
 ## Overview
-A cutting-edge wedding photography platform that blends sophisticated design with interactive user experiences, leveraging modern web technologies to create an immersive digital showcase of love stories.
+Vedic Vows is a specialized South Indian wedding photography platform that captures authentic traditions with modern artistry. Based in Bangalore, the website showcases expertise in Kannada, Tamil, Telugu, and Kerala-style weddings through sophisticated design and immersive digital storytelling.
 
 ## Technology Stack
 - Advanced responsive HTML5/CSS3 design
