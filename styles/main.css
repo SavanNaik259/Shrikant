@@ -859,7 +859,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .portfolio-item {
-    cursor: pointer;
+    cursor: default;
     transition: var(--transition-smooth);
     border-radius: 20px;
     overflow: hidden;

@@ -385,16 +385,12 @@ class WeddingPhotographyWebsite {
     }
 
     setupPortfolio() {
-        // Handle portfolio item clicks
+        // Handle portfolio item clicks - disabled navigation
         this.portfolioItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
-                const videoId = item.dataset.video;
-                const slug = item.dataset.slug;
-                
-                if (videoId && slug) {
-                    this.navigateToPortfolioVideo(videoId, slug);
-                }
+                // Navigation disabled - portfolio items no longer redirect
+                return false;
             });
         });
     }
