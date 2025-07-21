@@ -173,17 +173,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-.nav-logo .logo-text {
-    font-family: var(--font-primary);
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    text-decoration: none;
+.nav-logo .logo-link {
+    display: inline-block;
     transition: var(--transition-smooth);
 }
 
-.nav-logo .logo-text:hover {
-    color: var(--accent-color);
+.nav-logo .logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+}
+
+.nav-logo .logo-link:hover .logo-image {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 .nav-menu {
@@ -628,13 +632,25 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
+@media screen and (max-width: 768px) {
+    .nav-logo .logo-image {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-logo .logo-image {
+        height: 30px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .hero-title {
         font-size: 1.8rem;
     }
 
-    .nav-logo .logo-text {
-        font-size: 1.5rem;
+    .nav-logo .logo-image {
+        height: 28px;
     }
 }
 
