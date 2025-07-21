@@ -119,21 +119,53 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
 }
 
-/* Desktop layout: center navigation, brand on right */
-@media screen and (min-width: 769px) {
+/* Mobile layout: hamburger left, brand center */
+@media screen and (max-width: 768px) {
     .nav-container {
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
     }
 
-    .nav-menu {
-        flex: 1;
-        justify-content: center;
+    .hamburger {
+        order: 1;
+        flex-shrink: 0;
     }
 
     .nav-logo {
+        order: 2;
         position: absolute;
-        right: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Hide nav menu on mobile - it will be shown as overlay */
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* Desktop layout: menu left, brand right with space between */
+@media screen and (min-width: 769px) {
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-menu {
+        order: 1;
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .nav-logo {
+        order: 2;
+        position: static;
+        transform: none;
     }
 
     .hamburger {
@@ -451,7 +483,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
-/* Responsive Design */
+/* Mobile Menu Styles */
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block;
