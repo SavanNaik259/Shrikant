@@ -181,8 +181,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .nav-logo .logo-image {
     height: 40px;
     width: auto;
+    max-width: 200px;
     object-fit: contain;
     transition: var(--transition-smooth);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: block;
 }
 
 .nav-logo .logo-link:hover .logo-image {
