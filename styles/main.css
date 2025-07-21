@@ -107,9 +107,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .navbar.scrolled {
-    background: #F0E9E0;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: transparent;
 }
 
 .nav-container {
@@ -121,25 +119,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
 }
 
-/* Desktop layout: center brand name, distribute nav links */
+/* Desktop layout: center navigation, brand on right */
 @media screen and (min-width: 769px) {
     .nav-container {
-        justify-content: space-between;
+        justify-content: center;
         position: relative;
+    }
+
+    .nav-menu {
+        flex: 1;
+        justify-content: center;
     }
 
     .nav-logo {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-    }
-
-    .nav-menu {
-        justify-content: space-between;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+        right: 2rem;
     }
 
     .hamburger {
