@@ -181,9 +181,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .nav-logo .logo-image {
-    height: 90px;
+    height: 70px;
     width: auto;
-    max-width: 320px;
+    max-width: 280px;
     object-fit: contain;
     transition: var(--transition-smooth);
     background: transparent;
@@ -644,13 +644,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media screen and (max-width: 768px) {
     .nav-logo .logo-image {
-        height: 75px;
+        height: 60px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .nav-logo .logo-image {
-        height: 70px;
+        height: 55px;
     }
 }
 
@@ -660,7 +660,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     }
 
     .nav-logo .logo-image {
-        height: 65px;
+        height: 50px;
     }
 }
 
