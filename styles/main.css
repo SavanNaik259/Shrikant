@@ -1256,11 +1256,13 @@ button, a, input, textarea, select {
 .portfolio-video-container {
     position: relative;
     width: 100%;
+    max-width: 900px;
     height: 70vh;
     min-height: 500px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
 }
 
 .portfolio-video-placeholder {
@@ -1575,6 +1577,7 @@ button, a, input, textarea, select {
     .portfolio-video-container {
         height: 50vh;
         min-height: 300px;
+        max-width: 700px;
     }
 
     .portfolio-video-title {
@@ -1633,6 +1636,10 @@ button, a, input, textarea, select {
 }
 
 @media screen and (max-width: 480px) {
+    .portfolio-video-container {
+        max-width: 600px;
+    }
+    
     .portfolio-video-title {
         font-size: 1.5rem;
     }
@@ -1767,11 +1774,13 @@ button, a, input, textarea, select {
 .detail-video-container {
     position: relative;
     width: 100%;
+    max-width: 900px;
     height: 60vh;
     min-height: 400px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 .detail-video-placeholder {
@@ -2083,6 +2092,7 @@ button, a, input, textarea, select {
     .detail-video-container {
         height: 40vh;
         min-height: 250px;
+        max-width: 700px;
     }
     
     .detail-video-play-btn {
@@ -2107,6 +2117,10 @@ button, a, input, textarea, select {
 }
 
 @media screen and (max-width: 480px) {
+    .detail-video-container {
+        max-width: 600px;
+    }
+    
     .detail-couple-names {
         font-size: 2rem;
     }
