@@ -3263,25 +3263,24 @@ input:focus, textarea:focus {
         position: absolute;
         right: 20px;
         top: 20px;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
-        border-radius: 8px;
-        background: rgba(0, 0, 0, 0.8);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid rgba(255, 255, 255, 0.4);
+        border: none;
         transition: all 0.3s ease;
         z-index: 1000;
         color: white;
-        font-size: 24px;
-        font-weight: bold;
+        font-size: 20px;
+        font-weight: 400;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.95);
-            border-color: rgba(255, 255, 255, 0.8);
-            transform: scale(1.05);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
         }
 
         &:after,
@@ -3290,8 +3289,8 @@ input:focus, textarea:focus {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 3px;
-            height: 24px;
+            width: 2px;
+            height: 18px;
             background: white;
         }
         &:after {
@@ -3369,20 +3368,25 @@ input:focus, textarea:focus {
         left: 15px;
     }
     .close {
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
         right: 15px;
         top: 15px;
-        background: rgba(0, 0, 0, 0.95);
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 50%;
         z-index: 10001;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        
+        &:hover {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
         
         &:after,
         &:before {
-            width: 2px;
-            height: 18px;
+            width: 1.5px;
+            height: 14px;
         }
     }
 }
@@ -3417,16 +3421,20 @@ input:focus, textarea:focus {
         left: 8px;
     }
     .close {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         font-size: 14px;
         right: 8px;
         top: 8px;
-        border-radius: 6px;
-        background: rgba(0, 0, 0, 0.98);
-        border: 1px solid rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
         z-index: 10002;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+        
+        &:hover {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
         
         &:after,
         &:before {
@@ -3466,16 +3474,20 @@ input:focus, textarea:focus {
         left: 6px;
     }
     .close {
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
         font-size: 12px;
         right: 6px;
         top: 6px;
-        border-radius: 4px;
-        background: rgba(0, 0, 0, 0.98);
-        border: 1px solid rgba(255, 255, 255, 0.95);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
         z-index: 10003;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.95);
+        
+        &:hover {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
         
         &:after,
         &:before {
