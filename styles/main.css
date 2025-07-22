@@ -90,6 +90,8 @@ html {
     border-bottom: none !important;
     border-left: none !important;
     border-right: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
 }
 
 body {
@@ -1105,7 +1107,8 @@ button, a, input, textarea, select {
     }
 
     .portfolio-names {
-        font-size: 1.4rem;
+        ```text
+font-size: 1.4rem;
         font-weight: 300;
         font-style: italic;
     }
