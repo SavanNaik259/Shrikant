@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananya & Rohan Wedding - Vedic Vows Photography</title>
+    <meta name="description" content="Beautiful wedding photography of Ananya & Rohan captured by Vedic Vows in Mysore, May 2024.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-menu" id="nav-menu">
+                <button class="mobile-close" id="mobile-close"></button>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/white-logo.png" alt="Vedic Vows Wedding Photography Logo" class="logo-image">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="detail-page-main">
+        <!-- Detail Page Header -->
+        <section class="detail-header">
+            <div class="detail-header-content">
+                <h1 class="detail-couple-names">Ananya <span class="ampersand">&</span> Rohan</h1>
+                <p class="detail-wedding-info">May 2024 • Mysore</p>
+                <a href="index.html#portfolio" class="back-to-portfolio">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+        </section>
+
+        <!-- Wedding Video Section -->
+        <section class="detail-video-section">
+            <div class="detail-video-container">
+                <div class="detail-video-placeholder" data-video-id="jNQXAC9IVRw">
+                    <img src="1000819102.jpg" alt="Ananya & Rohan Wedding" class="detail-video-bg">
+                    <div class="detail-video-overlay">
+                        <button class="detail-video-play-btn">
+                            <i class="fab fa-youtube"></i>
+                            <span>Watch Wedding Film</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Gallery Section -->
+        <section class="detail-gallery-section">
+            <h2 class="detail-gallery-title">Wedding Gallery</h2>
+            <div class="detail-photo-grid">
+                <!-- Top Row - Large photo -->
+                <div class="photo-item large-photo">
+                    <img src="https://picsum.photos/600/800?random=ananya-rohan-1" alt="Ananya & Rohan Wedding Photo 1" loading="lazy">
+                </div>
+                
+                <!-- Right Column - Two medium photos -->
+                <div class="photo-item medium-photo">
+                    <img src="https://picsum.photos/400/380?random=ananya-rohan-2" alt="Ananya & Rohan Wedding Photo 2" loading="lazy">
+                </div>
+                <div class="photo-item medium-photo">
+                    <img src="https://picsum.photos/400/380?random=ananya-rohan-3" alt="Ananya & Rohan Wedding Photo 3" loading="lazy">
+                </div>
+
+                <!-- Bottom Row - Three equal photos -->
+                <div class="photo-item equal-photo">
+                    <img src="https://picsum.photos/400/400?random=ananya-rohan-4" alt="Ananya & Rohan Wedding Photo 4" loading="lazy">
+                </div>
+                <div class="photo-item equal-photo">
+                    <img src="https://picsum.photos/400/400?random=ananya-rohan-5" alt="Ananya & Rohan Wedding Photo 5" loading="lazy">
+                </div>
+                <div class="photo-item equal-photo">
+                    <img src="https://picsum.photos/400/400?random=ananya-rohan-6" alt="Ananya & Rohan Wedding Photo 6" loading="lazy">
+                </div>
+
+                <!-- Additional Row - Two large photos -->
+                <div class="photo-item wide-photo">
+                    <img src="https://picsum.photos/600/450?random=ananya-rohan-7" alt="Ananya & Rohan Wedding Photo 7" loading="lazy">
+                </div>
+                <div class="photo-item wide-photo">
+                    <img src="https://picsum.photos/600/450?random=ananya-rohan-8" alt="Ananya & Rohan Wedding Photo 8" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script>
+        // Initialize the website functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            window.weddingWebsite = new WeddingPhotographyWebsite();
+            
+            // Setup video play functionality
+            const videoPlayBtn = document.querySelector('.detail-video-play-btn');
+            const videoContainer = document.querySelector('.detail-video-container');
+            
+            if (videoPlayBtn) {
+                videoPlayBtn.addEventListener('click', () => {
+                    const videoId = document.querySelector('.detail-video-placeholder').getAttribute('data-video-id');
+                    const iframe = document.createElement('iframe');
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&modestbranding=1&controls=1`;
+                    iframe.frameBorder = '0';
+                    iframe.allowFullscreen = true;
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.className = 'detail-youtube-iframe';
+                    
+                    videoContainer.innerHTML = '';
+                    videoContainer.appendChild(iframe);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

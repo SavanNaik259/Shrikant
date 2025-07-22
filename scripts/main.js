@@ -361,15 +361,30 @@ class WeddingPhotographyWebsite {
     }
 
     setupPortfolio() {
-        // Handle portfolio item clicks to open modal
+        // Handle portfolio item clicks to navigate to detail pages
         this.portfolioItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
                 const videoId = item.getAttribute('data-video');
                 const slug = item.getAttribute('data-slug');
-                this.openPortfolioModal(videoId, slug, item);
+                this.navigateToDetailPage(slug);
             });
         });
+    }
+
+    navigateToDetailPage(slug) {
+        // Map slugs to their corresponding detail page filenames
+        const pageMap = {
+            'dhrisha-arun': 'kavya-arjun-detail-page.html',
+            'ananya-rohan': 'ananya-rohan-detail-page.html',
+            'meera-karthik': 'meera-karthik-detail-page.html',
+            'lakshmi-aditya': 'lakshmi-aditya-detail-page.html'
+        };
+
+        const detailPageUrl = pageMap[slug];
+        if (detailPageUrl) {
+            window.location.href = detailPageUrl;
+        }
     }
 
     navigateToPortfolioVideo(videoId, slug) {
