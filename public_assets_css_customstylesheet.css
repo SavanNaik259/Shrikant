@@ -3208,7 +3208,7 @@ input:focus, textarea:focus {
         width: 80px;
         height: 80px;
         border-radius: 8px;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3217,17 +3217,21 @@ input:focus, textarea:focus {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 36px;
-        font-weight: bold;
-        border: 2px solid rgba(255, 255, 255, 0.4);
+        font-size: 40px;
+        font-weight: 900;
+        border: 3px solid rgba(255, 255, 255, 0.8);
         transition: all 0.3s ease;
-        z-index: 1000;
+        z-index: 10000;
         line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
         &:hover {
-            background: rgba(0, 0, 0, 0.95);
-            border-color: rgba(255, 255, 255, 0.8);
-            transform: translateY(-50%) scale(1.05);
+            background: rgba(255, 255, 255, 0.95);
+            color: #000;
+            border-color: rgba(255, 255, 255, 1);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
         }
         }
         .arrowl {
@@ -3235,7 +3239,7 @@ input:focus, textarea:focus {
         width: 80px;
         height: 80px;
         border-radius: 8px;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3244,17 +3248,21 @@ input:focus, textarea:focus {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 36px;
-        font-weight: bold;
-        border: 2px solid rgba(255, 255, 255, 0.4);
+        font-size: 40px;
+        font-weight: 900;
+        border: 3px solid rgba(255, 255, 255, 0.8);
         transition: all 0.3s ease;
-        z-index: 1000;
+        z-index: 10000;
         line-height: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
         &:hover {
-            background: rgba(0, 0, 0, 0.95);
-            border-color: rgba(255, 255, 255, 0.8);
-            transform: translateY(-50%) scale(1.05);
+            background: rgba(255, 255, 255, 0.95);
+            color: #000;
+            border-color: rgba(255, 255, 255, 1);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
         }
         }
         .close {
