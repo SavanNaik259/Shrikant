@@ -556,16 +556,18 @@ class WeddingPhotographyWebsite {
         lightbox.className = 'portfolio-photo-lightbox';
         lightbox.innerHTML = `
             <div class="lightbox-content">
-                <button class="lightbox-close" aria-label="Close photo">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button class="lightbox-prev" aria-label="Previous photo">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
+                <div class="lightbox-controls">
+                    <button class="lightbox-btn lightbox-btn-close" aria-label="Close photo">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="lightbox-btn lightbox-btn-prev" aria-label="Previous photo">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-btn lightbox-btn-next" aria-label="Next photo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
                 <img src="${currentPhoto.src}" alt="${currentPhoto.alt}" class="lightbox-image">
-                <button class="lightbox-next" aria-label="Next photo">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
                 <div class="lightbox-counter">${photoIndex + 1} / ${photos.length}</div>
             </div>
         `;
@@ -594,19 +596,19 @@ class WeddingPhotographyWebsite {
         };
         
         // Close lightbox
-        lightbox.querySelector('.lightbox-close').addEventListener('click', () => {
+        lightbox.querySelector('.lightbox-btn-close').addEventListener('click', () => {
             lightbox.classList.remove('active');
             setTimeout(() => lightbox.remove(), 300);
         });
         
         // Previous photo
-        lightbox.querySelector('.lightbox-prev').addEventListener('click', () => {
+        lightbox.querySelector('.lightbox-btn-prev').addEventListener('click', () => {
             const prevIndex = currentPhotoIndex > 0 ? currentPhotoIndex - 1 : photos.length - 1;
             updatePhoto(prevIndex);
         });
         
         // Next photo
-        lightbox.querySelector('.lightbox-next').addEventListener('click', () => {
+        lightbox.querySelector('.lightbox-btn-next').addEventListener('click', () => {
             const nextIndex = currentPhotoIndex < photos.length - 1 ? currentPhotoIndex + 1 : 0;
             updatePhoto(nextIndex);
         });
@@ -617,13 +619,13 @@ class WeddingPhotographyWebsite {
             
             switch(e.key) {
                 case 'Escape':
-                    lightbox.querySelector('.lightbox-close').click();
+                    lightbox.querySelector('.lightbox-btn-close').click();
                     break;
                 case 'ArrowLeft':
-                    lightbox.querySelector('.lightbox-prev').click();
+                    lightbox.querySelector('.lightbox-btn-prev').click();
                     break;
                 case 'ArrowRight':
-                    lightbox.querySelector('.lightbox-next').click();
+                    lightbox.querySelector('.lightbox-btn-next').click();
                     break;
             }
         });

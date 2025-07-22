@@ -1471,57 +1471,7 @@ button, a, input, textarea, select {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.lightbox-close {
-    top: 2rem;
-    right: 2rem;
-}
-
-.lightbox-prev {
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.lightbox-next {
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.lightbox-close:hover,
-.lightbox-prev:hover,
-.lightbox-next:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-.lightbox-prev:hover {
-    transform: translateY(-50%) scale(1.1);
-}
-
-.lightbox-next:hover {
-    transform: translateY(-50%) scale(1.1);
-}
 
 .lightbox-counter {
     position: absolute;
@@ -1536,6 +1486,79 @@ button, a, input, textarea, select {
     font-size: 0.9rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+/* NEW LIGHTBOX CONTROLS - Mobile First Design */
+.lightbox-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.lightbox-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+}
+
+.lightbox-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.lightbox-btn:active {
+    transform: scale(0.95);
+}
+
+.lightbox-btn-close {
+    top: 1rem;
+    right: 1rem;
+}
+
+.lightbox-btn-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-btn-prev:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-btn-prev:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.lightbox-btn-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-btn-next:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-btn-next:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
 /* Portfolio Modal Responsive Design */
@@ -1582,25 +1605,24 @@ button, a, input, textarea, select {
         padding: 1rem;
     }
 
-    .portfolio-photo-lightbox .lightbox-close,
-    .portfolio-photo-lightbox .lightbox-prev,
-    .portfolio-photo-lightbox .lightbox-next {
-        width: 35px !important;
-        height: 35px !important;
-        font-size: 0.9rem !important;
+    /* Mobile responsive lightbox buttons */
+    .lightbox-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
     }
 
-    .lightbox-close {
-        top: 1rem;
-        right: 1rem;
+    .lightbox-btn-close {
+        top: 0.8rem;
+        right: 0.8rem;
     }
 
-    .lightbox-prev {
-        left: 1rem;
+    .lightbox-btn-prev {
+        left: 0.8rem;
     }
 
-    .lightbox-next {
-        right: 1rem;
+    .lightbox-btn-next {
+        right: 0.8rem;
     }
 
     .lightbox-counter {
@@ -1632,25 +1654,25 @@ button, a, input, textarea, select {
         gap: 1rem;
     }
 
-    .portfolio-photo-lightbox .lightbox-close,
-    .portfolio-photo-lightbox .lightbox-prev,
-    .portfolio-photo-lightbox .lightbox-next {
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 0.75rem !important;
+    /* Small mobile lightbox buttons */
+    .lightbox-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+        border-width: 1.5px;
     }
 
-    .lightbox-close {
-        top: 0.5rem;
-        right: 0.5rem;
+    .lightbox-btn-close {
+        top: 0.6rem;
+        right: 0.6rem;
     }
 
-    .lightbox-prev {
-        left: 0.5rem;
+    .lightbox-btn-prev {
+        left: 0.6rem;
     }
 
-    .lightbox-next {
-        right: 0.5rem;
+    .lightbox-btn-next {
+        right: 0.6rem;
     }
 
     .lightbox-content {
@@ -1658,17 +1680,7 @@ button, a, input, textarea, select {
     }
 }
 
-/* Extra small devices */
-@media screen and (max-width: 360px) {
-    .portfolio-photo-lightbox .lightbox-close,
-    .portfolio-photo-lightbox .lightbox-prev,
-    .portfolio-photo-lightbox .lightbox-next {
-        width: 26px !important;
-        height: 26px !important;
-        font-size: 0.7rem !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    }
-}
+
 
 /* Detail Page Styles */
 .detail-page-main {
@@ -3699,48 +3711,26 @@ button, a, input, textarea, select {
     .footer-brand h3 {
         font-size: 1.5rem;
     }
-}
 
-/* CRITICAL FIX: Mobile Lightbox Button Sizes - Final Override */
-@media screen and (max-width: 768px) {
-    body .portfolio-photo-lightbox.active .lightbox-close,
-    body .portfolio-photo-lightbox.active .lightbox-prev,
-    body .portfolio-photo-lightbox.active .lightbox-next {
-        width: 35px !important;
-        height: 35px !important;
-        font-size: 0.9rem !important;
-        min-width: 35px !important;
-        min-height: 35px !important;
-        max-width: 35px !important;
-        max-height: 35px !important;
+    /* Extra small mobile lightbox buttons */
+    .lightbox-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+        border-width: 1px;
+    }
+
+    .lightbox-btn-close {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .lightbox-btn-prev {
+        left: 0.5rem;
+    }
+
+    .lightbox-btn-next {
+        right: 0.5rem;
     }
 }
 
-@media screen and (max-width: 480px) {
-    body .portfolio-photo-lightbox.active .lightbox-close,
-    body .portfolio-photo-lightbox.active .lightbox-prev,
-    body .portfolio-photo-lightbox.active .lightbox-next {
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 0.75rem !important;
-        min-width: 30px !important;
-        min-height: 30px !important;
-        max-width: 30px !important;
-        max-height: 30px !important;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    body .portfolio-photo-lightbox.active .lightbox-close,
-    body .portfolio-photo-lightbox.active .lightbox-prev,
-    body .portfolio-photo-lightbox.active .lightbox-next {
-        width: 26px !important;
-        height: 26px !important;
-        font-size: 0.7rem !important;
-        min-width: 26px !important;
-        min-height: 26px !important;
-        max-width: 26px !important;
-        max-height: 26px !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    }
-}
