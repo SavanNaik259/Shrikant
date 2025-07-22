@@ -3205,8 +3205,8 @@ input:focus, textarea:focus {
         }
         .arrowr {
         right: 20px;
-        width: 80px;
-        height: 80px;
+        width: 10px;
+        height: 10px;
         border-radius: 8px;
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
@@ -3217,27 +3217,27 @@ input:focus, textarea:focus {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 40px;
+        font-size: 8px;
         font-weight: 900;
-        border: 3px solid rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.8);
         transition: all 0.3s ease;
         z-index: 10000;
         line-height: 1;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 
         &:hover {
             background: rgba(255, 255, 255, 0.95);
             color: #000;
             border-color: rgba(255, 255, 255, 1);
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
         }
         }
         .arrowl {
         left: 20px;
-        width: 80px;
-        height: 80px;
+        width: 10px;
+        height: 10px;
         border-radius: 8px;
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
@@ -3248,21 +3248,21 @@ input:focus, textarea:focus {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 40px;
+        font-size: 8px;
         font-weight: 900;
-        border: 3px solid rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.8);
         transition: all 0.3s ease;
         z-index: 10000;
         line-height: 1;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 
         &:hover {
             background: rgba(255, 255, 255, 0.95);
             color: #000;
             border-color: rgba(255, 255, 255, 1);
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
         }
         }
         .close {
@@ -3352,13 +3352,13 @@ input:focus, textarea:focus {
     }
     
     .arrowr, .arrowl {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
+        width: 10px;
+        height: 10px;
+        font-size: 8px;
         background: rgba(0, 0, 0, 0.95);
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.8);
         z-index: 10001;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
     .arrowr {
         right: 15px;
@@ -3392,14 +3392,14 @@ input:focus, textarea:focus {
     }
     
     .arrowr, .arrowl {
-        width: 32px;
-        height: 32px;
-        font-size: 16px;
+        width: 10px;
+        height: 10px;
+        font-size: 8px;
         border-radius: 6px;
         background: rgba(0, 0, 0, 0.98);
         border: 1px solid rgba(255, 255, 255, 0.9);
         z-index: 10002;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
     .arrowr {
         right: 8px;
@@ -3434,14 +3434,14 @@ input:focus, textarea:focus {
     }
     
     .arrowr, .arrowl {
-        width: 28px;
-        height: 28px;
-        font-size: 14px;
+        width: 10px;
+        height: 10px;
+        font-size: 8px;
         border-radius: 4px;
         background: rgba(0, 0, 0, 0.98);
         border: 1px solid rgba(255, 255, 255, 0.95);
         z-index: 10003;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
     .arrowr {
         right: 6px;
