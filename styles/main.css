@@ -1945,17 +1945,19 @@ button, a, input, textarea, select {
 .form-group {
     position: relative;
     margin-bottom: 2.5rem;
-    width: 100%;
+    width: 90vw;
     max-width: 600px;
-    align-self: center;
 }
 
-/* Remove zigzag pattern - center all form fields */
-.form-group:nth-child(odd),
+/* Zigzag Pattern - Alternate left and right alignment */
+.form-group:nth-child(odd) {
+    align-self: flex-start;
+    margin-left: 0;
+}
+
 .form-group:nth-child(even) {
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
+    align-self: flex-end;
+    margin-right: 0;
 }
 
 /* Minimalist Underline Input Style */
