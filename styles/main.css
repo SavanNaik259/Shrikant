@@ -1582,12 +1582,12 @@ button, a, input, textarea, select {
         padding: 1rem;
     }
 
-    .lightbox-close,
-    .lightbox-prev,
-    .lightbox-next {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
+    .portfolio-photo-lightbox .lightbox-close,
+    .portfolio-photo-lightbox .lightbox-prev,
+    .portfolio-photo-lightbox .lightbox-next {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 0.9rem !important;
     }
 
     .lightbox-close {
@@ -1632,12 +1632,12 @@ button, a, input, textarea, select {
         gap: 1rem;
     }
 
-    .lightbox-close,
-    .lightbox-prev,
-    .lightbox-next {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
+    .portfolio-photo-lightbox .lightbox-close,
+    .portfolio-photo-lightbox .lightbox-prev,
+    .portfolio-photo-lightbox .lightbox-next {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.75rem !important;
     }
 
     .lightbox-close {
@@ -1655,6 +1655,18 @@ button, a, input, textarea, select {
 
     .lightbox-content {
         padding: 0.5rem;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .portfolio-photo-lightbox .lightbox-close,
+    .portfolio-photo-lightbox .lightbox-prev,
+    .portfolio-photo-lightbox .lightbox-next {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.7rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
     }
 }
 
@@ -3686,5 +3698,49 @@ button, a, input, textarea, select {
 
     .footer-brand h3 {
         font-size: 1.5rem;
+    }
+}
+
+/* CRITICAL FIX: Mobile Lightbox Button Sizes - Final Override */
+@media screen and (max-width: 768px) {
+    body .portfolio-photo-lightbox.active .lightbox-close,
+    body .portfolio-photo-lightbox.active .lightbox-prev,
+    body .portfolio-photo-lightbox.active .lightbox-next {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 0.9rem !important;
+        min-width: 35px !important;
+        min-height: 35px !important;
+        max-width: 35px !important;
+        max-height: 35px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body .portfolio-photo-lightbox.active .lightbox-close,
+    body .portfolio-photo-lightbox.active .lightbox-prev,
+    body .portfolio-photo-lightbox.active .lightbox-next {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.75rem !important;
+        min-width: 30px !important;
+        min-height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body .portfolio-photo-lightbox.active .lightbox-close,
+    body .portfolio-photo-lightbox.active .lightbox-prev,
+    body .portfolio-photo-lightbox.active .lightbox-next {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.7rem !important;
+        min-width: 26px !important;
+        min-height: 26px !important;
+        max-width: 26px !important;
+        max-height: 26px !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
     }
 }
