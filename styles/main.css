@@ -23,9 +23,7 @@
 }
 
 /* Remove any skip links or accessibility elements that might show */
-.skip-link,
-a[href="#home"]:first-child,
-body > a:first-child {
+.skip-link {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
