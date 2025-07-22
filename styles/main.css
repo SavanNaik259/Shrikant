@@ -50,30 +50,28 @@ body {
     background-color: var(--primary-color);
 }
 
-/* Global Scrollbar Styling */
+/* Global Scrollbar Styling - Using default browser scrollbars */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: auto;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--primary-color);
-    border-radius: 6px;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-    border-radius: 6px;
-    border: 2px solid var(--primary-color);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-light);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* Firefox scrollbar */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-color) var(--primary-color);
+    scrollbar-width: auto;
+    scrollbar-color: auto;
 }
 
 /* Remove default focus outlines for touch devices */
@@ -840,22 +838,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .portfolio-grid::-webkit-scrollbar {
-    height: 8px;
+    height: auto;
 }
 
 .portfolio-grid::-webkit-scrollbar-track {
-    background: var(--primary-color);
-    border-radius: 4px;
+    background: transparent;
 }
 
 .portfolio-grid::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-    opacity: 0.7;
 }
 
 .portfolio-grid::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-light);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-item {
@@ -2102,15 +2098,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .countries-list::-webkit-scrollbar {
-    width: 6px;
+    width: auto;
 }
 
 .countries-list::-webkit-scrollbar-track {
-    background: #f0f0f0;
+    background: transparent;
 }
 
 .countries-list::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 }
 
