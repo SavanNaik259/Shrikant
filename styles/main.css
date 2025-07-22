@@ -8,14 +8,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Remove borders from all elements EXCEPT form elements */
+*:not(input):not(textarea):not(select) {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
 }
 
-*::before,
-*::after {
+*:not(input):not(textarea):not(select)::before,
+*:not(input):not(textarea):not(select)::after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
