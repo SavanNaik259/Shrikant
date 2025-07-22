@@ -83,65 +83,40 @@
         </section>
 
         <!-- Wedding Gallery Section -->
-        <section class="detail-gallery-section">
+        <section class="detail-gallery-section photography-editorial-gallery">
             <h2 class="detail-gallery-title">Wedding Gallery</h2>
-            <div class="detail-photo-grid">
-                <!-- Large photo on left -->
-                <div class="photo-item">
-                    <img src="1000819102.jpg" alt="Ananya & Rohan Wedding Photo 1" loading="lazy">
-                </div>
-                
-                <!-- Top right photo -->
-                <div class="photo-item">
-                    <img src="1000819096.jpg" alt="Ananya & Rohan Wedding Photo 2" loading="lazy">
-                </div>
-                
-                <!-- Middle right photo -->
-                <div class="photo-item">
-                    <img src="1000819097.jpg" alt="Ananya & Rohan Wedding Photo 3" loading="lazy">
-                </div>
-                
-                <!-- Bottom right photo -->
-                <div class="photo-item">
-                    <img src="1000819100.jpg" alt="Ananya & Rohan Wedding Photo 4" loading="lazy">
-                </div>
-
-                <!-- Full width photo -->
-                <div class="photo-item">
-                    <img src="1000819098.jpg" alt="Ananya & Rohan Wedding Photo 5" loading="lazy">
-                </div>
-
-                <!-- Bottom left photo -->
-                <div class="photo-item">
-                    <img src="1000819102.jpg" alt="Ananya & Rohan Wedding Photo 6" loading="lazy">
-                </div>
-                
-                <!-- Bottom right photo -->
-                <div class="photo-item">
-                    <img src="1000819096.jpg" alt="Ananya & Rohan Wedding Photo 7" loading="lazy">
-                </div>
-
-                <!-- Eighth photo -->
-                <div class="photo-item">
-                    <img src="1000819100.jpg" alt="Ananya & Rohan Wedding Photo 8" loading="lazy">
-                </div>
-
-                <!-- Ninth photo -->
-                <div class="photo-item">
-                    <img src="1000819102.jpg" alt="Ananya & Rohan Wedding Photo 9" loading="lazy">
-                </div>
-
-                <!-- Final full width photo -->
-                <div class="photo-item">
-                    <img src="1000819098.jpg" alt="Ananya & Rohan Wedding Photo 10" loading="lazy">
-                </div>
+            <div class="photography-editorial-gallery-imgs">
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 1"/>
+                <img data-src="1000819096.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 2"/>
+                <img data-src="1000819097.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 3"/>
+                <img data-src="1000819100.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 4"/>
+                <img data-src="1000819098.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 5"/>
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 6"/>
+                <img data-src="1000819096.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 7"/>
+                <img data-src="1000819100.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 8"/>
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 9"/>
+                <img data-src="1000819098.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Ananya & Rohan Wedding Photo 10"/>
+            </div>
+            
+            <!-- Lightbox -->
+            <div class="lightbox">
+                <div class="filter"></div>
+                <div class="title"></div>
+                <div class="close-lightbox">×</div>
+                <div class="arrowl">‹</div>
+                <div class="arrowr">›</div>
             </div>
         </section>
     </main>
 
     <!-- Scripts -->
+    <link rel="stylesheet" href="public_assets_css_customstylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" />
+    <script src="public_assets_theme_js_jquery.min.js"></script>
+    <script src="public_assets_theme_js_bootstrap.bundle.min.js"></script>
+    <script src="public_assets_theme_js_masonry.pkgd.min.js"></script>
+    <script src="public_assets_js_custom.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/image-optimizer.js"></script>
     <script>
         // Initialize the website functionality
         document.addEventListener('DOMContentLoaded', () => {
