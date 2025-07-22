@@ -1776,8 +1776,8 @@ font-size: 1.4rem;
 
 .detail-video-container {
     position: relative;
-    width: 80vw;
-    height: 50vh;
+    width: 90vw;
+    height: 30vh;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -2091,8 +2091,8 @@ font-size: 1.4rem;
     }
 
     .detail-video-container {
-        width: 80vw;
-        height: 50vh;
+        width: 90vw;
+        height: 30vh;
     }
 
     .detail-video-play-btn {
@@ -2118,8 +2118,8 @@ font-size: 1.4rem;
 
 @media screen and (max-width: 480px) {
     .detail-video-container {
-        width: 80vw;
-        height: 50vh;
+        width: 90vw;
+        height: 30vh;
     }
 
     .detail-couple-names {
