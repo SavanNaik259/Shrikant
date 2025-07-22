@@ -40,6 +40,10 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
 }
 
 body {
@@ -48,30 +52,33 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
 }
 
-/* Global Scrollbar Styling - Using default browser scrollbars */
+/* Completely hide all scrollbars */
 ::-webkit-scrollbar {
-    width: auto;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 /* Firefox scrollbar */
 * {
-    scrollbar-width: auto;
-    scrollbar-color: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 /* Remove default focus outlines for touch devices */
@@ -102,6 +109,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     z-index: 1000;
     transition: var(--transition-smooth);
     padding: 1rem 0;
+    border: none;
+    border-top: none;
+    border-bottom: none;
+    outline: none;
+    margin: 0;
 }
 
 .navbar.scrolled {
@@ -838,20 +850,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .portfolio-grid::-webkit-scrollbar {
-    height: auto;
+    display: none;
 }
 
 .portfolio-grid::-webkit-scrollbar-track {
-    background: transparent;
+    display: none;
 }
 
 .portfolio-grid::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+    display: none;
 }
 
 .portfolio-grid::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 .portfolio-item {
@@ -2098,16 +2109,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .countries-list::-webkit-scrollbar {
-    width: auto;
+    display: none;
 }
 
 .countries-list::-webkit-scrollbar-track {
-    background: transparent;
+    display: none;
 }
 
 .countries-list::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
+    display: none;
 }
 
 .country-item {
