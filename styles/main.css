@@ -1823,13 +1823,46 @@ button, a, input, textarea, select {
     display: block;
 }
 
-/* Special handling for wide photos to prevent excessive cropping */
-.detail-photo-grid .photo-item:nth-child(4) img,
-.detail-photo-grid .photo-item:nth-child(7) img,
-.detail-photo-grid .photo-item:nth-child(10) img {
+/* Dynamic image optimization classes */
+.optimized-wide {
+    background-color: var(--primary-color);
+}
+
+.optimized-wide img {
     object-fit: contain;
     object-position: center;
-    background-color: var(--primary-color);
+}
+
+.optimized-landscape img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.optimized-square img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.optimized-portrait img {
+    object-fit: cover;
+    object-position: center top;
+}
+
+.optimized-tall img {
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Responsive adjustments for optimized images */
+@media screen and (min-width: 769px) {
+    .optimized-wide {
+        background-color: var(--primary-color);
+    }
+    
+    .optimized-tall img,
+    .optimized-portrait img {
+        object-position: center;
+    }
 }
 
 /* Specific layout to match screenshot exactly */
