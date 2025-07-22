@@ -2292,32 +2292,32 @@ button, a, input, textarea, select {
     /* Maintain zigzag pattern on small screens with reduced offset */
     .form-group {
         margin-bottom: 2rem;
-        width: 85vw;
+        width: 80vw;
         max-width: 400px;
     }
 
-    /* Override large screen margins for mobile - make the zigzag more pronounced on small screens */
+    /* Default zigzag: odd = left, even = right with consistent spacing */
     .form-group:nth-child(odd) {
         align-self: flex-start !important;
-        margin-left: 12% !important;
-        margin-right: 3% !important;
+        margin-left: 10% !important;
+        margin-right: 5% !important;
     }
 
     .form-group:nth-child(even) {
         align-self: flex-end !important;
-        margin-right: 12% !important;
-        margin-left: 3% !important;
+        margin-right: 10% !important;
+        margin-left: 5% !important;
     }
 
     /* Add slight extra spacing for Event Date and Days fields to prevent label hiding */
     .form-group.date-field-group {
-        margin-left: 15% !important;
+        margin-left: 8% !important;
         margin-right: 5% !important;
     }
 
     .form-group.days-field-group {
         margin-left: 5% !important;
-        margin-right: 15% !important;
+        margin-right: 8% !important;
     }
 
     .form-input, .form-textarea, .form-select {
