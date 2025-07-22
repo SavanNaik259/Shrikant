@@ -2226,7 +2226,8 @@ input:focus, textarea:focus {
     .photography-video-gallery-main{
         margin-left: 0px;
         .video-gallery-heading{
-            .event-place-name{
+            ```text
+.event-place-name{
                 font-size: 14px;
                 margin-bottom: 12px;
             }
@@ -2747,10 +2748,10 @@ input:focus, textarea:focus {
             }
             .blogs-card-content{
                 &>*:not(:last-child){
-                    margin-bottom: 6px;
+                    margin-bottom: 5px;
                 }
                 h4{
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }
@@ -3203,55 +3204,88 @@ input:focus, textarea:focus {
             transform-style: preserve-3d;
         }
         }
-        [class^="arrow"] {
-        height: 200px;
-        width: 50px;
-        background: rgba(0, 0, 0, 0.4);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            width: 15px;
-            height: 15px;
-        }
-        }
         .arrowr {
-        right: 0;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.9);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
 
         &:after {
-            border-right: 1px solid white;
-            border-bottom: 1px solid white;
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
         }
         }
         .arrowl {
-        left: 0;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.9);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
 
         &:after {
-            border-left: 1px solid white;
-            border-top: 1px solid white;
+            border-left: 2px solid white;
+            border-top: 2px solid white;
         }
         }
         .close {
         position: absolute;
-        right: 0;
-        width: 30px;
-        height: 30px;
-        margin: 20px;
+        right: 20px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.9);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.1);
+        }
+
         &:after,
         &:before {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 1px;
-            height: 100%;
+            width: 2px;
+            height: 20px;
             background: white;
         }
         &:after {
