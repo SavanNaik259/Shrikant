@@ -40,12 +40,6 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-}
-
-html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
 }
 
 body {
@@ -53,18 +47,33 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
-    overflow-y: hidden;
     background-color: var(--primary-color);
 }
 
-/* Global Scrollbar Hiding */
-* {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+/* Global Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
 }
 
-*::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--primary-color);
 }
 
 /* Remove default focus outlines for touch devices */
