@@ -1823,6 +1823,15 @@ button, a, input, textarea, select {
     display: block;
 }
 
+/* Special handling for wide photos to prevent excessive cropping */
+.detail-photo-grid .photo-item:nth-child(4) img,
+.detail-photo-grid .photo-item:nth-child(7) img,
+.detail-photo-grid .photo-item:nth-child(10) img {
+    object-fit: contain;
+    object-position: center;
+    background-color: var(--primary-color);
+}
+
 /* Specific layout to match screenshot exactly */
 /* First photo - Large on left, but not too tall */
 .detail-photo-grid .photo-item:nth-child(1) {
@@ -1845,7 +1854,7 @@ button, a, input, textarea, select {
 /* Fourth photo - Full width below */
 .detail-photo-grid .photo-item:nth-child(4) {
     grid-column: span 2;
-    min-height: 180px;
+    min-height: 140px;
 }
 
 /* Fifth photo - Left bottom */
@@ -1863,25 +1872,25 @@ button, a, input, textarea, select {
 /* Seventh photo - Full width */
 .detail-photo-grid .photo-item:nth-child(7) {
     grid-column: span 2;
-    min-height: 140px;
+    min-height: 120px;
 }
 
 /* Eighth photo - Left */
 .detail-photo-grid .photo-item:nth-child(8) {
     grid-column: span 1;
-    min-height: 180px;
+    min-height: 160px;
 }
 
 /* Ninth photo - Right */
 .detail-photo-grid .photo-item:nth-child(9) {
     grid-column: span 1;
-    min-height: 180px;
+    min-height: 160px;
 }
 
 /* Tenth photo - Full width final */
 .detail-photo-grid .photo-item:nth-child(10) {
     grid-column: span 2;
-    min-height: 160px;
+    min-height: 130px;
 }
 
 /* Detail Page Responsive Design */
@@ -1916,7 +1925,7 @@ button, a, input, textarea, select {
     .detail-photo-grid .photo-item:nth-child(4) {
         grid-column: 2 / 4;
         grid-row: 2;
-        min-height: 190px;
+        min-height: 150px;
     }
     
     .detail-photo-grid .photo-item:nth-child(5) {
