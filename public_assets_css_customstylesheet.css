@@ -3208,7 +3208,7 @@ input:focus, textarea:focus {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.6);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3222,11 +3222,11 @@ input:focus, textarea:focus {
         border: none;
         transition: all 0.3s ease;
         z-index: 10000;
-        line-height: 1;
+        line-height: 50px;
         text-align: center;
         
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
             transform: translateY(-50%);
         }
@@ -3236,7 +3236,7 @@ input:focus, textarea:focus {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.6);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3250,11 +3250,11 @@ input:focus, textarea:focus {
         border: none;
         transition: all 0.3s ease;
         z-index: 10000;
-        line-height: 1;
+        line-height: 50px;
         text-align: center;
         
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
             transform: translateY(-50%);
         }
@@ -3349,15 +3349,16 @@ input:focus, textarea:focus {
         width: 45px;
         height: 45px;
         font-size: 18px;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.6);
         border: none;
         border-radius: 50%;
         z-index: 10001;
         font-weight: 400;
         text-align: center;
+        line-height: 45px;
         
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
         }
     }
@@ -3397,14 +3398,15 @@ input:focus, textarea:focus {
         height: 40px;
         font-size: 16px;
         border-radius: 50%;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.6);
         border: none;
         z-index: 10002;
         font-weight: 400;
         text-align: center;
+        line-height: 40px;
         
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
         }
     }
@@ -3445,14 +3447,15 @@ input:focus, textarea:focus {
         height: 35px;
         font-size: 14px;
         border-radius: 50%;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.6);
         border: none;
         z-index: 10003;
         font-weight: 400;
         text-align: center;
+        line-height: 35px;
         
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
         }
     }
