@@ -52,12 +52,43 @@ app.get('/video_20250721_160603_edit.mp4', (req, res) => {
     }
 });
 
-// Serve static files (after custom routes)
+// URL rewriting middleware to remove .html extensions
+app.use((req, res, next) => {
+    // Redirect .html URLs to clean URLs
+    if (req.path.endsWith('.html')) {
+        const cleanPath = req.path.slice(0, -5); // Remove .html
+        return res.redirect(301, cleanPath || '/');
+    }
+    
+    // Handle clean URLs by checking for .html files
+    if (!req.path.includes('.') && req.path !== '/') {
+        const htmlPath = path.join(__dirname, req.path + '.html');
+        if (fs.existsSync(htmlPath)) {
+            return res.sendFile(htmlPath);
+        }
+    }
+    
+    // Handle root path
+    if (req.path === '/') {
+        const indexPath = path.join(__dirname, 'index.html');
+        if (fs.existsSync(indexPath)) {
+            return res.sendFile(indexPath);
+        }
+    }
+    
+    next();
+});
+
+// Serve static files (after custom routes and URL rewriting)
 app.use(express.static('.', {
     setHeaders: (res, filePath) => {
         if (filePath.endsWith('.mp4')) {
             res.setHeader('Cache-Control', 'public, max-age=3600');
             res.setHeader('Accept-Ranges', 'bytes');
+        }
+        // Set proper headers for HTML files
+        if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'public, max-age=300');
         }
     }
 }));
