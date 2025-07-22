@@ -1704,9 +1704,9 @@ button, a, input, textarea, select {
 }
 
 .detail-video-section {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto 4rem;
+    padding: 2rem 0;
+    width: 100%;
+    margin: 0 0 4rem 0;
 }
 
 .detail-video-container {
@@ -1781,8 +1781,8 @@ button, a, input, textarea, select {
 
 .detail-gallery-section {
     padding: 0 0 4rem 0;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
 }
 
 .detail-gallery-title {
@@ -1889,9 +1889,9 @@ button, a, input, textarea, select {
     .detail-photo-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     
     /* Desktop layout - more complex grid with 10 photos */
@@ -1980,7 +1980,7 @@ button, a, input, textarea, select {
     }
     
     .detail-video-section {
-        padding: 1rem;
+        padding: 1rem 0;
     }
     
     .detail-video-container {
@@ -1996,7 +1996,8 @@ button, a, input, textarea, select {
     .detail-gallery-title {
         font-size: 1.8rem;
         margin-bottom: 2rem;
-        padding: 0 1rem;
+        padding: 0;
+        text-align: center;
     }
     
     /* Mobile keeps the 2-column layout as specified */
