@@ -361,12 +361,13 @@ class WeddingPhotographyWebsite {
     }
 
     setupPortfolio() {
-        // Handle portfolio item clicks - disabled navigation
+        // Handle portfolio item clicks to open modal
         this.portfolioItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
-                // Navigation disabled - portfolio items no longer redirect
-                return false;
+                const videoId = item.getAttribute('data-video');
+                const slug = item.getAttribute('data-slug');
+                this.openPortfolioModal(videoId, slug, item);
             });
         });
     }
@@ -385,42 +386,252 @@ class WeddingPhotographyWebsite {
         this.createVideoPage(videoId, slug);
     }
 
-    createVideoPage(videoId, slug) {
-        // Hide main content
-        const main = document.querySelector('main');
-        if (main) {
-            main.style.display = 'none';
-        }
+    openPortfolioModal(videoId, slug, portfolioItem) {
+        // Get portfolio data
+        const portfolioInfo = this.getPortfolioData(portfolioItem);
         
-        // Create video page container
-        const videoPageContainer = document.createElement('div');
-        videoPageContainer.className = 'video-page-container';
-        videoPageContainer.innerHTML = `
-            <div class="video-page">
-                <div class="video-header">
-                    <button class="back-button" onclick="window.weddingWebsite.goBackToPortfolio()">
-                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+        // Create modal overlay
+        const modalOverlay = document.createElement('div');
+        modalOverlay.className = 'portfolio-modal-overlay';
+        modalOverlay.innerHTML = `
+            <div class="portfolio-modal">
+                <div class="portfolio-modal-header">
+                    <button class="portfolio-modal-close" aria-label="Close portfolio">
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/${videoId}?rel=0&showinfo=0&modestbranding=1&controls=1"
-                        frameborder="0"
-                        allowfullscreen
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
+                
+                <div class="portfolio-modal-content">
+                    <div class="portfolio-video-section">
+                        <div class="portfolio-video-container" data-video-id="${videoId}">
+                            <div class="portfolio-video-placeholder">
+                                <img src="${portfolioInfo.image}" alt="${portfolioInfo.names} Wedding" class="portfolio-video-bg">
+                                <div class="portfolio-video-overlay">
+                                    <div class="portfolio-video-info">
+                                        <h2 class="portfolio-video-title">${portfolioInfo.names}</h2>
+                                        <p class="portfolio-video-details">${portfolioInfo.date} • ${portfolioInfo.location}</p>
+                                    </div>
+                                    <button class="portfolio-video-play-btn" data-video-id="${videoId}">
+                                        <i class="fab fa-youtube"></i>
+                                        <span>Watch on YouTube</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-photos-section">
+                        <h3 class="portfolio-photos-title">Wedding Gallery</h3>
+                        <div class="portfolio-photos-grid">
+                            ${this.generatePortfolioPhotos(slug)}
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
         
-        // Add to body
-        document.body.appendChild(videoPageContainer);
+        // Add modal to body
+        document.body.appendChild(modalOverlay);
         
-        // Update URL without page reload
-        history.pushState({ page: 'video', slug: slug }, '', `/portfolio/${slug}`);
+        // Prevent body scrolling
+        document.body.style.overflow = 'hidden';
         
-        // Scroll to top
-        window.scrollTo(0, 0);
+        // Add event listeners
+        this.setupModalEventListeners(modalOverlay, videoId);
+        
+        // Animate modal in
+        requestAnimationFrame(() => {
+            modalOverlay.classList.add('active');
+        });
+    }
+
+    getPortfolioData(portfolioItem) {
+        const img = portfolioItem.querySelector('img');
+        const names = portfolioItem.querySelector('.portfolio-names').textContent;
+        const date = portfolioItem.querySelector('.portfolio-date').textContent;
+        const location = portfolioItem.querySelector('.portfolio-location').textContent;
+        
+        return {
+            image: img.src,
+            names: names,
+            date: date,
+            location: location
+        };
+    }
+
+    generatePortfolioPhotos(slug) {
+        // Generate a variety of wedding photos for the gallery
+        const photoCategories = [
+            'ceremony', 'reception', 'portraits', 'details', 'candid', 'family'
+        ];
+        
+        let photosHTML = '';
+        const photoCount = 12; // Show 12 photos per portfolio
+        
+        for (let i = 1; i <= photoCount; i++) {
+            const category = photoCategories[i % photoCategories.length];
+            photosHTML += `
+                <div class="portfolio-photo-item">
+                    <img src="https://picsum.photos/400/600?random=${slug}-${i}" 
+                         alt="${category} photo ${i}" 
+                         class="portfolio-photo"
+                         loading="lazy">
+                    <div class="portfolio-photo-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            `;
+        }
+        
+        return photosHTML;
+    }
+
+    setupModalEventListeners(modalOverlay, videoId) {
+        // Close modal button
+        const closeBtn = modalOverlay.querySelector('.portfolio-modal-close');
+        closeBtn.addEventListener('click', () => this.closePortfolioModal(modalOverlay));
+        
+        // Close modal when clicking overlay
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                this.closePortfolioModal(modalOverlay);
+            }
+        });
+        
+        // Video play button
+        const playBtn = modalOverlay.querySelector('.portfolio-video-play-btn');
+        playBtn.addEventListener('click', () => this.loadYouTubeVideo(modalOverlay, videoId));
+        
+        // Photo lightbox
+        const photos = modalOverlay.querySelectorAll('.portfolio-photo-item');
+        photos.forEach((photo, index) => {
+            photo.addEventListener('click', () => this.openPhotoLightbox(modalOverlay, index));
+        });
+        
+        // Escape key to close
+        document.addEventListener('keydown', this.handleModalKeydown.bind(this, modalOverlay));
+    }
+
+    loadYouTubeVideo(modalOverlay, videoId) {
+        const videoContainer = modalOverlay.querySelector('.portfolio-video-container');
+        const placeholder = videoContainer.querySelector('.portfolio-video-placeholder');
+        
+        // Create YouTube iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&modestbranding=1&controls=1`;
+        iframe.frameBorder = '0';
+        iframe.allowFullscreen = true;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.className = 'portfolio-youtube-iframe';
+        
+        // Replace placeholder with iframe
+        placeholder.style.opacity = '0';
+        setTimeout(() => {
+            videoContainer.appendChild(iframe);
+            placeholder.remove();
+        }, 300);
+    }
+
+    openPhotoLightbox(modalOverlay, photoIndex) {
+        const photos = modalOverlay.querySelectorAll('.portfolio-photo');
+        const currentPhoto = photos[photoIndex];
+        
+        // Create lightbox
+        const lightbox = document.createElement('div');
+        lightbox.className = 'portfolio-photo-lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <button class="lightbox-close" aria-label="Close photo">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="lightbox-prev" aria-label="Previous photo">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img src="${currentPhoto.src}" alt="${currentPhoto.alt}" class="lightbox-image">
+                <button class="lightbox-next" aria-label="Next photo">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="lightbox-counter">${photoIndex + 1} / ${photos.length}</div>
+            </div>
+        `;
+        
+        modalOverlay.appendChild(lightbox);
+        
+        // Lightbox event listeners
+        this.setupLightboxControls(lightbox, photos, photoIndex);
+        
+        // Animate in
+        requestAnimationFrame(() => {
+            lightbox.classList.add('active');
+        });
+    }
+
+    setupLightboxControls(lightbox, photos, currentIndex) {
+        let currentPhotoIndex = currentIndex;
+        const lightboxImage = lightbox.querySelector('.lightbox-image');
+        const counter = lightbox.querySelector('.lightbox-counter');
+        
+        const updatePhoto = (index) => {
+            lightboxImage.src = photos[index].src;
+            lightboxImage.alt = photos[index].alt;
+            counter.textContent = `${index + 1} / ${photos.length}`;
+            currentPhotoIndex = index;
+        };
+        
+        // Close lightbox
+        lightbox.querySelector('.lightbox-close').addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            setTimeout(() => lightbox.remove(), 300);
+        });
+        
+        // Previous photo
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', () => {
+            const prevIndex = currentPhotoIndex > 0 ? currentPhotoIndex - 1 : photos.length - 1;
+            updatePhoto(prevIndex);
+        });
+        
+        // Next photo
+        lightbox.querySelector('.lightbox-next').addEventListener('click', () => {
+            const nextIndex = currentPhotoIndex < photos.length - 1 ? currentPhotoIndex + 1 : 0;
+            updatePhoto(nextIndex);
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    lightbox.querySelector('.lightbox-close').click();
+                    break;
+                case 'ArrowLeft':
+                    lightbox.querySelector('.lightbox-prev').click();
+                    break;
+                case 'ArrowRight':
+                    lightbox.querySelector('.lightbox-next').click();
+                    break;
+            }
+        });
+    }
+
+    handleModalKeydown(modalOverlay, e) {
+        if (e.key === 'Escape') {
+            this.closePortfolioModal(modalOverlay);
+        }
+    }
+
+    closePortfolioModal(modalOverlay) {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        setTimeout(() => {
+            modalOverlay.remove();
+        }, 300);
+    }
+
+    createVideoPage(videoId, slug) {
+        // Legacy function - keeping for compatibility
+        this.openPortfolioModal(videoId, slug, document.querySelector(`[data-slug="${slug}"]`));
     }
 
     goBackToPortfolio() {
