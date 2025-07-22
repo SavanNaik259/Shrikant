@@ -1950,16 +1950,29 @@ button, a, input, textarea, select {
 }
 
 /* Expand form width on larger screens */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  
+    .contact-form-wrapper {
+        max-width: 900px;
+    }
+    
+    .form-group {
+        width: 95vw;
+        max-width: 850px;
+    }
+}
+@media screen and (min-width: 1301px) {
     .contact-form-wrapper {
         max-width: 1200px;
     }
-    
+
     .form-group {
         width: 98vw;
         max-width: 1150px;
     }
 }
+
+
 
 /* Zigzag Pattern - Alternate left and right alignment for all screen sizes */
 .form-group:nth-child(odd) {
