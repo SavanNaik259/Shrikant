@@ -1513,9 +1513,9 @@ button, a, input, textarea, select {
     align-items: center;
     justify-content: center;
     pointer-events: all;
-    font-size: 14px;
-    width: 40px;
-    height: 40px;
+    font-size: 8px;
+    width: 10px;
+    height: 10px;
 }
 
 .lightbox-btn:hover {
@@ -1607,9 +1607,9 @@ button, a, input, textarea, select {
 
     /* Mobile responsive lightbox buttons */
     .lightbox-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 13px;
+        width: 10px;
+        height: 10px;
+        font-size: 8px;
     }
 
     .lightbox-btn-close {
@@ -1656,10 +1656,10 @@ button, a, input, textarea, select {
 
     /* Small mobile lightbox buttons */
     .lightbox-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 12px;
-        border-width: 1.5px;
+        width: 10px;
+        height: 10px;
+        font-size: 8px;
+        border-width: 1px;
     }
 
     .lightbox-btn-close {
@@ -3714,9 +3714,9 @@ button, a, input, textarea, select {
 
     /* Extra small mobile lightbox buttons */
     .lightbox-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 11px;
+        width: 10px;
+        height: 10px;
+        font-size: 8px;
         border-width: 1px;
     }
 
