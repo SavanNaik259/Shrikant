@@ -26,6 +26,22 @@
     text-shadow: none !important;
 }
 
+/* Restore borders for form elements */
+input, textarea, select {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Specifically restore bottom borders for contact form inputs */
+.form-input, .form-textarea, .form-select {
+    border-bottom: 2px solid #B49E64 !important;
+}
+
+.phone-prefix {
+    border-bottom: 2px solid #B49E64 !important;
+}
+
 /* Remove any skip links or accessibility elements that might show */
 .skip-link {
     display: none !important;
