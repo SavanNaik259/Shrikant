@@ -3338,36 +3338,89 @@ input:focus, textarea:focus {
 
 /* Responsive lightbox buttons */
 @media (max-width: 768px) {
+    .lightbox img {
+        max-width: calc(100vw - 120px);
+        max-height: calc(100vh - 120px);
+    }
+    
     .arrowr, .arrowl {
-        width: 60px;
-        height: 60px;
-        font-size: 28px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        background: rgba(0, 0, 0, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .arrowr {
         right: 10px;
     }
     .arrowl {
         left: 10px;
     }
     .close {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
         right: 10px;
         top: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.6);
         
         &:after,
         &:before {
             width: 2px;
-            height: 20px;
+            height: 18px;
         }
     }
 }
 
 @media (max-width: 480px) {
+    .lightbox img {
+        max-width: calc(100vw - 100px);
+        max-height: calc(100vh - 100px);
+    }
+    
     .arrowr, .arrowl {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
         border-radius: 6px;
+        background: rgba(0, 0, 0, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+    .arrowr {
+        right: 8px;
+    }
+    .arrowl {
+        left: 8px;
+    }
+    .close {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        right: 8px;
+        top: 8px;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        
+        &:after,
+        &:before {
+            width: 2px;
+            height: 14px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .lightbox img {
+        max-width: calc(100vw - 80px);
+        max-height: calc(100vh - 80px);
+    }
+    
+    .arrowr, .arrowl {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
     }
     .arrowr {
         right: 5px;
@@ -3376,17 +3429,16 @@ input:focus, textarea:focus {
         left: 5px;
     }
     .close {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
         right: 5px;
         top: 5px;
-        border-radius: 6px;
         
         &:after,
         &:before {
-            width: 2px;
-            height: 16px;
+            width: 1.5px;
+            height: 12px;
         }
     }
 }
