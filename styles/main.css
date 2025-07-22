@@ -10,12 +10,28 @@
     box-sizing: border-box;
     border: none !important;
     outline: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
 
 *::before,
 *::after {
     border: none !important;
     outline: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* Remove any skip links or accessibility elements that might show */
+.skip-link,
+a[href="#home"]:first-child,
+body > a:first-child {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
 
 :root {
@@ -72,6 +88,19 @@ body {
     border-bottom: none !important;
     border-left: none !important;
     border-right: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+/* Remove any viewport lines */
+body::before,
+body::after,
+html::before,
+html::after {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+    background: none !important;
 }
 
 /* Completely hide all scrollbars */
@@ -99,13 +128,29 @@ body {
 
 /* Remove default focus outlines for touch devices */
 button, a, input, textarea, select {
-    outline: none;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* Add focus-visible for keyboard users only */
-button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
+/* Remove all selection highlighting */
+::selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+::-moz-selection {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+/* Remove any focus rings completely */
+*:focus,
+*:focus-visible,
+*:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 /* Container */
