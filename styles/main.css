@@ -909,12 +909,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     justify-content: space-between;
     align-items: flex-end;
     padding: 2rem;
-    opacity: 0;
-    transition: var(--transition-smooth);
-}
-
-.portfolio-item:hover .portfolio-overlay {
     opacity: 1;
+    transition: var(--transition-smooth);
 }
 
 .portfolio-info {
@@ -984,16 +980,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-size: 1.2rem;
     color: white;
     margin-left: 2px;
-}
-
-.portfolio-item:hover .play-button {
-    background: #cc0000;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
-}
-
-.portfolio-item:hover .play-button i {
-    color: white;
 }
 
 /* Portfolio Responsive Design */
