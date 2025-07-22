@@ -1952,12 +1952,12 @@ button, a, input, textarea, select {
 /* Expand form width on larger screens */
 @media screen and (min-width: 769px) {
     .contact-form-wrapper {
-        max-width: 900px;
+        max-width: 1200px;
     }
     
     .form-group {
-        width: 95vw;
-        max-width: 850px;
+        width: 98vw;
+        max-width: 1150px;
     }
 }
 
