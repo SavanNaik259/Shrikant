@@ -1780,8 +1780,8 @@ button, a, input, textarea, select {
 }
 
 .detail-gallery-section {
-    padding: 0 2rem 4rem;
-    max-width: 1400px;
+    padding: 0 0 4rem 0;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1798,23 +1798,21 @@ button, a, input, textarea, select {
 
 .detail-photo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    grid-auto-rows: 250px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
 }
 
-/* Photo Item Sizes based on your screenshot layout */
+/* Photo Item Styles - Clean and minimal like screenshot */
 .photo-item {
     position: relative;
-    border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .photo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
 }
 
 .photo-item img {
@@ -1822,76 +1820,118 @@ button, a, input, textarea, select {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
-.photo-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Large photo - spans 1 column, 2 rows */
-.large-photo {
-    grid-row: span 2;
-}
-
-/* Medium photos - normal size */
-.medium-photo {
-    grid-row: span 1;
-}
-
-/* Equal photos - normal size */
-.equal-photo {
-    grid-row: span 1;
-}
-
-/* Wide photos - spans 1.5 columns if space allows */
-.wide-photo {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-/* Specific grid layout to match screenshot */
+/* Specific layout to match screenshot exactly */
+/* First photo - Large on left, tall */
 .detail-photo-grid .photo-item:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1 / 3;
+    grid-row: span 3;
+    min-height: 400px;
 }
 
+/* Second photo - Top right, medium */
 .detail-photo-grid .photo-item:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
+    grid-row: span 1;
+    min-height: 130px;
 }
 
+/* Third photo - Middle right, medium */
 .detail-photo-grid .photo-item:nth-child(3) {
-    grid-column: 3;
-    grid-row: 1;
+    grid-row: span 1;
+    min-height: 130px;
 }
 
+/* Fourth photo - Bottom right, small */
 .detail-photo-grid .photo-item:nth-child(4) {
-    grid-column: 2;
-    grid-row: 2;
+    grid-row: span 1;
+    min-height: 130px;
 }
 
+/* Fifth photo - Full width below, medium height */
 .detail-photo-grid .photo-item:nth-child(5) {
-    grid-column: 3;
-    grid-row: 2;
+    grid-column: span 2;
+    min-height: 200px;
 }
 
+/* Sixth photo - Left bottom half */
 .detail-photo-grid .photo-item:nth-child(6) {
-    grid-column: 1;
-    grid-row: 3;
+    grid-column: span 1;
+    min-height: 180px;
 }
 
+/* Seventh photo - Right bottom half */
 .detail-photo-grid .photo-item:nth-child(7) {
-    grid-column: 2 / 4;
-    grid-row: 3;
+    grid-column: span 1;
+    min-height: 180px;
 }
 
+/* Eighth photo - Full width bottom */
 .detail-photo-grid .photo-item:nth-child(8) {
-    grid-column: 1 / 3;
-    grid-row: 4;
+    grid-column: span 2;
+    min-height: 160px;
 }
 
 /* Detail Page Responsive Design */
+@media screen and (min-width: 769px) {
+    .detail-photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    /* Desktop layout - more complex grid */
+    .detail-photo-grid .photo-item:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        min-height: 500px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+        min-height: 240px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1;
+        min-height: 240px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+        min-height: 240px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(5) {
+        grid-column: 3;
+        grid-row: 2;
+        min-height: 240px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(6) {
+        grid-column: 1;
+        grid-row: 3;
+        min-height: 200px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(7) {
+        grid-column: 2 / 4;
+        grid-row: 3;
+        min-height: 200px;
+    }
+    
+    .detail-photo-grid .photo-item:nth-child(8) {
+        grid-column: 1 / 4;
+        grid-row: 4;
+        min-height: 180px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .detail-page-main {
         padding-top: 70px;
@@ -1929,40 +1969,18 @@ button, a, input, textarea, select {
         font-size: 0.9rem;
     }
     
-    .detail-gallery-section {
-        padding: 0 1rem 2rem;
-    }
-    
     .detail-gallery-title {
         font-size: 1.8rem;
         margin-bottom: 2rem;
+        padding: 0 1rem;
     }
     
+    /* Mobile keeps the 2-column layout as specified */
     .detail-photo-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.8rem;
-        grid-auto-rows: 200px;
-    }
-    
-    /* Reset specific positioning for mobile */
-    .detail-photo-grid .photo-item:nth-child(1) {
-        grid-column: 1 / 3;
-        grid-row: 1 / 3;
-    }
-    
-    .detail-photo-grid .photo-item:nth-child(2),
-    .detail-photo-grid .photo-item:nth-child(3),
-    .detail-photo-grid .photo-item:nth-child(4),
-    .detail-photo-grid .photo-item:nth-child(5),
-    .detail-photo-grid .photo-item:nth-child(6) {
-        grid-column: auto;
-        grid-row: auto;
-    }
-    
-    .detail-photo-grid .photo-item:nth-child(7),
-    .detail-photo-grid .photo-item:nth-child(8) {
-        grid-column: 1 / 3;
-        grid-row: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.2rem;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -1971,16 +1989,14 @@ button, a, input, textarea, select {
         font-size: 2rem;
     }
     
-    .detail-photo-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 280px;
+    .detail-gallery-title {
+        font-size: 1.5rem;
     }
     
-    .detail-photo-grid .photo-item:nth-child(1),
-    .detail-photo-grid .photo-item:nth-child(7),
-    .detail-photo-grid .photo-item:nth-child(8) {
-        grid-column: 1;
-        grid-row: auto;
+    /* Keep 2-column layout even on smallest screens */
+    .detail-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.15rem;
     }
 }
 
