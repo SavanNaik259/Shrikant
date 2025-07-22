@@ -1500,22 +1500,23 @@ button, a, input, textarea, select {
 }
 
 .lightbox-btn {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: all;
-    font-size: 8px;
-    width: 10px;
-    height: 10px;
+    position: absolute !important;
+    background: rgba(255, 0, 0, 0.8) !important;
+    border: 3px solid rgba(255, 255, 255, 0.9) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: all !important;
+    font-size: 8px !important;
+    width: 10px !important;
+    height: 10px !important;
+    z-index: 999999 !important;
 }
 
 .lightbox-btn:hover {
@@ -3734,3 +3735,4 @@ button, a, input, textarea, select {
     }
 }
 
+/* CACHE BUSTING - Tue Jul 22 07:34:00 PM UTC 2025 */

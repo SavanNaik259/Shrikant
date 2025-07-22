@@ -557,13 +557,13 @@ class WeddingPhotographyWebsite {
         lightbox.innerHTML = `
             <div class="lightbox-content">
                 <div class="lightbox-controls">
-                    <button class="lightbox-btn lightbox-btn-close" aria-label="Close photo">
+                    <button class="lightbox-btn lightbox-btn-close" aria-label="Close photo" style="position:absolute!important;top:1rem!important;right:1rem!important;width:10px!important;height:10px!important;background:red!important;z-index:999999!important;">
                         <i class="fas fa-times"></i>
                     </button>
-                    <button class="lightbox-btn lightbox-btn-prev" aria-label="Previous photo">
+                    <button class="lightbox-btn lightbox-btn-prev" aria-label="Previous photo" style="position:absolute!important;left:1rem!important;top:50%!important;transform:translateY(-50%)!important;width:10px!important;height:10px!important;background:red!important;z-index:999999!important;">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button class="lightbox-btn lightbox-btn-next" aria-label="Next photo">
+                    <button class="lightbox-btn lightbox-btn-next" aria-label="Next photo" style="position:absolute!important;right:1rem!important;top:50%!important;transform:translateY(-50%)!important;width:10px!important;height:10px!important;background:red!important;z-index:999999!important;">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
@@ -571,6 +571,8 @@ class WeddingPhotographyWebsite {
                 <div class="lightbox-counter">${photoIndex + 1} / ${photos.length}</div>
             </div>
         `;
+        
+        console.log('Lightbox created with 10px red buttons');
         
         modalOverlay.appendChild(lightbox);
         
