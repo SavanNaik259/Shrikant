@@ -1639,7 +1639,7 @@ button, a, input, textarea, select {
     .portfolio-video-container {
         max-width: 600px;
     }
-    
+
     .portfolio-video-title {
         font-size: 1.5rem;
     }
@@ -1922,7 +1922,7 @@ button, a, input, textarea, select {
     .optimized-wide {
         background-color: var(--primary-color);
     }
-    
+
     .optimized-tall img,
     .optimized-portrait img {
         object-position: center;
@@ -1999,62 +1999,62 @@ button, a, input, textarea, select {
         margin: 0;
         padding: 0;
     }
-    
+
     /* Desktop layout - more complex grid with 10 photos */
     .detail-photo-grid .photo-item:nth-child(1) {
         grid-column: 1;
         grid-row: 1 / 3;
         min-height: 400px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(2) {
         grid-column: 2;
         grid-row: 1;
         min-height: 190px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(3) {
         grid-column: 3;
         grid-row: 1;
         min-height: 190px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(4) {
         grid-column: 2 / 4;
         grid-row: 2;
         min-height: 150px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(5) {
         grid-column: 1;
         grid-row: 3;
         min-height: 180px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(6) {
         grid-column: 2;
         grid-row: 3;
         min-height: 180px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(7) {
         grid-column: 3;
         grid-row: 3;
         min-height: 180px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(8) {
         grid-column: 1;
         grid-row: 4;
         min-height: 200px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(9) {
         grid-column: 2;
         grid-row: 4;
         min-height: 200px;
     }
-    
+
     .detail-photo-grid .photo-item:nth-child(10) {
         grid-column: 3;
         grid-row: 4;
@@ -2066,47 +2066,47 @@ button, a, input, textarea, select {
     .detail-page-main {
         padding-top: 70px;
     }
-    
+
     .detail-header {
         padding: 2rem 1rem 1rem;
     }
-    
+
     .detail-couple-names {
         font-size: 2.5rem;
     }
-    
+
     .detail-wedding-info {
         font-size: 0.9rem;
         letter-spacing: 2px;
     }
-    
+
     .back-to-portfolio {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
     }
-    
+
     .detail-video-section {
         padding: 1rem 0;
     }
-    
+
     .detail-video-container {
-        height: 40vh;
-        min-height: 250px;
-        max-width: 700px;
+        height: 50vh;
+        min-height: 300px;
+        max-width: 550px;
     }
-    
+
     .detail-video-play-btn {
         padding: 1rem 1.5rem;
         font-size: 0.9rem;
     }
-    
+
     .detail-gallery-title {
         font-size: 1.8rem;
         margin-bottom: 2rem;
         padding: 0;
         text-align: center;
     }
-    
+
     /* Mobile keeps the 2-column layout as specified */
     .detail-photo-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -2120,15 +2120,15 @@ button, a, input, textarea, select {
     .detail-video-container {
         max-width: 600px;
     }
-    
+
     .detail-couple-names {
         font-size: 2rem;
     }
-    
+
     .detail-gallery-title {
         font-size: 1.5rem;
     }
-    
+
     /* Keep 2-column layout even on smallest screens */
     .detail-photo-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -2617,7 +2617,7 @@ button, a, input, textarea, select {
         align-items: center !important;
         justify-content: center !important;
     }
-    
+
     .about-wrapper {
         width: 100% !important;
         max-width: 100% !important;
@@ -2625,7 +2625,7 @@ button, a, input, textarea, select {
         margin: 0 auto !important;
         text-align: center !important;
     }
-    
+
     .about-content-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem;
@@ -2635,7 +2635,7 @@ button, a, input, textarea, select {
         width: 100% !important;
         min-height: auto;
     }
-    
+
     .about-description {
         text-align: center !important;
     }
@@ -2681,7 +2681,7 @@ button, a, input, textarea, select {
         align-items: center !important;
         justify-content: center !important;
     }
-    
+
     .about-wrapper {
         width: 100% !important;
         max-width: 100% !important;
@@ -2689,7 +2689,7 @@ button, a, input, textarea, select {
         margin: 0 auto !important;
         text-align: center !important;
     }
-    
+
     .about-content-grid {
         gap: 1.5rem;
         width: 100% !important;
@@ -2716,7 +2716,7 @@ button, a, input, textarea, select {
         align-items: center !important;
         justify-content: center !important;
     }
-    
+
     .about-description {
         text-align: center !important;
     }
@@ -2912,11 +2912,11 @@ button, a, input, textarea, select {
 
 /* Expand form width on larger screens */
 @media screen and (min-width: 1100px) and (max-width: 1300px) {
-  
+
     .contact-form-wrapper {
         max-width: 900px;
     }
-    
+
     .form-group {
         width: 95vw;
         max-width: 850px;
@@ -3250,20 +3250,20 @@ button, a, input, textarea, select {
         max-height: 70vh;
         border-radius: 12px;
     }
-    
+
     .country-search {
         font-size: 16px; /* Prevent zoom on iOS */
         padding: 14px 16px;
     }
-    
+
     .country-item {
         padding: 14px 16px;
     }
-    
+
     .country-name {
         font-size: 15px;
     }
-    
+
     .country-dial-code {
         font-size: 15px;
     }
