@@ -1949,6 +1949,18 @@ button, a, input, textarea, select {
     max-width: 600px;
 }
 
+/* Expand form width on larger screens */
+@media screen and (min-width: 769px) {
+    .contact-form-wrapper {
+        max-width: 900px;
+    }
+    
+    .form-group {
+        width: 95vw;
+        max-width: 850px;
+    }
+}
+
 /* Zigzag Pattern - Alternate left and right alignment for all screen sizes */
 .form-group:nth-child(odd) {
     align-self: flex-start;
