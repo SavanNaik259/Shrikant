@@ -1773,10 +1773,8 @@ button, a, input, textarea, select {
 
 .detail-video-container {
     position: relative;
-    width: 100%;
-    max-width: 900px;
-    height: 60vh;
-    min-height: 400px;
+    width: 80vw;
+    height: 50vh;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -2090,9 +2088,8 @@ button, a, input, textarea, select {
     }
 
     .detail-video-container {
+        width: 80vw;
         height: 50vh;
-        min-height: 300px;
-        max-width: 550px;
     }
 
     .detail-video-play-btn {
@@ -2118,7 +2115,8 @@ button, a, input, textarea, select {
 
 @media screen and (max-width: 480px) {
     .detail-video-container {
-        max-width: 600px;
+        width: 80vw;
+        height: 50vh;
     }
 
     .detail-couple-names {
