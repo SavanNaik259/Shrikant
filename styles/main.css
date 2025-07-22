@@ -8,6 +8,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none !important;
+    outline: none !important;
+}
+
+*::before,
+*::after {
+    border: none !important;
+    outline: none !important;
 }
 
 :root {
@@ -40,10 +48,14 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
 }
 
 body {
@@ -52,10 +64,14 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     background-color: var(--primary-color);
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
 }
 
 /* Completely hide all scrollbars */
@@ -109,11 +125,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     z-index: 1000;
     transition: var(--transition-smooth);
     padding: 1rem 0;
-    border: none;
-    border-top: none;
-    border-bottom: none;
-    outline: none;
-    margin: 0;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
 }
 
 .navbar.scrolled {
