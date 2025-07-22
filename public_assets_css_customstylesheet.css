@@ -3205,10 +3205,10 @@ input:focus, textarea:focus {
         }
         .arrowr {
         right: 20px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.7);
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.8);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3217,24 +3217,25 @@ input:focus, textarea:focus {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 24px;
+        font-size: 36px;
         font-weight: bold;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         transition: all 0.3s ease;
         z-index: 1000;
+        line-height: 1;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.9);
-            border-color: rgba(255, 255, 255, 0.6);
-            transform: translateY(-50%) scale(1.1);
+            background: rgba(0, 0, 0, 0.95);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-50%) scale(1.05);
         }
         }
         .arrowl {
         left: 20px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.7);
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.8);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3243,41 +3244,42 @@ input:focus, textarea:focus {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 24px;
+        font-size: 36px;
         font-weight: bold;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         transition: all 0.3s ease;
         z-index: 1000;
+        line-height: 1;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.9);
-            border-color: rgba(255, 255, 255, 0.6);
-            transform: translateY(-50%) scale(1.1);
+            background: rgba(0, 0, 0, 0.95);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-50%) scale(1.05);
         }
         }
         .close {
         position: absolute;
         right: 20px;
         top: 20px;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         cursor: pointer;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.8);
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         transition: all 0.3s ease;
         z-index: 1000;
         color: white;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.9);
-            border-color: rgba(255, 255, 255, 0.6);
-            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.95);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: scale(1.05);
         }
 
         &:after,
@@ -3286,8 +3288,8 @@ input:focus, textarea:focus {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 2px;
-            height: 20px;
+            width: 3px;
+            height: 24px;
             background: white;
         }
         &:after {
@@ -3330,6 +3332,61 @@ input:focus, textarea:focus {
             .grid-item {
                 width: calc(50% - 10px);
             }
+        }
+    }
+}
+
+/* Responsive lightbox buttons */
+@media (max-width: 768px) {
+    .arrowr, .arrowl {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        right: 10px;
+    }
+    .arrowl {
+        left: 10px;
+    }
+    .close {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        right: 10px;
+        top: 10px;
+        
+        &:after,
+        &:before {
+            width: 2px;
+            height: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .arrowr, .arrowl {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        border-radius: 6px;
+    }
+    .arrowr {
+        right: 5px;
+    }
+    .arrowl {
+        left: 5px;
+    }
+    .close {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        right: 5px;
+        top: 5px;
+        border-radius: 6px;
+        
+        &:after,
+        &:before {
+            width: 2px;
+            height: 16px;
         }
     }
 }
