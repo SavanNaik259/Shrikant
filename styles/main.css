@@ -1631,6 +1631,31 @@ button, a, input, textarea, select {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .lightbox-close {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .lightbox-prev {
+        left: 0.5rem;
+    }
+
+    .lightbox-next {
+        right: 0.5rem;
+    }
+
+    .lightbox-content {
+        padding: 0.5rem;
+    }
 }
 
 /* Detail Page Styles */
