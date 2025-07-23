@@ -1712,16 +1712,14 @@ font-size: 1.4rem;
     background: rgba(240, 233, 224, 0.98);
 }
 
-/* Desktop navigation links - black color */
-@media screen and (min-width: 769px) {
-    .detail-page-main .nav-link {
-        color: var(--text-dark) !important;
-    }
+/* Desktop navigation links - black color for all screens above mobile */
+.detail-page-main .nav-link {
+    color: var(--text-dark) !important;
+}
 
-    .detail-page-main .nav-link:hover,
-    .detail-page-main .nav-link.active {
-        color: var(--accent-color) !important;
-    }
+.detail-page-main .nav-link:hover,
+.detail-page-main .nav-link.active {
+    color: var(--accent-color) !important;
 }
 
 .detail-page-main .hamburger .bar {
