@@ -1700,6 +1700,18 @@ font-size: 1.4rem;
     padding-top: 80px;
 }
 
+/* Couples Detail Page Navigation Styling */
+.couples-detail-navbar {
+    background: rgba(240, 233, 224, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+}
+
+.couples-detail-navbar.scrolled {
+    background: rgba(240, 233, 224, 0.98) !important;
+}
+
 /* Detail page navigation styling */
 .detail-page-main .navbar {
     background: rgba(240, 233, 224, 0.95);

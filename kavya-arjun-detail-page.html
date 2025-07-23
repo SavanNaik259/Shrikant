@@ -15,36 +15,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="styles/main.cs">
+    <link rel="stylesheet" href="styles/main.css">
     
     <!-- Page-specific navigation styling -->
     <style>
         /* Force black navigation on this detail page */
-        .detail-page-main .nav-link {
+        .couples-detail-navbar .nav-link {
             color: #2c2c2c !important;
         }
         
-        .detail-page-main .nav-link:hover,
-        .detail-page-main .nav-link.active {
+        .couples-detail-navbar .nav-link:hover,
+        .couples-detail-navbar .nav-link.active {
             color: #d4af37 !important;
         }
         
-        .detail-page-main .hamburger .bar {
+        .couples-detail-navbar .hamburger .bar {
             background-color: #2c2c2c !important;
         }
         
         /* Mobile menu styling */
         @media screen and (max-width: 768px) {
-            .detail-page-main .nav-menu {
+            .couples-detail-navbar .nav-menu {
                 background: rgba(240, 233, 224, 0.95) !important;
             }
             
-            .detail-page-main .nav-link {
+            .couples-detail-navbar .nav-link {
                 color: #2c2c2c !important;
             }
             
-            .detail-page-main .mobile-close::before,
-            .detail-page-main .mobile-close::after {
+            .couples-detail-navbar .mobile-close::before,
+            .couples-detail-navbar .mobile-close::after {
                 background: #2c2c2c !important;
             }
         }
@@ -52,7 +52,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar couples-detail-navbar" id="navbar">
         <div class="nav-container">
             <!-- Mobile Hamburger Menu -->
             <div class="hamburger" id="hamburger">
