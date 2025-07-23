@@ -1,4 +1,4 @@
-* {
+/** {
     box-sizing: border-box;
 
   }
@@ -53,19 +53,19 @@ body{
     height: 5px;
   }
 
-  /* Track */
+  /* Track *
   ::-webkit-scrollbar-track {
     background: var(--secondary-color);
   }
 
-  /* Handle */
+  /* Handle *
   ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 60px;
 
   }
 
-  /* Handle on hover */
+  /* Handle on hover *
   ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
   }
@@ -129,7 +129,7 @@ input:focus, textarea:focus {
     border: none;
     outline: none;
 }
-/* FIX CLASS */
+/* FIX CLASS *
 .p-color{
     color: var(--primary-color);
 }
@@ -153,7 +153,7 @@ input:focus, textarea:focus {
 .list-disc{
     list-style: disc !important;
 }
-/* spacing */
+/* spacing *
 .pt-100{
     padding-top:100px;
 }
@@ -192,7 +192,7 @@ input:focus, textarea:focus {
             --spacing-unit: 8px;
         }
 
-        /* Modern Footer Styles */
+        /* Modern Footer Styles *
         .footerline{
           margin-top:70px;
           width:100vw;
@@ -201,7 +201,7 @@ input:focus, textarea:focus {
         }
         .modern-footer {
             position: relative;
-          /*  padding: 6rem 2rem 3rem;*/
+          /*  padding: 6rem 2rem 3rem;*
             background-color: var(--background-color);
             text-align: center;
             overflow: hidden;
@@ -369,13 +369,13 @@ input:focus, textarea:focus {
             transition: color var(--transition-fast) ease;
         }
 
-        /* Interactive elements and effects */
+        /* Interactive elements and effects *
         .magnetic-area {
             position: relative;
             display: inline-block;
         }
 
-        /* Responsive styles */
+        /* Responsive styles *
         @media (max-width: 768px) {
             .social-link {
                 margin: 0 calc(var(--spacing-unit) * 2);
@@ -520,7 +520,7 @@ input:focus, textarea:focus {
             flex-direction: column;
             height: 150vh;
             width: 100%;
-            /*background-color: #333;*/
+            /*background-color: #333;*
             position: absolute;
              z-index: 1;
              overflow: hidden; 
@@ -597,7 +597,7 @@ input:focus, textarea:focus {
 
                 
             }
-        }*/
+        }*
 
         .uniquenav-place-button {
             display: flex;
@@ -608,7 +608,7 @@ input:focus, textarea:focus {
           color: #555;
           font-size: 25px;
         }
-/* BUTTON DESIGN */
+/* BUTTON DESIGN *
 .photography-btn-main{
     display: flex;
     .photography-btn{
@@ -638,7 +638,7 @@ input:focus, textarea:focus {
     }
 }
 @media (max-width:1199px) {
-    /* BUTTON DESIGN */
+    /* BUTTON DESIGN *
     .photography-btn-main{
         .photography-btn{
             font-size: 14px;
@@ -654,7 +654,7 @@ input:focus, textarea:focus {
         }
 }
 @media (max-width:991px) {
-    /* BUTTON DESIGN */
+    /* BUTTON DESIGN *
     .photography-btn-main {
         .photography-btn {
             font-size: 12px;
@@ -674,7 +674,7 @@ input:focus, textarea:focus {
     }
 }
 @media (max-width:767px) {
-    /* BUTTON DESIGN */
+    /* BUTTON DESIGN *
     .photography-main-title {
         margin-bottom: 30px;
         h2 {
@@ -687,7 +687,7 @@ input:focus, textarea:focus {
     }
 }
 @media (max-width:575px) {
-    /* BUTTON DESIGN */
+    /* BUTTON DESIGN *
     .photography-btn-main {
         .photography-btn {
             font-size: 12px;
@@ -705,13 +705,13 @@ input:focus, textarea:focus {
     }
 }
 
-/* HEADER */
+/* HEADER *
 .shift{
   margin-top:-20vh;
 }
 /*.dropdown-menu{
   width:50vw;
-}*/
+}*
  .main-header {
    position: absolute;
     .photography-logo svg{
@@ -756,7 +756,7 @@ input:focus, textarea:focus {
 }
 
 @media (min-width:1351px) and (max-width:1590px) {
-    /* HEADER */
+    /* HEADER *
     .main-header {
         .header-menu-list{
             ul li{
@@ -768,7 +768,7 @@ input:focus, textarea:focus {
     }
 }
 @media (min-width:1200px) and (max-width:1350px) {
-    /* HEADER */
+    /* HEADER *
     .main-header {
         .header-menu-list{
             ul li{
@@ -778,7 +778,7 @@ input:focus, textarea:focus {
             }
         }
     }
-     /* HEADER */
+     /* HEADER *
      .main-cover-img img{
         min-height: 750px;
     }
@@ -809,7 +809,7 @@ input:focus, textarea:focus {
     }
 }
 @media (min-width:992px) and (max-width:1199px) {
-    /* HEADER */
+    /* HEADER *
     .main-header {
         .photography-logo svg{
             height: auto;
@@ -826,13 +826,13 @@ input:focus, textarea:focus {
             }
         }
     }
-     /* HEADER */
+     /* HEADER *
      .main-cover-img img{
         min-height: 700px;
     }
 }
 @media (min-width:768px) and (max-width:991px) {
-    /* HEADER */
+    /* HEADER *
     .main-cover-img img{
         min-height: 480px;
     }
@@ -846,7 +846,7 @@ input:focus, textarea:focus {
     }
 }
 @media (min-width:576px) and (max-width:767px) {
-    /* HEADER */
+    /* HEADER *
     .main-cover-img img{
         min-height: 360px;
         object-fit: cover;
@@ -860,7 +860,7 @@ input:focus, textarea:focus {
     }
 }
 @media (max-width:575px) {
-    /* HEADER */
+    /* HEADER *
     .main-cover-img img{
         min-height: 290px;
         object-fit: cover;
@@ -922,7 +922,7 @@ input:focus, textarea:focus {
              transition: all 0.4s ease-in-out;
          }
 
-        /* Hamburger Animation */
+        /* Hamburger Animation *
         #header-toggle:checked+.hamburger .top {
             transform: rotate(-45deg);
             background-color: var(--text-dark)!important;
@@ -943,14 +943,14 @@ input:focus, textarea:focus {
         #header-toggle:checked+.hamburger+.header-rspnv {
             top: 0;
             .photography-btn-main .photography-btn{
-                /* background-color: var(--text-dark); */
+                /* background-color: var(--text-dark); *
                 color: var(--text-white);
             }
         }
         #header-toggle-2:checked ~ .photography-logo svg {
             fill: #000000;
         }
-        /* Menu Styling */
+        /* Menu Styling *
         .header-rspnv {
             position: fixed;
             width: 100%;
@@ -983,7 +983,7 @@ input:focus, textarea:focus {
             }
         }
 
-        /* Dropdown Animation */
+        /* Dropdown Animation *
         #header-toggle:checked+.hamburger+.header-rspnv .header-rspnv-wrapper nav a {
             opacity: 0.9;
             transform: scale(1);
@@ -998,7 +998,7 @@ input:focus, textarea:focus {
             margin-top: 4px;
         }
 
-        /* Menu Styling */
+        /* Menu Styling *
         .header-rspnv {
             .header-navbar li {
                 margin-bottom: 12px;
