@@ -1729,11 +1729,13 @@ font-size: 1.4rem;
 /* Mobile menu styling for detail pages */
 @media screen and (max-width: 768px) {
     .detail-page-main .nav-menu {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(240, 233, 224, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
     
     .detail-page-main .nav-link {
-        color: var(--text-white) !important;
+        color: var(--text-dark) !important;
     }
     
     .detail-page-main .nav-link:hover,
@@ -1743,7 +1745,7 @@ font-size: 1.4rem;
     
     .detail-page-main .mobile-close::before,
     .detail-page-main .mobile-close::after {
-        background: var(--text-white);
+        background: var(--text-dark);
     }
 }
 
