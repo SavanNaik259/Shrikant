@@ -1725,6 +1725,27 @@ font-size: 1.4rem;
     background-color: var(--text-dark);
 }
 
+/* Mobile menu styling for detail pages */
+@media screen and (max-width: 768px) {
+    .detail-page-main .nav-menu {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    
+    .detail-page-main .nav-link {
+        color: var(--text-white) !important;
+    }
+    
+    .detail-page-main .nav-link:hover,
+    .detail-page-main .nav-link.active {
+        color: var(--accent-color) !important;
+    }
+    
+    .detail-page-main .mobile-close::before,
+    .detail-page-main .mobile-close::after {
+        background: var(--text-white);
+    }
+}
+
 .detail-header {
     text-align: center;
     padding: 4rem 2rem 2rem;
