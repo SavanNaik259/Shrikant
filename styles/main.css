@@ -3823,4 +3823,83 @@ body.detail-page-main .navbar .nav-link.active,
     }
 }
 
+/* FORCE FOOTER STYLING TO MATCH INDEX PAGE - OVERRIDE ALL OTHER CSS */
+/* These styles ensure couples detail pages have identical footer styling to index page */
+.footer-contact-item i {
+    width: 22px !important;
+    height: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--accent-color) !important;
+    font-size: 1.1rem !important;
+    transition: transform 0.3s ease !important;
+}
+
+.footer-contact-item:hover i {
+    transform: scale(1.1) !important;
+}
+
+.footer-social a {
+    width: 40px !important;
+    height: 40px !important;
+    background: #333 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    font-size: 1rem !important;
+}
+
+.footer-social a:hover {
+    background: var(--accent-color) !important;
+    transform: translateY(-2px) !important;
+    color: white !important;
+}
+
+.footer-developer a {
+    color: var(--accent-color) !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.footer-developer a:hover {
+    color: var(--accent-light) !important;
+}
+
+.footer {
+    background: #1a1a1a !important;
+    color: white !important;
+    padding: 4rem 0 2rem !important;
+}
+
+.footer-section h4 {
+    color: white !important;
+    font-family: 'Cormorant Garamond', serif !important;
+}
+
+.footer-section ul li a {
+    color: #ccc !important;
+    transition: all 0.3s ease !important;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color) !important;
+    transform: translateX(3px) !important;
+}
+
+.footer-brand p {
+    color: #b8b8b8 !important;
+}
+
+.footer-copyright p,
+.footer-developer p {
+    color: #888 !important;
+}
+
 /* CACHE BUSTING - Tue Jul 22 07:34:00 PM UTC 2025 */
