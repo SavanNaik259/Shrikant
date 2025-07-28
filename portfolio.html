@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Portfolio - Vedic Vows Wedding Photography</title>
+    <meta name="description" content="Explore our wedding photography portfolio featuring authentic South Indian weddings captured with artistic excellence.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css?v=1737556200&refresh=true">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-menu" id="nav-menu">
+                <button class="mobile-close" id="mobile-close"></button>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/white-logo.png" alt="Vedic Vows Wedding Photography Logo" class="logo-image">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Portfolio Hero Section -->
+        <section class="portfolio-hero">
+            <div class="portfolio-hero-content">
+                <h1 class="portfolio-hero-title">OUR PORTFOLIO</h1>
+                <p class="portfolio-hero-subtitle">Timeless Stories Captured with Artistic Excellence</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid Section -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio-item" onclick="openVideoPage('kavya-arjun')">
+                        <div class="portfolio-image">
+                            <img src="1000819100.jpg" alt="Kavya & Arjun Wedding">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-date">JUN 2024</div>
+                                    <div class="portfolio-location">BANGALORE</div>
+                                    <div class="portfolio-names">KAVYA <span class="ampersand">&</span> ARJUN</div>
+                                </div>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-item" onclick="openVideoPage('ananya-rohan')">
+                        <div class="portfolio-image">
+                            <img src="1000819102.jpg" alt="Ananya & Rohan Wedding">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-date">MAY 2024</div>
+                                    <div class="portfolio-location">MYSORE</div>
+                                    <div class="portfolio-names">ANANYA <span class="ampersand">&</span> ROHAN</div>
+                                </div>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio-item" onclick="openVideoPage('meera-karthik')">
+                        <div class="portfolio-image">
+                            <img src="1000819098.jpg" alt="Meera & Karthik Wedding">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-date">MAR 2024</div>
+                                    <div class="portfolio-location">COORG</div>
+                                    <div class="portfolio-names">MEERA <span class="ampersand">&</span> KARTHIK</div>
+                                </div>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 4 -->
+                    <div class="portfolio-item" onclick="openVideoPage('lakshmi-aditya')">
+                        <div class="portfolio-image">
+                            <img src="1000819097.jpg" alt="Lakshmi & Aditya Wedding">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <div class="portfolio-date">APR 2024</div>
+                                    <div class="portfolio-location">UDAIPUR</div>
+                                    <div class="portfolio-names">LAKSHMI <span class="ampersand">&</span> ADITYA</div>
+                                </div>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/white-logo.png" alt="Vedic Vows" class="footer-logo">
+                    <p>Capturing timeless moments with artistic excellence</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="portfolio.html">Wedding Photography</a></li>
+                            <li><a href="portfolio.html">Pre-Wedding Shoots</a></li>
+                            <li><a href="portfolio.html">Engagement Photos</a></li>
+                            <li><a href="portfolio.html">Traditional Ceremonies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contact Information</h4>
+                        <div class="footer-contact-items">
+                            <div class="footer-contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>srikantavishwakrma@gmail.com</span>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 96117 43662</span>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Banglore, karnataka</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Vedic Vows. All rights reserved.</p>
+                </div>
+                <div class="footer-developer">
+                    <p>Developed by <a href="https://savannaik.netlify.app" target="_blank" rel="noopener noreferrer">Savan Naik</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+    <script>
+        function openVideoPage(slug) {
+            window.location.href = slug + '-video.html';
+        }
+    </script>
+</body>
+</html>

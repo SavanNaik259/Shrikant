@@ -20,18 +20,27 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 - **Contact Section**: Modern floating label form with professional styling
 - **Footer**: Contact information and social links
 
-### Recent Changes (July 22, 2025)
+### Recent Changes (July 28, 2025)
 
-#### Detail Page System Implementation
-- ✅ **Separate Detail Pages**: Created individual couple detail pages (kavya-arjun, ananya-rohan, etc.)
-- ✅ **Screenshot-Perfect Gallery**: Implemented photo grid exactly matching user's mobile screenshot
-- ✅ **2-Column Mobile Layout**: No left/right spacing, small gaps between images as requested
-- ✅ **Smart Video Loading**: Shows couple photo placeholder until user clicks "Watch on YouTube" button
-- ✅ **YouTube Integration**: Only loads YouTube iframe when play button is clicked
-- ✅ **10-Photo Gallery**: Each detail page includes curated wedding photos with optimal height distribution
-- ✅ **Responsive Grid Design**: Mobile uses 2-column asymmetrical layout, desktop expands to 3-column
-- ✅ **Object-Fit Cover**: All photos properly fill their containers without stretching
-- ✅ **Homepage Background**: Maintains consistent cream/beige background across all detail pages
+#### Complete Portfolio Architecture Overhaul
+- ✅ **Separate Portfolio System**: Completely removed portfolio from homepage, created dedicated portfolio.html page
+- ✅ **Video-First Structure**: Each couple has dedicated video page as primary content destination
+- ✅ **Separate Photo Galleries**: Individual photo gallery pages accessible via "View Photo Gallery" buttons
+- ✅ **Navigation Refinement**: Logo positioned left, nav links centered on large devices
+- ✅ **Contact Form Straightening**: Removed zigzag pattern, made all form inputs straight and center-aligned
+
+#### Individual Video Pages Implementation
+- ✅ **Dedicated Video Pages**: Created kavya-arjun-video.html, ananya-rohan-video.html, meera-karthik-video.html, lakshmi-aditya-video.html
+- ✅ **YouTube Integration**: Direct YouTube iframe embedding for each couple's wedding video
+- ✅ **View Photo Gallery Buttons**: Golden styled buttons with icons linking to photo galleries
+- ✅ **Consistent Header Design**: Couple names, wedding details, and navigation buttons
+
+#### Photo Gallery Pages System
+- ✅ **Individual Photo Galleries**: Separate photo pages for each couple (kavya-arjun-photos.html, etc.)
+- ✅ **Lightbox Functionality**: Full-screen photo viewing with navigation controls
+- ✅ **Responsive Grid Layout**: 2-column mobile, 3-column desktop with varied aspect ratios
+- ✅ **Navigation Between Pages**: Back to video and portfolio navigation buttons
+- ✅ **Keyboard Controls**: Arrow keys and escape key support for lightbox navigation
 
 #### Advanced Interactive Features
 - **Modal Navigation**: Smooth animations with backdrop blur effects
@@ -71,18 +80,21 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 
 ## File Structure
 ```
-├── index.html                 # Main HTML structure
+├── index.html                    # Main homepage (no portfolio section)
+├── portfolio.html               # Dedicated portfolio page
+├── *-video.html                 # Individual couple video pages
+├── *-photos.html               # Individual couple photo galleries
 ├── styles/
-│   └── main.css              # Main stylesheet with modern contact form design
+│   └── main.css                # Main stylesheet with photo gallery and lightbox design
 ├── scripts/
-│   ├── main.js              # Core JavaScript functionality
-│   ├── contact.js           # Contact form handling
-│   └── button-effects.js    # Interactive particle effects
-└── replit.md                # Project documentation
+│   ├── main.js                 # Core JavaScript functionality
+│   ├── contact.js              # Contact form handling
+│   └── button-effects.js       # Interactive particle effects
+└── replit.md                   # Project documentation
 ```
 
 ## Current Status
-The contact form has been successfully redesigned with modern floating label inputs and a professional submit button. All form fields include proper name attributes for form processing. The design maintains the elegant wedding photography theme while providing a contemporary user experience.
+The portfolio architecture has been completely restructured with separate video and photo pages for each couple. The homepage no longer contains portfolio content, instead linking to a dedicated portfolio page. Each couple has individual video pages that showcase their wedding videos, with easy navigation to separate photo galleries featuring lightbox functionality and responsive design.
 
 ## Next Steps
 - Consider adding form submission backend integration
