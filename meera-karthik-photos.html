@@ -211,74 +211,53 @@
                     }
                 });
 
+                $(".close").click(function() {
+                    $(".lightbox").fadeOut(300);
+                    $(".lightbox img").remove();
+                    $(".lightbox video").remove();
+                    $("html").css("overflow", "unset");
+                });
+
                 $(".arrowr").click(function() {
-                    $(".gallery-box").remove();
-                    $(".title h1").remove();
-                    var currentimg = $(".photography-editorial-gallery-imgs .editorial-gallery-images.gallery-box");
-                    currentimg.removeClass("gallery-box");
-                    var nextimg = currentimg.next(".editorial-gallery-images");
-                    if (nextimg.length > 0) {
-                        nextimg.addClass("gallery-box");
-                        if (nextimg.hasClass("gallery-video")) {
-                            $(".lightbox").append(`<video class='gallery-box' data-src='${nextimg.attr("data-src")}' controls><source src='${nextimg.attr("data-src")}' alt='${nextimg.attr("alt")}'>`);
-                        } else {
-                            $(".lightbox").append(`<img src='${nextimg.attr("data-src")}' data-src='${nextimg.attr("data-src")}' alt='${nextimg.attr("alt")}' class='gallery-box' />`);
-                        }
-                        $(".filter").css("background-image", `url(${nextimg.attr("src")})`);
-                        $(".title").append(`<h1>${nextimg.attr("alt")}</h1>`);
-                        if (nextimg.is(":last-child")) {
-                            $(".arrowr").css("display", "none");
-                            $(".arrowl").css("display", "block");
-                        } else {
-                            $(".arrowr").css("display", "block");
-                            $(".arrowl").css("display", "block");
-                        }
+                    var a = $(".lightbox .gallery-box").attr("data-src"),
+                        t = $(".photography-editorial-gallery").find(`[data-src='${a}']`).next();
+                    $(".lightbox .gallery-box").remove();
+                    if (t.hasClass("gallery-video")) {
+                        $(".lightbox").append(`<video class='gallery-box' data-src='${t.attr("data-src")}' controls><source src='${t.attr("data-src")}' alt='${t.attr("alt")}'>`);
+                        $(".filter").css("background-image", "none");
+                    } else {
+                        $(".lightbox").append(`<img src='${t.attr("src")}' alt='${t.attr("alt")}' data-src='${t.attr("src")}' class='gallery-box' />`);
+                        $(".filter").css("background-image", `url(${t.attr("src")})`);
+                    }
+                    $(".lightbox h1").html(t.attr("alt"));
+                    if (t.is(":last-child")) {
+                        $(".arrowr").css("display", "none");
+                    } else {
+                        $(".arrowl").css("display", "block");
                     }
                 });
 
                 $(".arrowl").click(function() {
-                    $(".gallery-box").remove();
-                    $(".title h1").remove();
-                    var currentimg = $(".photography-editorial-gallery-imgs .editorial-gallery-images.gallery-box");
-                    currentimg.removeClass("gallery-box");
-                    var previmg = currentimg.prev(".editorial-gallery-images");
-                    if (previmg.length > 0) {
-                        previmg.addClass("gallery-box");
-                        if (previmg.hasClass("gallery-video")) {
-                            $(".lightbox").append(`<video class='gallery-box' data-src='${previmg.attr("data-src")}' controls><source src='${previmg.attr("data-src")}' alt='${previmg.attr("alt")}'>`);
-                        } else {
-                            $(".lightbox").append(`<img src='${previmg.attr("data-src")}' data-src='${previmg.attr("data-src")}' alt='${previmg.attr("alt")}' class='gallery-box' />`);
-                        }
-                        $(".filter").css("background-image", `url(${previmg.attr("src")})`);
-                        $(".title").append(`<h1>${previmg.attr("alt")}</h1>`);
-                        if (previmg.is(":first-child")) {
-                            $(".arrowr").css("display", "block");
-                            $(".arrowl").css("display", "none");
-                        } else {
-                            $(".arrowr").css("display", "block");
-                            $(".arrowl").css("display", "block");
-                        }
+                    var a = $(".lightbox .gallery-box").attr("data-src"),
+                        t = $(".photography-editorial-gallery").find(`[data-src='${a}']`).prev();
+                    $(".lightbox .gallery-box").remove();
+                    if (t.hasClass("gallery-video")) {
+                        $(".lightbox").append(`<video class='gallery-box' data-src='${t.attr("data-src")}' controls><source src='${t.attr("data-src")}' alt='${t.attr("alt")}'>`);
+                        $(".filter").css("background-image", "none");
+                    } else {
+                        $(".lightbox").append(`<img src='${t.attr("src")}' alt='${t.attr("alt")}' data-src='${t.attr("src")}' class='gallery-box' />`);
+                        $(".filter").css("background-image", `url(${t.attr("src")})`);
                     }
-                });
-
-                $(".lightbox").click(function(e) {
-                    if (e.target !== this) return;
-                    $(".lightbox").fadeOut(300);
-                    $(".gallery-box").remove();
-                    $(".title h1").remove();
-                    $("html").css("overflow", "auto");
-                    $(".photography-editorial-gallery-imgs .editorial-gallery-images").removeClass("gallery-box");
-                });
-
-                $(".close").click(function() {
-                    $(".lightbox").fadeOut(300);
-                    $(".gallery-box").remove();
-                    $(".title h1").remove();
-                    $("html").css("overflow", "auto");
-                    $(".photography-editorial-gallery-imgs .editorial-gallery-images").removeClass("gallery-box");
+                    $(".lightbox h1").html(t.attr("alt"));
+                    if (t.is(":first-child")) {
+                        $(".arrowl").css("display", "none");
+                    } else {
+                        $(".arrowr").css("display", "block");
+                    }
                 });
             });
         });
     </script>
+
 </body>
 </html>
