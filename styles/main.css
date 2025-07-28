@@ -933,7 +933,7 @@ button, a, input, textarea, select {
     gap: 2.5rem;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 0 2rem;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -1094,7 +1094,7 @@ button, a, input, textarea, select {
 
     .portfolio-grid {
         gap: 1.5rem;
-        padding: 1rem 1.5rem 0rem;
+        padding: 1rem 0 0rem;
     }
 
     .portfolio-item {
@@ -1156,7 +1156,7 @@ font-size: 1.4rem;
 
     .portfolio-grid {
         gap: 1rem;
-        padding: 1rem 1rem 1rem;
+        padding: 1rem 0 1rem;
     }
 
     .portfolio-item {
