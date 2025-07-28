@@ -68,61 +68,33 @@
             </div>
         </section>
 
-        <!-- Photo Gallery -->
-        <section class="detail-gallery-section">
-            <div class="container">
-                <h2 class="detail-gallery-title">Photo Gallery</h2>
-                <div class="detail-photo-grid">
-                    <div class="photo-item" onclick="openLightbox(0)">
-                        <img src="1000819097.jpg" alt="Lakshmi & Aditya Wedding Photo 1" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(1)">
-                        <img src="1000819100.jpg" alt="Lakshmi & Aditya Wedding Photo 2" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(2)">
-                        <img src="1000819096.jpg" alt="Lakshmi & Aditya Wedding Photo 3" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(3)">
-                        <img src="1000819102.jpg" alt="Lakshmi & Aditya Wedding Photo 4" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(4)">
-                        <img src="1000819098.jpg" alt="Lakshmi & Aditya Wedding Photo 5" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(5)">
-                        <img src="1000819097.jpg" alt="Lakshmi & Aditya Wedding Photo 6" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(6)">
-                        <img src="1000819100.jpg" alt="Lakshmi & Aditya Wedding Photo 7" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(7)">
-                        <img src="1000819096.jpg" alt="Lakshmi & Aditya Wedding Photo 8" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(8)">
-                        <img src="1000819102.jpg" alt="Lakshmi & Aditya Wedding Photo 9" loading="lazy">
-                    </div>
-                    <div class="photo-item" onclick="openLightbox(9)">
-                        <img src="1000819098.jpg" alt="Lakshmi & Aditya Wedding Photo 10" loading="lazy">
-                    </div>
-                </div>
+        <!-- Wedding Gallery Section -->
+        <section class="detail-gallery-section photography-editorial-gallery">
+            <div class="photography-videography-title text-center mb-100 mt-100 px-75">
+                <h2 class="detail-gallery-title">Wedding Gallery</h2>
+            </div>
+            <div class="photography-editorial-gallery-imgs">
+                <img data-src="1000819097.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 1"/>
+                <img data-src="1000819100.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 2"/>
+                <img data-src="1000819096.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 3"/>
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 4"/>
+                <img data-src="1000819098.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 5"/>
+                <img data-src="1000819097.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 6"/>
+                <img data-src="1000819100.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 7"/>
+                <img data-src="1000819096.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 8"/>
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 9"/>
+                <img data-src="1000819098.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Lakshmi & Aditya Wedding Photo 10"/>
+            </div>
+            
+            <!-- Lightbox -->
+            <div class="lightbox">
+                <div class="filter"></div>
+                <div class="arrowr">›</div>
+                <div class="arrowl">‹</div>
+                <div class="close">×</div>
             </div>
         </section>
     </main>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox-overlay" id="lightbox-overlay">
-        <div class="lightbox-container">
-            <button class="lightbox-btn lightbox-btn-close" onclick="closeLightbox()">
-                <i class="fas fa-times"></i>
-            </button>
-            <button class="lightbox-btn lightbox-btn-prev" onclick="prevImage()">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="lightbox-btn lightbox-btn-next" onclick="nextImage()">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <img class="lightbox-image" id="lightbox-image" src="" alt="">
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -195,54 +167,13 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
+    <link rel="stylesheet" href="public_assets_css_customstylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" />
+    <script src="public_assets_theme_js_jquery.min.js"></script>
+    <script src="public_assets_theme_js_bootstrap.bundle.min.js"></script>
+    <script src="public_assets_theme_js_masonry.pkgd.min.js"></script>
+    <script src="public_assets_js_custom.js"></script>
     <script src="scripts/main.js"></script>
-    <script>
-        const images = [
-            '1000819097.jpg',
-            '1000819100.jpg',
-            '1000819096.jpg',
-            '1000819102.jpg',
-            '1000819098.jpg',
-            '1000819097.jpg',
-            '1000819100.jpg',
-            '1000819096.jpg',
-            '1000819102.jpg',
-            '1000819098.jpg'
-        ];
-        
-        let currentImageIndex = 0;
-        
-        function openLightbox(index) {
-            currentImageIndex = index;
-            document.getElementById('lightbox-image').src = images[index];
-            document.getElementById('lightbox-overlay').classList.add('active');
-        }
-        
-        function closeLightbox() {
-            document.getElementById('lightbox-overlay').classList.remove('active');
-        }
-        
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            document.getElementById('lightbox-image').src = images[currentImageIndex];
-        }
-        
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            document.getElementById('lightbox-image').src = images[currentImageIndex];
-        }
-        
-        // Close lightbox on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            } else if (e.key === 'ArrowRight') {
-                nextImage();
-            } else if (e.key === 'ArrowLeft') {
-                prevImage();
-            }
-        });
-    </script>
 </body>
 </html>
