@@ -74,16 +74,16 @@
                 <h2 class="detail-gallery-title">Wedding Gallery</h2>
             </div>
             <div class="photography-editorial-gallery-imgs">
-                <img src="1000819098.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 1"/>
-                <img src="1000819100.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 2"/>
-                <img src="1000819096.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 3"/>
-                <img src="1000819102.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 4"/>
-                <img src="1000819097.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 5"/>
-                <img src="1000819098.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 6"/>
-                <img src="1000819100.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 7"/>
-                <img src="1000819096.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 8"/>
-                <img src="1000819102.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 9"/>
-                <img src="1000819097.jpg" class="img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 10"/>
+                <img data-src="1000819098.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 1"/>
+                <img data-src="1000819100.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 2"/>
+                <img data-src="1000819096.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 3"/>
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 4"/>
+                <img data-src="1000819097.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 5"/>
+                <img data-src="1000819098.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 6"/>
+                <img data-src="1000819100.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 7"/>
+                <img data-src="1000819096.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 8"/>
+                <img data-src="1000819102.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 9"/>
+                <img data-src="1000819097.jpg" class="lazyload img-fluid editorial-gallery-images gallery-box grid-item" width="auto" height="auto" alt="Meera & Karthik Wedding Photo 10"/>
             </div>
             
             <!-- Lightbox -->
@@ -175,5 +175,110 @@
     <script src="public_assets_theme_js_masonry.pkgd.min.js"></script>
     <script src="public_assets_js_custom.js"></script>
     <script src="scripts/main.js"></script>
+    <!-- Lazysizes script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var grid = document.querySelector('.photography-editorial-gallery-imgs');
+            var masonry = new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+            });
+            document.addEventListener('lazyloaded', function(e) {
+                masonry.layout();
+            });
+            
+            $(window).on("load", function() {
+                $(".photography-editorial-gallery-imgs .editorial-gallery-images").click(function() {
+                    if ($(this).hasClass("gallery-video")) {
+                        $(".lightbox").append(`<video class='gallery-box' data-src='${$(this).attr("data-src")}' controls><source src='${$(this).attr("data-src")}' alt='${$(this).attr("alt")}'>`);
+                    } else {
+                        $(".lightbox").append(`<img src='${$(this).attr("data-src")}' data-src='${$(this).attr("data-src")}' alt='${$(this).attr("alt")}' class='gallery-box' />`);
+                    }
+                    $(".lightbox").fadeIn(300);
+                    $(".filter").css("background-image", `url(${$(this).attr("src")})`);
+                    $(".title").append(`<h1>${$(this).attr("alt")}</h1>`);
+                    $("html").css("overflow", "hidden");
+                    if ($(this).is(":last-child")) {
+                        $(".arrowr").css("display", "none");
+                        $(".arrowl").css("display", "block");
+                    } else if ($(this).is(":first-child")) {
+                        $(".arrowr").css("display", "block");
+                        $(".arrowl").css("display", "none");
+                    } else {
+                        $(".arrowr").css("display", "block");
+                        $(".arrowl").css("display", "block");
+                    }
+                });
+
+                $(".arrowr").click(function() {
+                    $(".gallery-box").remove();
+                    $(".title h1").remove();
+                    var currentimg = $(".photography-editorial-gallery-imgs .editorial-gallery-images.gallery-box");
+                    currentimg.removeClass("gallery-box");
+                    var nextimg = currentimg.next(".editorial-gallery-images");
+                    if (nextimg.length > 0) {
+                        nextimg.addClass("gallery-box");
+                        if (nextimg.hasClass("gallery-video")) {
+                            $(".lightbox").append(`<video class='gallery-box' data-src='${nextimg.attr("data-src")}' controls><source src='${nextimg.attr("data-src")}' alt='${nextimg.attr("alt")}'>`);
+                        } else {
+                            $(".lightbox").append(`<img src='${nextimg.attr("data-src")}' data-src='${nextimg.attr("data-src")}' alt='${nextimg.attr("alt")}' class='gallery-box' />`);
+                        }
+                        $(".filter").css("background-image", `url(${nextimg.attr("src")})`);
+                        $(".title").append(`<h1>${nextimg.attr("alt")}</h1>`);
+                        if (nextimg.is(":last-child")) {
+                            $(".arrowr").css("display", "none");
+                            $(".arrowl").css("display", "block");
+                        } else {
+                            $(".arrowr").css("display", "block");
+                            $(".arrowl").css("display", "block");
+                        }
+                    }
+                });
+
+                $(".arrowl").click(function() {
+                    $(".gallery-box").remove();
+                    $(".title h1").remove();
+                    var currentimg = $(".photography-editorial-gallery-imgs .editorial-gallery-images.gallery-box");
+                    currentimg.removeClass("gallery-box");
+                    var previmg = currentimg.prev(".editorial-gallery-images");
+                    if (previmg.length > 0) {
+                        previmg.addClass("gallery-box");
+                        if (previmg.hasClass("gallery-video")) {
+                            $(".lightbox").append(`<video class='gallery-box' data-src='${previmg.attr("data-src")}' controls><source src='${previmg.attr("data-src")}' alt='${previmg.attr("alt")}'>`);
+                        } else {
+                            $(".lightbox").append(`<img src='${previmg.attr("data-src")}' data-src='${previmg.attr("data-src")}' alt='${previmg.attr("alt")}' class='gallery-box' />`);
+                        }
+                        $(".filter").css("background-image", `url(${previmg.attr("src")})`);
+                        $(".title").append(`<h1>${previmg.attr("alt")}</h1>`);
+                        if (previmg.is(":first-child")) {
+                            $(".arrowr").css("display", "block");
+                            $(".arrowl").css("display", "none");
+                        } else {
+                            $(".arrowr").css("display", "block");
+                            $(".arrowl").css("display", "block");
+                        }
+                    }
+                });
+
+                $(".lightbox").click(function(e) {
+                    if (e.target !== this) return;
+                    $(".lightbox").fadeOut(300);
+                    $(".gallery-box").remove();
+                    $(".title h1").remove();
+                    $("html").css("overflow", "auto");
+                    $(".photography-editorial-gallery-imgs .editorial-gallery-images").removeClass("gallery-box");
+                });
+
+                $(".close").click(function() {
+                    $(".lightbox").fadeOut(300);
+                    $(".gallery-box").remove();
+                    $(".title h1").remove();
+                    $("html").css("overflow", "auto");
+                    $(".photography-editorial-gallery-imgs .editorial-gallery-images").removeClass("gallery-box");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
