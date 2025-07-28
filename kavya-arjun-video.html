@@ -17,6 +17,39 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles/main.css?v=1737556200&refresh=true">
 </head>
+<!-- Page-specific navigation styling -->
+    <style>
+        /* Force black navigation on this detail page */
+        .couples-detail-navbar .nav-link {
+            color: #2c2c2c !important;
+        }
+        
+        .couples-detail-navbar .nav-link:hover,
+        .couples-detail-navbar .nav-link.active {
+            color: #d4af37 !important;
+        }
+        
+        .couples-detail-navbar .hamburger .bar {
+            background-color: #2c2c2c !important;
+        }
+        
+        /* Mobile menu styling */
+        @media screen and (max-width: 768px) {
+            .couples-detail-navbar .nav-menu {
+                background: rgba(240, 233, 224, 0.95) !important;
+            }
+            
+            .couples-detail-navbar .nav-link {
+                color: #2c2c2c !important;
+            }
+            
+            .couples-detail-navbar .mobile-close::before,
+            .couples-detail-navbar .mobile-close::after {
+                background: #2c2c2c !important;
+            }
+        }
+    </style>
+</head>
 <body>
     <!-- Navigation -->
     <nav class="navbar couples-detail-navbar" id="navbar">
