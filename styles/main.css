@@ -1097,7 +1097,7 @@ button, a, input, textarea, select {
 
     .portfolio-grid {
         gap: 1.5rem;
-        padding: 1rem 0 0rem;
+        padding: 1rem 1rem 0rem 2rem;
     }
 
     .portfolio-item {
@@ -1159,7 +1159,7 @@ font-size: 1.4rem;
 
     .portfolio-grid {
         gap: 1rem;
-        padding: 1rem 0 1rem;
+        padding: 1rem 1rem 1rem 2rem;
     }
 
     .portfolio-item {
