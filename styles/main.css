@@ -938,6 +938,9 @@ button, a, input, textarea, select {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: var(--accent-color) transparent;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
 .portfolio-grid::-webkit-scrollbar {
