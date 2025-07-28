@@ -964,8 +964,7 @@ button, a, input, textarea, select {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     flex: 0 0 560px;
-    height: auto;
-    min-height: 400px;
+    height: 450px;
 }
 
 .portfolio-item:hover {
@@ -983,7 +982,7 @@ button, a, input, textarea, select {
 .portfolio-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     transition: var(--transition-slow);
 }
