@@ -248,9 +248,10 @@ button, a, input, textarea, select {
 /* Desktop layout: brand logo left, nav links centered with specific positioning */
 @media screen and (min-width: 769px) {
     .nav-container {
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         position: relative;
+        padding: 0 2rem;
     }
 
     .nav-logo {
@@ -258,6 +259,7 @@ button, a, input, textarea, select {
         position: static;
         transform: none;
         flex-shrink: 0;
+        margin-right: auto;
     }
 
     .nav-menu {
@@ -273,6 +275,28 @@ button, a, input, textarea, select {
 
     .hamburger {
         display: none;
+    }
+}
+
+/* Enhanced styling for larger screens */
+@media screen and (min-width: 1200px) {
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 3rem;
+    }
+
+    .nav-logo .logo-image {
+        height: 80px;
+        max-width: 300px;
+    }
+
+    .nav-menu {
+        gap: 3rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
     }
 }
 
