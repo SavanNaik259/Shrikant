@@ -245,23 +245,30 @@ button, a, input, textarea, select {
     }
 }
 
-/* Desktop layout: brand logo left, nav links right with space between */
+/* Desktop layout: brand logo left, nav links centered with specific positioning */
 @media screen and (min-width: 769px) {
     .nav-container {
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
 
     .nav-logo {
         order: 1;
         position: static;
         transform: none;
+        flex-shrink: 0;
     }
 
     .nav-menu {
         order: 2;
         display: flex;
         gap: 2.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .hamburger {
@@ -3009,17 +3016,11 @@ body.detail-page-main .navbar .nav-link.active,
 
 
 
-/* Zigzag Pattern - Alternate left and right alignment for all screen sizes */
-.form-group:nth-child(odd) {
-    align-self: flex-start;
-    margin-left: 8%;
-    margin-right: 3%;
-}
-
-.form-group:nth-child(even) {
-    align-self: flex-end;
-    margin-right: 8%;
-    margin-left: 3%;
+/* Straight Pattern - Center all form groups for clean layout */
+.form-group {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Minimalist Underline Input Style */
@@ -3356,28 +3357,18 @@ body.detail-page-main .navbar .nav-link.active,
         max-width: 400px;
     }
 
-    /* Default zigzag: odd = left, even = right with consistent spacing */
-    .form-group:nth-child(odd) {
-        align-self: flex-start !important;
-        margin-left: 10% !important;
-        margin-right: 5% !important;
+    /* Straight layout for mobile: center all form groups */
+    .form-group {
+        align-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
-    .form-group:nth-child(even) {
-        align-self: flex-end !important;
-        margin-right: 10% !important;
-        margin-left: 5% !important;
-    }
-
-    /* Add slight extra spacing for Event Date and Days fields to prevent label hiding */
-    .form-group.date-field-group {
-        margin-left: 8% !important;
-        margin-right: 5% !important;
-    }
-
+    /* Consistent spacing for all form groups including date and days fields */
+    .form-group.date-field-group,
     .form-group.days-field-group {
-        margin-left: 5% !important;
-        margin-right: 8% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .form-input, .form-textarea, .form-select {
