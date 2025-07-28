@@ -299,6 +299,44 @@ button, a, input, textarea, select {
     }
 }
 
+/* Ultra-large screens - position logo more to the left */
+@media screen and (min-width: 1600px) {
+    .nav-container {
+        max-width: 1600px;
+        padding: 0 4rem;
+        justify-content: flex-start;
+    }
+
+    .nav-logo {
+        margin-right: 6rem;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        margin-left: 0;
+        margin-right: auto;
+        position: static;
+        transform: none;
+    }
+}
+
+/* Extra large screens - even more left positioning */
+@media screen and (min-width: 1920px) {
+    .nav-container {
+        max-width: 1800px;
+        padding: 0 5rem;
+    }
+
+    .nav-logo {
+        margin-right: 8rem;
+    }
+
+    .nav-logo .logo-image {
+        height: 90px;
+        max-width: 350px;
+    }
+}
+
 .nav-logo .logo-link {
     display: inline-block;
     transition: var(--transition-smooth);
