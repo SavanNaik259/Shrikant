@@ -82,8 +82,14 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 ```
 ├── index.html                    # Main homepage (no portfolio section)
 ├── portfolio.html               # Dedicated portfolio page
-├── *-video.html                 # Individual couple video pages
-├── *-photos.html               # Individual couple photo galleries
+├── kushiki-sandeep-video.html   # Kushiki & Sandeep video page
+├── kushiki-sandeep-photos.html  # Kushiki & Sandeep photo gallery
+├── kushiki-sandeep-detail-page.html # Kushiki & Sandeep detail page
+├── *-video.html                 # Other couple video pages
+├── *-photos.html               # Other couple photo galleries
+├── images/
+│   ├── kushiki-sandeep/        # Kushiki & Sandeep wedding photos (17 images)
+│   └── ...                     # Other organized image folders
 ├── styles/
 │   └── main.css                # Main stylesheet with photo gallery and lightbox design
 ├── scripts/
@@ -100,6 +106,8 @@ The portfolio architecture has been completely restructured with separate video 
 - ✅ **Couple Name Update**: Changed first portfolio couple from "Kavya & Arjun" to "Kushiki & Sandeep" across all pages
 - ✅ **Image Gallery Refresh**: Replaced old wedding photos (1000819xxx series) with new wedding photos (1000822689-1000822705 series) - 17 new images total
 - ✅ **File Cleanup**: Removed old unused image files to optimize project structure
+- ✅ **Image Organization**: Moved all wedding photos to `images/kushiki-sandeep/` folder for better organization
+- ✅ **Path Updates**: Updated all image references across HTML files to use new organized folder structure
 - ✅ **File Renaming**: Renamed all couple-specific files:
   - `kavya-arjun-photos.html` → `kushiki-sandeep-photos.html`
   - `kavya-arjun-video.html` → `kushiki-sandeep-video.html`
