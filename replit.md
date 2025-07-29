@@ -100,7 +100,12 @@ The portfolio architecture has been completely restructured with separate video 
 - ✅ **Couple Name Update**: Changed first portfolio couple from "Kavya & Arjun" to "Kushiki & Sandeep" across all pages
 - ✅ **Image Gallery Refresh**: Replaced old wedding photos (1000819xxx series) with new wedding photos (1000822689-1000822705 series) - 17 new images total
 - ✅ **File Cleanup**: Removed old unused image files to optimize project structure
-- ✅ **Multi-Page Updates**: Updated kavya-arjun-photos.html, kavya-arjun-video.html, kavya-arjun-detail-page.html, and portfolio.html with new content
+- ✅ **File Renaming**: Renamed all couple-specific files:
+  - `kavya-arjun-photos.html` → `kushiki-sandeep-photos.html`
+  - `kavya-arjun-video.html` → `kushiki-sandeep-video.html`
+  - `kavya-arjun-detail-page.html` → `kushiki-sandeep-detail-page.html`
+- ✅ **Link Updates**: Updated internal navigation links and JavaScript functions to work with new filenames
+- ✅ **Portfolio Integration**: Updated portfolio.html grid to link to new couple pages
 
 ## Next Steps
 - Consider adding form submission backend integration
