@@ -719,6 +719,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Global functions for portfolio navigation
+function openVideoPage(coupleSlug) {
+    const videoPageMap = {
+        'kushiki-sandeep': 'kushiki-sandeep-video.html',
+        'himanshu-priyanka': 'himanshu-priyanka-video.html',
+        'meera-karthik': 'meera-karthik-video.html',
+        'lakshmi-aditya': 'lakshmi-aditya-video.html'
+    };
+    
+    const videoPageUrl = videoPageMap[coupleSlug];
+    if (videoPageUrl) {
+        window.location.href = videoPageUrl;
+    }
+}
+
+function openPhotoGallery(coupleSlug) {
+    const photoPageMap = {
+        'kushiki-sandeep': 'kushiki-sandeep-photos.html',
+        'himanshu-priyanka': 'himanshu-priyanka-photos.html',
+        'meera-karthik': 'meera-karthik-photos.html',
+        'lakshmi-aditya': 'lakshmi-aditya-photos.html'
+    };
+    
+    const photoPageUrl = photoPageMap[coupleSlug];
+    if (photoPageUrl) {
+        window.location.href = photoPageUrl;
+    }
+}
+
 // Export for potential module use
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = WeddingPhotographyWebsite;

@@ -89,6 +89,7 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 ├── *-photos.html               # Other couple photo galleries
 ├── images/
 │   ├── kushiki-sandeep/        # Kushiki & Sandeep wedding photos (17 images)
+│   ├── himanshu-priyanka/      # Himanshu & Priyanka wedding photos (55 images)
 │   └── ...                     # Other organized image folders
 ├── styles/
 │   └── main.css                # Main stylesheet with photo gallery and lightbox design
@@ -103,6 +104,8 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 The portfolio architecture has been completely restructured with separate video and photo pages for each couple. The homepage no longer contains portfolio content, instead linking to a dedicated portfolio page. Each couple has individual video pages that showcase their wedding videos, with easy navigation to separate photo galleries featuring lightbox functionality and responsive design.
 
 ### Recent Updates (July 29, 2025)
+
+#### First Couple Update (Kushiki & Sandeep)
 - ✅ **Couple Name Update**: Changed first portfolio couple from "Kavya & Arjun" to "Kushiki & Sandeep" across all pages
 - ✅ **Image Gallery Refresh**: Replaced old wedding photos (1000819xxx series) with new wedding photos (1000822689-1000822705 series) - 17 new images total
 - ✅ **File Cleanup**: Removed old unused image files to optimize project structure
@@ -112,8 +115,18 @@ The portfolio architecture has been completely restructured with separate video 
   - `kavya-arjun-photos.html` → `kushiki-sandeep-photos.html`
   - `kavya-arjun-video.html` → `kushiki-sandeep-video.html`
   - `kavya-arjun-detail-page.html` → `kushiki-sandeep-detail-page.html`
+
+#### Second Couple Update (Himanshu & Priyanka)
+- ✅ **Couple Name Update**: Changed second portfolio couple from "Ananya & Rohan" to "Himanshu & Priyanka" across all pages
+- ✅ **Massive Image Gallery**: Added 55 new wedding photos (1000822738-1000822802 series) organized in `images/himanshu-priyanka/` folder
+- ✅ **File Renaming**: Renamed all second couple files:
+  - `ananya-rohan-photos.html` → `himanshu-priyanka-photos.html`
+  - `ananya-rohan-video.html` → `himanshu-priyanka-video.html`
+  - `ananya-rohan-detail-page.html` → `himanshu-priyanka-detail-page.html`
+- ✅ **Complete Content Update**: Updated titles, descriptions, headers, and navigation across all pages
+- ✅ **Portfolio Grid Update**: Updated portfolio thumbnail and couple information
+- ✅ **JavaScript Navigation**: Added global functions for openVideoPage() and openPhotoGallery() with new couple mappings
 - ✅ **Link Updates**: Updated internal navigation links and JavaScript functions to work with new filenames
-- ✅ **Portfolio Integration**: Updated portfolio.html grid to link to new couple pages
 
 ## Next Steps
 - Consider adding form submission backend integration
