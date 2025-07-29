@@ -724,7 +724,7 @@ function openVideoPage(coupleSlug) {
     const videoPageMap = {
         'kushiki-sandeep': 'kushiki-sandeep-video.html',
         'himanshu-priyanka': 'himanshu-priyanka-video.html',
-        'meera-karthik': 'meera-karthik-video.html',
+        'alice-jai': 'alice-jai-video.html',
         'lakshmi-aditya': 'lakshmi-aditya-video.html'
     };
     
@@ -738,7 +738,7 @@ function openPhotoGallery(coupleSlug) {
     const photoPageMap = {
         'kushiki-sandeep': 'kushiki-sandeep-photos.html',
         'himanshu-priyanka': 'himanshu-priyanka-photos.html',
-        'meera-karthik': 'meera-karthik-photos.html',
+        'alice-jai': 'alice-jai-photos.html',
         'lakshmi-aditya': 'lakshmi-aditya-photos.html'
     };
     

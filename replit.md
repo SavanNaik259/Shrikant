@@ -85,12 +85,16 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 ├── kushiki-sandeep-video.html   # Kushiki & Sandeep video page
 ├── kushiki-sandeep-photos.html  # Kushiki & Sandeep photo gallery
 ├── kushiki-sandeep-detail-page.html # Kushiki & Sandeep detail page
-├── *-video.html                 # Other couple video pages
-├── *-photos.html               # Other couple photo galleries
+├── himanshu-priyanka-video.html # Himanshu & Priyanka video page
+├── himanshu-priyanka-photos.html # Himanshu & Priyanka photo gallery
+├── himanshu-priyanka-detail-page.html # Himanshu & Priyanka detail page
+├── alice-jai-video.html         # Alice & Jai video page
+├── alice-jai-photos.html        # Alice & Jai photo gallery
+├── alice-jai-detail-page.html   # Alice & Jai detail page
 ├── images/
 │   ├── kushiki-sandeep/        # Kushiki & Sandeep wedding photos (17 images)
 │   ├── himanshu-priyanka/      # Himanshu & Priyanka wedding photos (55 images)
-│   └── ...                     # Other organized image folders
+│   └── alice-jai/              # Alice & Jai wedding photos (77 images)
 ├── styles/
 │   └── main.css                # Main stylesheet with photo gallery and lightbox design
 ├── scripts/
@@ -101,7 +105,7 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 ```
 
 ## Current Status
-The portfolio architecture has been completely restructured with separate video and photo pages for each couple. The homepage no longer contains portfolio content, instead linking to a dedicated portfolio page. Each couple has individual video pages that showcase their wedding videos, with easy navigation to separate photo galleries featuring lightbox functionality and responsive design.
+The portfolio architecture has been completely restructured with separate video and photo pages for each couple. The homepage no longer contains portfolio content, instead linking to a dedicated portfolio page. All three couples (Kushiki & Sandeep, Himanshu & Priyanka, Alice & Jai) have individual video pages that showcase their wedding videos, with easy navigation to separate photo galleries featuring lightbox functionality and responsive design. The project now contains 149 total wedding photos across all three couples, organized in dedicated folders with professional naming and structure.
 
 ### Recent Updates (July 29, 2025)
 
@@ -127,6 +131,19 @@ The portfolio architecture has been completely restructured with separate video 
 - ✅ **Portfolio Grid Update**: Updated portfolio thumbnail and couple information
 - ✅ **JavaScript Navigation**: Added global functions for openVideoPage() and openPhotoGallery() with new couple mappings
 - ✅ **Link Updates**: Updated internal navigation links and JavaScript functions to work with new filenames
+
+#### Third Couple Update (Alice & Jai)
+- ✅ **Couple Name Update**: Changed third portfolio couple from "Meera & Karthik" to "Alice & Jai" across all pages
+- ✅ **Extensive Image Gallery**: Added 77 new wedding photos (1000822858-1000822953 series) organized in `images/alice-jai/` folder
+- ✅ **File Renaming**: Renamed all third couple files:
+  - `meera-karthik-photos.html` → `alice-jai-photos.html`
+  - `meera-karthik-video.html` → `alice-jai-video.html`
+  - `meera-karthik-detail-page.html` → `alice-jai-detail-page.html`
+- ✅ **Complete Content Update**: Updated titles, descriptions, headers, and navigation across all pages
+- ✅ **Portfolio Grid Update**: Updated portfolio thumbnail with new couple image and information
+- ✅ **JavaScript Navigation**: Updated global functions for openVideoPage() and openPhotoGallery() with alice-jai mapping
+- ✅ **File Organization**: Moved all 77 new images from root directory to organized `images/alice-jai/` folder
+- ✅ **Old File Cleanup**: Removed old wedding photo files to optimize project structure
 
 ## Next Steps
 - Consider adding form submission backend integration
