@@ -96,6 +96,12 @@ Vedic Vows is a specialized South Indian wedding photography platform that captu
 ## Current Status
 The portfolio architecture has been completely restructured with separate video and photo pages for each couple. The homepage no longer contains portfolio content, instead linking to a dedicated portfolio page. Each couple has individual video pages that showcase their wedding videos, with easy navigation to separate photo galleries featuring lightbox functionality and responsive design.
 
+### Recent Updates (July 29, 2025)
+- ✅ **Couple Name Update**: Changed first portfolio couple from "Kavya & Arjun" to "Kushiki & Sandeep" across all pages
+- ✅ **Image Gallery Refresh**: Replaced old wedding photos (1000819xxx series) with new wedding photos (1000822689-1000822705 series) - 17 new images total
+- ✅ **File Cleanup**: Removed old unused image files to optimize project structure
+- ✅ **Multi-Page Updates**: Updated kavya-arjun-photos.html, kavya-arjun-video.html, kavya-arjun-detail-page.html, and portfolio.html with new content
+
 ## Next Steps
 - Consider adding form submission backend integration
 - Potential SEO optimization
